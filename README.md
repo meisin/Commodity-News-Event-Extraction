@@ -7,7 +7,10 @@ This paper introduces the use of pre-trained language models, eg: BERT and Graph
 
 ![Architecture](fig/architecture_without_polaritymodality.png)
 
-
+The events found in Commodity News are group into three main categories:
+1. Geo-political events
+2. Macro-economic events
+3. Commodity Price Movement events
 
 ## Requirements
 
