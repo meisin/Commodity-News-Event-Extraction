@@ -21,15 +21,14 @@ The events found in Commodity News are group into three main categories:
 To install the requirements, run ```pip -r requirements.txt```.
 
 ## Repository contents
-- ```dataset``` 
-- ```data```
-- ```utils```
-- ```model```
-- ```runs```
-- 
+- ```dataset``` folder contains training data- ```event_extraction_train.json``` and testing data- ```event_extraction_test.json```
+- ```data``` folder contains (1) ```const.py``` file with Event Labels, Entity Labels, Argument Role Labels and other constants and (2) ```data_loader.py``` with functions relating to the loading of data.
+- ```utils``` folder contains helper functions and Tree structure related functions.
+- ```model``` folder contains the main Event Extraction Model ```event_extraction.py``` and Graph Convolution Model ```graph_convolution.py```
+- ```runs``` folder contains the output of the executions (see Ouput section below for details)
 
 ## How to run the codes
-Run ````run_train.bat ```
+Run ```run_train.bat ```
 
 ## Output
 The results are written to (1) Tensorboard and (2) "runs/logfiles/output_XX.log' where XX is the system date and timestamp. Results include
