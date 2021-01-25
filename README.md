@@ -21,3 +21,7 @@ The events found in Commodity News are group into three main categories:
 To install the requirements, run ```pip -r requirements.txt```.
 
 ## How to run the codes
+
+
+## Citation
+If you find the codes or the paper useful, please cite using the following:
