@@ -20,8 +20,16 @@ The events found in Commodity News are group into three main categories:
 
 To install the requirements, run ```pip -r requirements.txt```.
 
-## How to run the codes
+## Repository contents
+- ```dataset``` 
+- ```data```
+- ```utils```
+- ```model```
+- ```runs```
+- 
 
+## How to run the codes
+Run ````run_train.bat ```
 
 ## Output
 The results are written to (1) Tensorboard and (2) "runs/logfiles/output_XX.log' where XX is the system date and timestamp. Results include
@@ -31,8 +39,6 @@ The results are written to (1) Tensorboard and (2) "runs/logfiles/output_XX.log'
 4. Argument Role classification Accuracy, Precision, Recall and F1 scores.
 
 To access results on Tensorboard, first you need to have Tensorboard install and to bring up to bring up tensorboardX, use this command: ```tensorboard --logdir runs```
-
-
 
 ## Citation
 If you find the codes or the paper useful, please cite using the following:
