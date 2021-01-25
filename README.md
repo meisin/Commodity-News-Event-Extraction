@@ -13,5 +13,9 @@ The events found in Commodity News are group into three main categories:
 3. Commodity Price Movement events
 
 ## Requirements
+1. Python 3 (own version is 3.7.4)
+2. PyTorch 1.2
+3. Transformer (own version is 2.11.0) - [Huggingface]https://huggingface.co/transformers/
+4. Stanford CoreNLP
 
 ## How to run the codes
