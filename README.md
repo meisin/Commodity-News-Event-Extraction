@@ -23,5 +23,16 @@ To install the requirements, run ```pip -r requirements.txt```.
 ## How to run the codes
 
 
+## Output
+The results are written to (1) Tensorboard and (2) "runs/logfiles/output_XX.log' where XX is the system date and timestamp. Results include
+1. Training loss
+2. Evaluation loss
+3. Event Trigger classification Accuracy, Precision, Recall and F1 scores.
+4. Argument Role classification Accuracy, Precision, Recall and F1 scores.
+
+To access results on Tensorboard, first you need to have Tensorboard install and to bring up to bring up tensorboardX, use this command: ```tensorboard --logdir runs```
+
+
+
 ## Citation
 If you find the codes or the paper useful, please cite using the following:
