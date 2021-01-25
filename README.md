@@ -1,7 +1,7 @@
 # Commodity-News-Event-Extraction
 
 ## Introduction
-![Architecture](fig/architecture_without_polaritymodality.jpg)
+![Architecture](fig/architecture_without_polaritymodality.png)
 
 ## Requirements
 
