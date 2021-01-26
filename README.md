@@ -18,7 +18,7 @@ The events found in Commodity News are group into three main categories:
 3. Transformer (own version is 2.11.0) - [Huggingface](https://huggingface.co/transformers/)
 4. Stanford CoreNLP
 
-To install the requirements, run ```pip -r requirements.txt```.
+To install the requirements, run ```pip install -r requirements.txt```.
 
 ## Repository contents
 - ```dataset``` folder contains training data- ```event_extraction_train.json``` and testing data- ```event_extraction_test.json```
