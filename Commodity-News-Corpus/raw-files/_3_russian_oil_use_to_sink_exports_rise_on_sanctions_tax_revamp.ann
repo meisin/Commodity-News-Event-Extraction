@@ -1,0 +1,284 @@
+T1	Movement-up-gain 321 326	surge
+E1	Movement-up-gain:T1 Attribute:T2 Item:T3 Type:T4 Reference_point_time:T5 Modality_cue:T130
+T2	Financial_attribute 297 304	exports
+T3	Commodity 292 296	fuel
+T4	NATIONALITY 284 291	Russian
+T5	DATE 327 336	next year
+T6	Movement-down-loss 362 367	slump
+E2	Movement-down-loss:T6 Attribute:T7 Type:T135
+T7	Financial_attribute 380 386	demand
+A1	Polarity E1 Positive
+A2	Modality E1 Other
+T8	Embargo 444 453	sanctions
+E3	Embargo:T8 Imposer:T9
+T9	LOCATION 436 443	Western
+T10	Financial_attribute 603 616	Demand growth
+T11	Slow-weak 636 639	bad
+E4	Slow-weak:T11 Attribute:T10
+T12	Economic_item 703 710	economy
+T13	LOCATION 694 702	domestic
+T14	Slow-weak 711 722	falls apart
+E5	Slow-weak:T14 Item:T12 Type:T13 Modality_cue:T131
+A3	Polarity E5 Positive
+A4	Modality E5 Other
+T16	Movement-down-loss 728 735	decline
+E7	Movement-down-loss:T16 Item:T17 Attribute:T18
+T17	Commodity 739 742	oil
+T18	Financial_attribute 743 756	demand growth
+T20	Movement-up-gain 786 795	increased
+E8	Movement-up-gain:T20 Attribute:T21
+T21	Financial_attribute 796 803	exports
+T22	Movement-down-loss 1016 1022	plunge
+E9	Movement-down-loss:T22 
+T23	Movement-down-loss 1043 1047	fell
+E10	Movement-down-loss:T23 Difference:T24 Reference_point_time:T25
+T24	PERCENTAGE 1051 1063	12.7 percent
+T25	DATE 1067 1082	January-October
+T26	Financial_attribute 1280 1286	demand
+T27	Movement-down-loss 1290 1296	shrink
+E11	Movement-down-loss:T27 Attribute:T26 Item:T29 Type:T28 Difference:T30 Reference_point_time:T31 Modality_cue:T162
+T28	NATIONALITY 1260 1267	Russian
+T29	Commodity 1268 1271	oil
+T30	PERCENTAGE 1300 1317	about 2.1 percent
+A5	Polarity E11 Positive
+A6	Modality E11 Other
+T31	DATE 1321 1325	2015
+T32	Financial_attribute 1482 1493	throughputs
+T33	Commodity 1476 1481	crude
+T34	NATIONALITY 1468 1475	Russian
+T35	Grow-strong 1504 1512	elevated
+E12	Grow-strong:T35 Attribute:T32 Reference_point_time:T36 Item:T33 Type:T34 Modality_cue:T163
+T36	DATE 1516 1520	2015
+T37	Movement-down-loss 1536 1540	down
+E13	Movement-down-loss:T37 Reference_point_time:T38 Modality_cue:T163
+T38	DATE 1578 1582	2014
+T39	Financial_attribute 1600 1607	exports
+T40	Commodity 1588 1599	oil product
+T41	Grow-strong 1618 1624	robust
+E14	Grow-strong:T41 Attribute:T39 Item:T40 Modality_cue:T163
+A7	Polarity E12 Positive
+A8	Modality E12 Other
+A9	Polarity E13 Positive
+A10	Modality E13 Other
+A11	Polarity E14 Positive
+A12	Modality E14 Other
+T42	Embargo 1755 1764	sanctions
+E15	Embargo:T42 
+T43	Economic_item 1785 1801	economic outlook
+T44	Slow-weak 1771 1784	deteriorating
+E16	Slow-weak:T44 Item:T43
+T45	Slow-weak 1721 1729	slowdown
+E17	Slow-weak:T45 Attribute:T46 Modality_cue:T164
+T46	Financial_attribute 1733 1739	demand
+A13	Polarity E17 Positive
+A14	Modality E17 Other
+T47	Movement-up-gain 1907 1911	rise
+E18	Movement-up-gain:T47 Attribute:T49 Item:T48 Modality_cue:T165
+T48	Commodity 1824 1835	oil product
+T49	Financial_attribute 1836 1843	exports
+T50	Shortage 2163 2172	shortages
+E19	Shortage:T50 Place:T181 Item:T51
+T52	Grow-strong 2204 2208	grew
+E20	Grow-strong:T52 Attribute:T53 Initial_reference_point:T55 Difference:T54 Final_value:T56 Reference_point_time:T57
+T53	Financial_attribute 2197 2203	output
+T54	PERCENTAGE 2212 2229	almost 45 percent
+T55	DATE 2235 2239	2000
+T56	Production_unit 2243 2270	275 million tonnes per year
+T57	DATE 2274 2278	2013
+T58	Embargo 2462 2471	sanctions
+E21	Embargo:T58 
+T59	Movement-up-gain 2899 2903	more
+E22	Movement-up-gain:T59 Attribute:T60 Item:T61 Modality_cue:T169
+T60	Financial_attribute 2887 2893	export
+T61	Commodity 2922 2928	diesel
+T62	Movement-down-loss 2938 2942	less
+E23	Movement-down-loss:T62 Item:T63 Attribute:T60 Modality_cue:T169
+T63	Commodity 2956 2964	fuel oil
+T64	Commodity 2992 3000	fuel oil
+T65	Movement-down-loss 2981 2988	decline
+E24	Movement-down-loss:T65 Item:T64 Attribute:T66
+T66	Financial_attribute 3019 3026	exports
+T67	Movement-up-gain 3130 3134	rise
+E25	Movement-up-gain:T67 Attribute:T68 Item:T69 Modality_cue:T170
+T68	Financial_attribute 3123 3129	prices
+T69	Commodity 3117 3122	crude
+T70	Movement-up-gain 3198 3206	increase
+E26	Movement-up-gain:T70 Item:T71 Item2:T72 Attribute:T73 Modality_cue:T171 Supplier_Consumer:T184
+T71	Commodity 3210 3216	diesel
+T72	Commodity 3221 3229	gasoline
+T73	Financial_attribute 3230 3237	exports
+A15	Polarity E25 Positive
+A16	Modality E25 Other
+T74	Cause-movement-down-loss 3250 3253	cut
+E27	Cause-movement-down-loss:T74 Modality_cue:T172
+T75	Movement-up-gain 3450 3454	rise
+E28	Movement-up-gain:T75 Type:T78 Item:T76 Attribute:T77 Final_value:T79 Reference_point_time:T82 Initial_value:T80 Initial_reference_point:T81 Modality_cue:T173
+T76	Commodity 3466 3472	diesel
+T77	Financial_attribute 3473 3483	production
+T78	NATIONALITY 3458 3465	Russian
+A17	Polarity E28 Positive
+A18	Modality E28 Other
+T79	PERCENTAGE 3487 3497	33 percent
+T80	PERCENTAGE 3547 3557	26 percent
+T81	DATE 3561 3565	2013
+T82	DATE 3536 3540	2020
+T83	Movement-up-gain 3593 3597	rise
+E29	Movement-up-gain:T83 Attribute:T84 Item:T85 Final_value:T86 Initial_value:T87 Modality_cue:T174
+A19	Polarity E29 Positive
+A20	Modality E29 Other
+T84	Financial_attribute 3581 3587	output
+T85	Commodity 3572 3580	gasoline
+T86	PERCENTAGE 3601 3611	18 percent
+T87	PERCENTAGE 3618 3628	14 percent
+T88	Movement-down-loss 3650 3654	lose
+E30	Movement-down-loss:T88 Difference:T90 Item:T89 Modality_cue:T175
+T89	Commodity 3636 3644	fuel oil
+T90	PERCENTAGE 3655 3668	13 percentage
+A21	Polarity E30 Positive
+A22	Modality E30 Other
+T91	Movement-down-loss 3677 3684	falling
+E31	Movement-down-loss:T91 Final_value:T92 Modality_cue:T175
+T92	PERCENTAGE 3688 3698	15 percent
+T93	Cause-movement-down-loss 3912 3918	curbed
+E32	Cause-movement-down-loss:T93 Attribute:T94 Supplier_Consumer:T95
+T94	Financial_attribute 3882 3889	Exports
+T95	COUNTRY 3895 3901	Russia
+T97	Commodity 4005 4011	diesel
+T99	Movement-up-gain 4179 4187	increase
+E34	Movement-up-gain:T99 Item:T100 Attribute:T101 Final_value:T102 Reference_point_time:T103 Initial_value:T104 Initial_reference_point:T105 Modality_cue:T176
+A23	Polarity E34 Positive
+A24	Modality E34 Other
+T100	Commodity 4195 4201	diesel
+T101	Financial_attribute 4202 4209	exports
+T102	Quantity 4227 4244	18 million tonnes
+T103	DATE 4248 4258	early 2017
+T104	Quantity 4276 4293	11 million tonnes
+T105	DATE 4297 4301	2014
+T106	Movement-up-gain 4386 4393	upsurge
+E35	Movement-up-gain:T106 Type:T107 Item:T108 Attribute:T109 Reference_point_time:T110 Modality_cue:T177
+T107	NATIONALITY 4397 4404	Russian
+T108	Commodity 4405 4408	oil
+T109	Financial_attribute 4409 4416	exports
+T110	DATE 4420 4424	2020
+T111	Financial_attribute 4438 4446	supplies
+T112	Commodity 4431 4437	diesel
+T113	Movement-up-gain 4447 4453	rising
+E36	Movement-up-gain:T113 Attribute:T111 Item:T112 Difference:T114 Modality_cue:T177
+T114	Production_unit 4457 4483	17 million tonnes per year
+T115	Commodity 4489 4497	gasoline
+T116	Financial_attribute 4498 4508	deliveries
+T117	Movement-up-gain 4514 4524	increasing
+E37	Movement-up-gain:T117 Attribute:T116 Item:T115 Difference:T118 Modality_cue:T177
+T118	Quantity 4528 4551	around 8 million tonnes
+T119	Cause-movement-down-loss 4594 4600	curbed
+E38	Cause-movement-down-loss:T119 Attribute:T120 Modality_cue:T178
+T120	Financial_attribute 4577 4584	exports
+A25	Polarity E38 Positive
+A26	Modality E38 Other
+T121	Movement-down-loss 4604 4611	falling
+E39	Movement-down-loss:T121 Item:T124 Attribute:T123 Modality_cue:T178
+T122	Movement-down-loss 4627 4636	declining
+E40	Movement-down-loss:T122 Modality_cue:T178
+T123	Financial_attribute 4616 4622	prices
+T124	Commodity 4612 4615	oil
+T15	Situation_deteriorate 772 778	worsen
+E6	Situation_deteriorate:T15 Situation:T19 Modality_cue:T158
+A27	Polarity E6 Positive
+A28	Modality E6 Other
+T19	Phenomenon 728 735	decline
+T126	Oversupply 876 883	surplus
+E42	Oversupply:T126 Item:T127 Place:T183
+T127	Commodity 867 875	gasoline
+T125	Situation_deteriorate 856 862	add to
+E41	Situation_deteriorate:T125 Situation:T128 Modality_cue:T159
+T128	Phenomenon 876 883	surplus
+T129	Movement-down-loss 1088 1095	decline
+E43	Movement-down-loss:T129 
+A29	Polarity E18 Positive
+A30	Modality E18 Other
+A31	Modality E26 Other
+A32	Polarity E27 Positive
+A33	Modality E27 Other
+A34	Modality E39 Other
+A35	Modality E40 Other
+T132	Commodity 483 489	diesel
+T133	Commodity 494 502	gasoline
+T134	Financial_attribute 503 510	exports
+T135	LOCATION 371 379	domestic
+T136	Commodity 845 851	diesel
+T137	Financial_attribute 960 971	consumption
+T138	Commodity 955 959	fuel
+T139	LOCATION 946 954	domestic
+T140	DATE 1106 1113	October
+T141	Financial_attribute 3302 3312	production
+T142	Commodity 3781 3789	fuel oil
+T143	Quantity 3760 3777	70 million tonnes
+T144	Quantity 3791 3810	35.5 million tonnes
+T145	Commodity 3814 3820	diesel
+T146	Quantity 3835 3852	10 million tonnes
+T147	Commodity 3957 3960	oil
+T148	Commodity 4148 4157	crude oil
+T96	Commodity 4336 4347	oil and gas
+T98	Financial_attribute 15 18	use
+T149	Movement-down-loss 22 26	sink
+E33	Movement-down-loss:T149 Attribute:T98 Item:T150 Type:T151
+T150	Commodity 11 14	oil
+T151	NATIONALITY 3 10	Russian
+A36	Modality E33 Other
+T152	Financial_attribute 28 35	exports
+T153	Movement-up-gain 36 40	rise
+E45	Movement-up-gain:T153 Attribute:T152
+T154	Embargo 44 53	sanctions
+E46	Embargo:T154 
+T155	Slow-weak 981 988	subdued
+E47	Slow-weak:T155 Attribute:T137 Item:T138 Type:T139 Reference_point_time:T156 Supplier_Consumer:T160
+T156	DATE 989 998	this year
+T157	Economic_item 1384 1391	economy
+A37	Modality E22 Other
+A38	Modality E23 Other
+T130	MODALITY_cue 315 320	could
+T131	MODALITY_cue 687 689	If
+T158	MODALITY_cue 757 761	will
+T159	MODALITY_cue 804 808	will
+A41	Modality E41 Other
+T160	COUNTRY 937 943	Russia
+T161	Slow-weak 1096 1102	slowed
+E44	Slow-weak:T161 Reference_point_time:T140
+T162	MODALITY_cue 1252 1259	expects
+T163	MODALITY_cue 1461 1467	expect
+T164	MODALITY_cue 1712 1720	possible
+T165	MODALITY_cue 1902 1906	will
+T166	Position-high 2303 2307	peak
+E48	Position-high:T166 Initial_reference_point:T167
+T167	DATE 2319 2332	the mid-1980s
+T168	Financial_attribute 2420 2430	production
+T169	MODALITY_cue 2882 2886	will
+T170	MODALITY_cue 3112 3116	when
+T171	MODALITY_cue 3186 3190	will
+T172	MODALITY_cue 3245 3249	will
+T173	MODALITY_cue 3437 3441	will
+T174	MODALITY_cue 3588 3592	will
+T175	MODALITY_cue 3645 3649	will
+A39	Modality E31 Other
+T176	MODALITY_cue 4170 4175	hopes
+T177	MODALITY_cue 4374 4382	expected
+A40	Modality E35 Other
+A42	Modality E36 Other
+A43	Modality E37 Other
+T178	MODALITY_cue 4585 4590	could
+T179	Cause-movement-up-gain 3996 4004	boosting
+E49	Cause-movement-up-gain:T179 
+T180	Forecast_target 1205 1213	forecast
+T181	COUNTRY 2132 2138	Russia
+T182	Economic_item 2401 2407	growth
+T183	LOCATION 887 897	the region
+T184	LOCATION 3179 3185	Europe
+T185	Movement-up-gain 470 474	More
+E50	Movement-up-gain:T185 Type:T186 Item:T132 Item2:T133 Attribute:T134
+T186	NATIONALITY 475 482	Russian
+T187	Commodity 2358 2362	fuel
+T188	Commodity 3874 3878	fuel
+T51	Commodity 2158 2162	fuel
+T189	Commodity 3350 3356	energy
+T190	LOCATION 3505 3513	domestic
+T191	Commodity 3514 3517	oil

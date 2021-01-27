@@ -1,0 +1,95 @@
+T1	Movement-up-gain 249 253	rise
+E1	Movement-up-gain:T1 Attribute:T2 Item:T3
+T2	Financial_attribute 229 235	prices
+T3	Commodity 219 228	Crude oil
+T4	DATE 296 303	Tuesday
+T5	Movement-down-loss 310 317	decline
+E2	Movement-down-loss:T5 Supplier_Consumer:T6 Item:T35 Attribute:T34
+T6	COUNTRY 321 325	U.S.
+T7	Cause-movement-down-loss 346 350	cuts
+E3	Cause-movement-down-loss:T7 Attribute:T8 Supplier_Consumer:T9
+T8	Financial_attribute 339 345	supply
+T9	Group 354 373	major oil producers
+T10	Movement-up-gain 471 473	up
+E4	Movement-up-gain:T10 Contract_date:T16 Difference:T11 Difference2:T12 Final_value:T13 Attribute:T77 Item:T14
+T11	MONEY 474 482	22 cents
+T12	PERCENTAGE 486 497	about 0.36%
+T13	Price_unit 501 516	$61.95 a barrel
+T16	DATE 449 457	February
+T17	Position-high 584 588	high
+E5	Position-high:T17 Difference:T18 Duration:T64
+T18	MONEY 592 598	$62.27
+T20	Commodity 625 634	Brent oil
+T21	DATE 639 644	March
+T22	MONEY 698 706	10 cents
+T23	PERCENTAGE 710 721	about 0.16%
+T24	Price_unit 725 740	$67.88 a barrel
+T25	Movement-up-gain 692 697	added
+E6	Movement-up-gain:T25 Reference_point_time:T21 Item:T20 Difference:T22 Difference2:T23 Difference3:T24
+T26	Movement-down-loss 877 884	decline
+E7	Movement-down-loss:T26 Difference:T27 Difference2:T28 Attribute:T29 Supplier_Consumer:T31 Reference_point_time:T30
+T27	NUMBER 888 892	five
+T28	NUMBER 896 899	742
+T29	Financial_attribute 922 926	rigs
+T30	DATE 930 951	the week to January 5
+T31	COUNTRY 917 921	U.S.
+T32	Cause-movement-down-loss 1009 1012	cut
+E8	Cause-movement-down-loss:T32 Attribute:T33 Supplier_Consumer:T71 Supplier_Consumer2:T72
+T33	Financial_attribute 998 1008	production
+T34	Financial_attribute 330 334	rigs
+T35	Commodity 326 329	oil
+T36	Cause-movement-down-loss 1156 1160	cuts
+E9	Cause-movement-down-loss:T36 Reference_point_time:T39 Attribute:T37 Item:T38 Supplier_Consumer:T73
+T37	Financial_attribute 1149 1155	output
+T38	Commodity 1145 1148	oil
+T39	DATE 1167 1182	the end of 2018
+T40	Cause-movement-down-loss 1196 1199	cut
+E10	Cause-movement-down-loss:T40 Item:T41 Attribute:T42 Difference:T43 Supplier_Consumer:T44 Supplier_Consumer2:T45 Supplier_Consumer3:T46
+T41	Commodity 1200 1203	oil
+T42	Financial_attribute 1204 1210	output
+T43	Production_unit 1214 1245	1.8 million barrels a day (bpd)
+T44	ORGANIZATION 1273 1277	OPEC
+T45	COUNTRY 1279 1285	Russia
+T46	Group 1301 1317	global producers
+T47	Movement-up-gain 1421 1427	rising
+E11	Movement-up-gain:T47 Supplier_Consumer:T48 Item:T49 Attribute:T50
+T48	COUNTRY 1428 1432	U.S.
+T49	Commodity 1433 1436	oil
+T50	Financial_attribute 1437 1447	production
+T51	Movement-up-gain 1623 1627	rose
+E12	Movement-up-gain:T51 Attribute:T53 Item:T52 Difference:T54 Final_value:T55
+T52	Commodity 1606 1614	gasoline
+T53	Financial_attribute 1615 1622	futures
+T54	PERCENTAGE 1628 1633	0.58%
+T55	Price_unit 1637 1652	$1.808 a gallon
+T56	Movement-up-gain 1680 1688	edged up
+E13	Movement-up-gain:T56 Attribute:T57 Item:T58 Difference:T59 Final_value:T60
+T57	Financial_attribute 1672 1679	futures
+T58	Commodity 1660 1671	natural gas
+T59	PERCENTAGE 1689 1694	0.25%
+T60	Price_unit 1698 1738	$2.843 per million British thermal units
+T61	Movement-up-gain 32 36	Rise
+E14	Movement-up-gain:T61 Attribute:T63 Item:T62
+T62	Commodity 3 12	Crude Oil
+T63	Financial_attribute 13 19	Prices
+T64	DURATION 564 583	two-and-a-half year
+T65	DATE 755 764	last week
+T66	DURATION 767 784	nearly three-year
+T67	Position-high 785 789	peak
+E15	Position-high:T67 Duration:T66 Reference_point_time:T65 Difference:T68
+T68	MONEY 793 799	$68.27
+T69	Financial_attribute 805 811	prices
+T70	Commodity 801 804	Oil
+T71	ORGANIZATION 1032 1081	Organization of the Petroleum Exporting Countries
+T72	COUNTRY 1086 1092	Russia
+T73	Group 1098 1107	producers
+T74	Production_unit 1551 1583	10 million barrels per day (bpd)
+T75	Position-high 287 292	highs
+E16	Position-high:T75 Duration:T76 Reference_point_time:T4
+T76	DURATION 276 286	multi-year
+T77	Financial_attribute 458 466	contract
+T78	Commodity 399 408	commodity
+T79	Commodity 957 966	commodity
+T19	Negative_sentiment 1407 1415	concerns
+E17	Negative_sentiment:T19 
+T14	Commodity 414 448	U.S. West Texas Intermediate crude

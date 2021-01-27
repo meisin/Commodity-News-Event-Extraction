@@ -1,0 +1,35 @@
+T1	Movement-flat 651 660	unchanged
+E1	Movement-flat:T1 Final_value:T5 Modality_cue:T25 Attribute:T27 Forecast:T4
+T2	Shortage 306 314	shortage
+E2	Shortage:T2 Attribute:T3 Polarity_cue:T24
+T3	Financial_attribute 318 324	supply
+A1	Polarity E2 Negative
+A2	Modality E2 Asserted
+T5	Production_unit 624 650	30 million barrels per day
+T6	Shortage 1097 1105	shortage
+E3	Shortage:T6 Attribute:T7 Polarity_cue:T26
+A3	Polarity E3 Negative
+T7	Financial_attribute 1109 1115	supply
+T8	Financial_attribute 7 13	prices
+T9	Commodity 3 6	Oil
+T10	Financial_attribute 236 242	prices
+T11	Commodity 232 235	Oil
+T12	Commodity 483 486	oil
+T13	Financial_attribute 530 536	output
+A5	Modality E1 Other
+T14	Financial_attribute 669 675	prices
+T15	Commodity 665 668	Oil
+T16	Movement-flat 686 692	steady
+E4	Movement-flat:T16 Attribute:T14 Duration:T17 Item:T15
+T17	DURATION 698 706	the past
+T18	Financial_attribute 893 899	supply
+T19	Financial_attribute 904 910	demand
+T20	Commodity 938 941	oil
+T21	Financial_attribute 942 950	supplies
+T22	Financial_attribute 1017 1025	reserves
+T23	Commodity 1013 1016	Oil
+T24	POLARITY_cue 303 305	no
+T25	MODALITY_cue 592 596	will
+T26	POLARITY_cue 1094 1096	no
+T4	Forecast_target 614 620	target
+T27	Financial_attribute 607 613	output

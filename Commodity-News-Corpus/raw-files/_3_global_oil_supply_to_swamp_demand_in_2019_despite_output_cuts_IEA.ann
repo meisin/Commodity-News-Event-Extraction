@@ -1,0 +1,148 @@
+T1	Cause-movement-down-loss 394 398	cuts
+E1	Cause-movement-down-loss:T1 Attribute:T2 Supplier_Consumer:T3
+T2	Financial_attribute 383 393	production
+T3	ORGANIZATION 371 380	the group
+T4	Embargo 408 417	sanctions
+E2	Embargo:T4 Imposer:T5 Imposee:T6 Imposee2:T7
+T5	COUNTRY 403 407	U.S.
+T6	COUNTRY 421 430	Venezuela
+T7	COUNTRY 435 439	Iran
+T8	Movement-flat 553 562	unchanged
+E3	Movement-flat:T8 Reference_point_time:T9 Initial_reference_point:T12 Initial_value:T13 Supplier_Consumer:T11 Forecast:T48 Attribute:T10
+T9	DATE 548 552	2019
+T11	ORGANIZATION 508 511	IEA
+T12	DATE 587 594	January
+T13	Production_unit 598 625	1.4 million barrels per day
+T14	Movement-down-loss 647 652	lower
+E4	Movement-down-loss:T14 Attribute:T15
+T15	Financial_attribute 653 659	prices
+T17	Slow-weak 725 732	slowing
+E5	Slow-weak:T17 Item:T18 Supplier_Consumer:T16
+T18	Economic_item 733 748	economic growth
+T19	Cause-movement-up-gain 808 814	raised
+E6	Cause-movement-up-gain:T19 Reference_point_time:T23 Final_value:T22 Initial_value:T24 Supplier_Consumer:T89 Forecaster:T91 Forecast:T112 Attribute:T21
+T22	Production_unit 915 930	1.8 million bpd
+T23	DATE 934 938	2019
+T24	Production_unit 945 960	1.6 million bpd
+T25	Cause-movement-down-loss 989 996	lowered
+E7	Cause-movement-down-loss:T25 Item:T28 Forecaster:T26 Supplier_Consumer:T29 Forecast:T49 Attribute:T27
+T26	ORGANIZATION 973 983	The agency
+T28	Commodity 1030 1035	crude
+T29	ORGANIZATION 1025 1029	OPEC
+T30	Cause-movement-down-loss 1082 1085	cut
+E8	Cause-movement-down-loss:T30 Supplier_Consumer:T32 Difference:T33 Reference_point_time:T34 Attribute:T31 Modality_cue:T110
+T31	Financial_attribute 1037 1047	production
+T32	ORGANIZATION 1057 1066	the group
+A1	Polarity E8 Positive
+A2	Modality E8 Other
+T33	Production_unit 1089 1099	800,000 bp
+T34	DATE 1101 1110	this year
+T35	Movement-down-loss 1275 1279	down
+E9	Movement-down-loss:T35 Forecaster:T36 Difference:T38 Reference_point_time:T39 Attribute:T113 Forecast:T37
+T36	ORGANIZATION 1289 1292	IEA
+T38	Production_unit 1319 1335	31.6 million bpd
+T39	DATE 1339 1346	January
+T40	Embargo 1353 1362	sanctions
+E10	Embargo:T40 Imposer:T41 Imposee:T42 Imposee2:T43
+T41	COUNTRY 1348 1352	U.S.
+T42	COUNTRY 1366 1370	Iran
+T43	COUNTRY 1375 1384	Venezuela
+T44	Movement-up-gain 1609 1617	increase
+E11	Movement-up-gain:T44 Item:T45 Reference_point_time:T47 Attribute:T46 Polarity_cue:T111
+T45	Commodity 1625 1628	oil
+T46	Financial_attribute 1629 1634	price
+T47	DATE 1638 1642	2019
+A3	Polarity E11 Negative
+T50	COUNTRY 1904 1913	Venezuela
+T51	Financial_attribute 1916 1926	production
+T52	Movement-down-loss 1938 1944	halved
+E13	Movement-down-loss:T52 Attribute:T51 Supplier_Consumer:T50 Reference_point_time:T53 Difference:T54
+T53	DATE 1948 1957	two years
+T54	Production_unit 1961 1977	1.17 million bpd
+T55	COUNTRY 2035 2039	U.S.
+T56	Embargo 2040 2049	sanctions
+E14	Embargo:T56 Imposer:T55
+T57	Crisis 1994 2000	crisis
+E15	Crisis:T57 Item:T58
+T58	Economic_item 1985 1993	economic
+T59	Movement-up-gain 2114 2119	risen
+E16	Movement-up-gain:T59 Attribute:T60 Item:T61 Difference:T62 Reference_point_time:T63 Difference2:T64
+T60	Financial_attribute 2093 2100	futures
+T61	Commodity 2081 2092	Brent crude
+T62	PERCENTAGE 2120 2130	20 percent
+T63	DATE 2134 2138	2019
+T64	Price_unit 2142 2161	around $63 a barrel
+T65	Movement-up-gain 2180 2188	increase
+E17	Movement-up-gain:T65 Reference_point_time:T66
+T66	DATE 2203 2216	early January
+T67	Movement-flat 2240 2249	plateaued
+E18	Movement-flat:T67 Attribute:T68
+T68	Financial_attribute 2222 2227	price
+T69	Embargo 2308 2317	sanctions
+E19	Embargo:T69 Imposer:T70
+T70	COUNTRY 2303 2307	U.S.
+T71	Movement-up-gain 2341 2350	increased
+E20	Movement-up-gain:T71 Attribute:T72 Item:T73 Polarity_cue:T99
+A5	Polarity E20 Negative
+A6	Modality E20 Asserted
+T72	Financial_attribute 2325 2331	prices
+T73	Commodity 2321 2324	Oil
+T74	Oversupply 2406 2415	surpluses
+E21	Oversupply:T74 Reference_point_time:T75
+T75	DATE 2428 2451	the second half of 2018
+T76	Grow-strong 2518 2522	grow
+E22	Grow-strong:T76 Item:T78 Attribute:T77 Modality_cue:T100 Supplier_Consumer:T79
+T77	Financial_attribute 2537 2547	production
+T78	Commodity 2527 2536	crude oil
+T81	Economic_item 275 281	market
+T82	Slow-weak 287 295	struggle
+E24	Slow-weak:T82 Item:T81 Item2:T83 Type:T84 Modality_cue:T109
+A7	Modality E24 Other
+T83	Commodity 271 274	oil
+T84	LOCATION 264 270	global
+T85	Financial_attribute 335 341	supply
+T86	ORGANIZATION 347 359	outside OPEC
+T87	Grow-strong 316 328	fast-growing
+E25	Grow-strong:T87 Item:T88 Attribute:T85 Supplier_Consumer:T86
+T88	Commodity 329 334	crude
+T89	ORGANIZATION 850 911	outside the Organization of the Petroleum Exporting Countries
+T20	Commodity 1224 1229	crude
+T90	Production_unit 1249 1265	30.7 million bpd
+T91	ORGANIZATION 804 807	IEA
+T92	Cause-movement-down-loss 1390 1400	choked off
+E26	Cause-movement-down-loss:T92 Attribute:T93 Item:T94
+T93	Financial_attribute 1401 1407	supply
+T94	Commodity 1434 1439	crude
+T95	Commodity 1491 1502	distillates
+T96	Commodity 1518 1526	gasoline
+T97	Movement-down-loss 1549 1559	disruption
+E27	Movement-down-loss:T97 
+T101	Slow-weak 2059 2067	crippled
+E29	Slow-weak:T101 Attribute:T102 Supplier_Consumer:T114
+T102	Financial_attribute 2072 2079	exports
+A10	Modality E22 Other
+T80	Financial_attribute 2581 2587	output
+T103	Cause-movement-down-loss 60 64	cuts
+E23	Cause-movement-down-loss:T103 Attribute:T104
+T104	Financial_attribute 53 59	output
+T105	LOCATION 3 9	Global
+T106	Commodity 10 13	oil
+T107	Financial_attribute 14 20	supply
+T108	Financial_attribute 30 36	demand
+T109	MODALITY_cue 282 286	will
+T110	MODALITY_cue 1071 1078	pledged
+T111	POLARITY_cue 1587 1590	not
+T98	Commodity 1657 1666	crude oil
+T99	POLARITY_cue 2337 2340	not
+T100	MODALITY_cue 2513 2517	will
+T10	Financial_attribute 521 534	demand growth
+T48	Forecast_target 535 543	forecast
+T27	Financial_attribute 1014 1020	demand
+T49	Forecast_target 1001 1009	forecast
+T21	Financial_attribute 831 844	supply growth
+T112	Forecast_target 819 827	estimate
+T37	Forecast_target 1307 1315	estimate
+T113	Financial_attribute 1300 1306	output
+T114	COUNTRY 2068 2071	its
+T16	COUNTRY 720 724	U.S.
+T79	COUNTRY 2502 2506	U.S.

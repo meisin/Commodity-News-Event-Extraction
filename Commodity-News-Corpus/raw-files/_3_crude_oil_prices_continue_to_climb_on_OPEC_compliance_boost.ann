@@ -1,0 +1,84 @@
+T1	Movement-up-gain 256 261	climb
+E1	Movement-up-gain:T1 Attribute:T3 Item:T4 Reference_point_time:T2
+T2	DATE 265 274	Wednesday
+T3	Financial_attribute 236 242	prices
+T4	Commodity 226 235	Crude oil
+T5	Movement-up-gain 276 283	boosted
+E2	Movement-up-gain:T5 
+T6	Cause-movement-down-loss 385 388	cut
+E3	Cause-movement-down-loss:T6 Attribute:T7 Supplier_Consumer:T8
+T7	Financial_attribute 378 384	supply
+T9	Movement-up-gain 456 458	up
+E4	Movement-up-gain:T9 Difference:T10 Difference2:T11 Final_value:T12 Contract_date:T15 Attribute:T66 Item:T13
+T10	MONEY 459 467	42 cents
+T11	PERCENTAGE 471 482	about 0.77%
+T12	Price_unit 486 501	$54.80 a barrel
+T15	DATE 434 442	December
+T16	Movement-up-gain 643 645	up
+E5	Movement-up-gain:T16 Item:T20 Difference:T17 Difference2:T18 Final_value:T21 Contract_date:T19
+T17	MONEY 646 654	31 cents
+T18	PERCENTAGE 658 669	about 0.51%
+T19	DATE 584 591	January
+T20	Commodity 570 579	Brent oil
+T21	Price_unit 673 688	$61.25 a barrel
+T22	Cause-movement-up-gain 708 715	boosted
+E6	Cause-movement-up-gain:T22 Attribute:T23 Item:T24
+T23	Financial_attribute 696 702	prices
+T24	Commodity 690 695	Crude
+T25	Movement-down-loss 753 761	declined
+E7	Movement-down-loss:T25 Reference_point_time:T27 Attribute:T26 Supplier_Consumer:T30 Difference:T28 Final_value:T29
+T26	Financial_attribute 746 752	output
+T27	DATE 738 745	October
+T28	Production_unit 765 775	80,000 bpd
+T29	Production_unit 779 796	32.78 million bpd
+T30	ORGANIZATION 731 735	OPEC
+T31	Cause-movement-down-loss 838 843	curbs
+E8	Cause-movement-down-loss:T31 Attribute:T32 Final_value:T33
+T32	Financial_attribute 831 837	supply
+T33	PERCENTAGE 847 850	92%
+T34	Cause-movement-down-loss 909 912	cut
+E9	Cause-movement-down-loss:T34 Supplier_Consumer:T35 Attribute:T36 Difference:T37 Reference_point_time:T38
+T35	COUNTRY 894 900	Russia
+T36	Financial_attribute 917 923	output
+T37	Production_unit 927 945	around 300,000 bpd
+T38	DATE 946 956	last month
+T39	Cause-movement-down-loss 1276 1279	cut
+E10	Cause-movement-down-loss:T39 Attribute:T40 Difference:T41
+T40	Financial_attribute 1280 1290	production
+T41	Production_unit 1294 1319	1.8 million barrels a day
+T42	Movement-down-loss 1643 1651	declined
+E11	Movement-down-loss:T42 Attribute:T43 Item:T46 Difference:T44 Reference_point_time:T45
+T43	Financial_attribute 1634 1642	supplies
+T44	Production_unit 1655 1676	5.087 million barrels
+T45	DATE 1680 1705	the week ended October 27
+T46	Commodity 1630 1633	oil
+T47	Movement-down-loss 1738 1742	fall
+E12	Movement-down-loss:T47 Difference:T49
+T49	Production_unit 1746 1767	2.100 million barrels
+T50	Movement-flat 1802 1808	steady
+E14	Movement-flat:T50 Attribute:T51 Item:T52 Final_value:T53
+T51	Financial_attribute 1789 1796	futures
+T52	Commodity 1780 1788	gasoline
+T53	Price_unit 1812 1827	$1.747 a gallon
+T54	Financial_attribute 1847 1854	futures
+T55	Commodity 1835 1846	natural gas
+T56	Movement-up-gain 1855 1859	rose
+E15	Movement-up-gain:T56 Attribute:T54 Item:T55 Difference:T57 Final_value:T58
+T57	PERCENTAGE 1860 1865	0.24%
+T58	Price_unit 1869 1909	$2.912 per million British thermal units
+T59	Movement-up-gain 32 37	Climb
+E16	Movement-up-gain:T59 Attribute:T60 Item:T61
+T60	Financial_attribute 13 19	Prices
+T61	Commodity 3 12	Crude Oil
+T8	ORGANIZATION 326 375	Organization of the Petroleum Exporting Countries
+T62	Production_unit 987 1005	11.247 million bpd
+T63	Financial_attribute 1489 1499	stockpiles
+T64	Economic_item 1443 1449	market
+T65	Cause-movement-up-gain 57 62	Boost
+E17	Cause-movement-up-gain:T65 
+T66	Financial_attribute 443 451	contract
+T67	Position-high 536 543	highest
+E18	Position-high:T67 Initial_reference_point:T68
+T68	DATE 550 557	January
+A1	Modality E12 Other
+T13	Commodity 399 433	U.S. West Texas Intermediate crude
