@@ -1,0 +1,154 @@
+T1	Movement-down-loss 293 297	fell
+E1	Movement-down-loss:T1 Item:T2 Reference_point_time:T3
+T2	Commodity 277 292	Brent crude oil
+T3	DATE 319 326	Tuesday
+T4	Movement-up-gain 330 339	increased
+E2	Movement-up-gain:T4 Supplier_Consumer:T5 Attribute:T6
+T5	ORGANIZATION 340 344	OPEC
+T6	Financial_attribute 345 355	production
+T7	Cause-movement-down-loss 401 412	disruptions
+E3	Cause-movement-down-loss:T7 Attribute:T8 Supplier_Consumer:T9 Supplier_Consumer2:T10 Modality_cue:T22
+T8	Financial_attribute 394 400	supply
+A1	Polarity E3 Positive
+A2	Modality E3 Other
+T9	COUNTRY 416 420	Iraq
+T10	COUNTRY 425 430	Libya
+T13	Movement-down-loss 666 670	down
+E5	Movement-down-loss:T13 Contract_date:T14 Item:T15 Difference:T16 Final_value:T17
+T14	DATE 640 649	September
+T15	Commodity 650 661	Brent crude
+T16	MONEY 671 676	$1.46
+T17	Price_unit 680 698	$103.22 per barrel
+T18	Movement-down-loss 719 726	falling
+E6	Movement-down-loss:T18 Final_value:T19
+T19	MONEY 730 737	$102.65
+T23	Movement-down-loss 848 852	down
+E8	Movement-down-loss:T23 Item:T28 Difference:T24 Final_value:T25 Contract_date:T27 Supplier_Consumer:T26
+T24	MONEY 853 861	68 cents
+T25	Price_unit 865 880	$97.40 a barrel
+T26	COUNTRY 823 827	U.S.
+T27	DATE 828 837	September
+T28	Commodity 838 843	crude
+T31	Oversupply 1067 1071	glut
+E10	Oversupply:T31 
+T32	ORGANIZATION 1074 1078	OPEC
+T33	Financial_attribute 1079 1085	output
+T34	Position-high 1103 1107	high
+E11	Position-high:T34 Attribute:T33 Supplier_Consumer:T32 Difference:T35 Reference_point_time:T36 Duration:T30
+T35	Production_unit 1111 1146	30.44 million barrels per day (bpd)
+T36	DATE 1150 1154	July
+T37	Movement-up-gain 1174 1178	rise
+E12	Movement-up-gain:T37 Difference:T38 Supplier_Consumer:T39 Supplier_Consumer2:T40
+T38	Production_unit 1162 1173	300,000-bpd
+T39	COUNTRY 1186 1198	Saudi Arabia
+T40	COUNTRY 1203 1208	Libya
+T42	STATE_OR_PROVINCE 1309 1316	Tripoli
+T43	STATE_OR_PROVINCE 1321 1329	Benghazi
+T41	Geopolitical-tension 1275 1282	clashes
+E13	Geopolitical-tension:T41 Impacted_countries:T42 Impacted_countries2:T43
+T44	Cause-movement-down-loss 1996 2006	disruption
+E14	Cause-movement-down-loss:T44 Attribute:T45 Modality_cue:T99
+T45	Financial_attribute 1989 1995	supply
+A3	Polarity E14 Positive
+A4	Modality E14 Other
+T46	COUNTRY 2105 2111	Russia
+T47	COUNTRY 2068 2072	U.S.
+T48	ORGANIZATION 2077 2091	European Union
+T49	Embargo 2092 2101	sanctions
+E15	Embargo:T49 Imposer:T48 Imposer2:T47 Imposee:T46
+T50	Cause-movement-down-loss 2152 2161	disrupted
+E16	Cause-movement-down-loss:T50 Attribute:T51 Polarity_cue:T84
+T51	Financial_attribute 2162 2168	supply
+A5	Polarity E16 Negative
+A6	Modality E16 Asserted
+T11	Embargo 2201 2210	sanctions
+E4	Embargo:T11 
+T12	Cause-movement-down-loss 2227 2231	trim
+E17	Cause-movement-down-loss:T12 Type:T52 Attribute:T53 Modality_cue:T85
+T52	NATIONALITY 2232 2239	Russian
+T53	Financial_attribute 2240 2246	demand
+A7	Polarity E17 Positive
+A8	Modality E17 Other
+T54	Movement-down-loss 2654 2660	fallen
+E18	Movement-down-loss:T54 Attribute:T56 Item:T57 Difference:T55 Reference_point_time:T64 Supplier_Consumer:T58 Modality_cue:T76
+T55	Production_unit 2661 2680	2.2 million barrels
+T56	Financial_attribute 2625 2631	stocks
+T57	Economic_item 2615 2624	crude oil
+T58	COUNTRY 2610 2614	U.S.
+A9	Polarity E18 Positive
+A10	Modality E18 Other
+T59	Crisis 550 556	crisis
+E19	Crisis:T59 Place:T60
+T60	COUNTRY 560 567	Ukraine
+T61	Crisis 2121 2127	crisis
+E20	Crisis:T61 Place:T62
+T62	COUNTRY 2131 2138	Ukraine
+T63	Movement-down-loss 435 441	plunge
+E21	Movement-down-loss:T63 Item:T65
+T64	DATE 2684 2702	the week to Aug. 8
+T65	Economic_item 473 489	market sentiment
+T20	Position-low 312 315	low
+E7	Position-low:T20 Duration:T21
+T21	DURATION 303 311	13-month
+T22	MODALITY_cue 384 393	potential
+T66	Position-low 497 509	lowest level
+E22	Position-low:T66 Duration:T67
+T67	DURATION 513 534	more than 1-1/2 years
+T68	Financial_attribute 617 623	demand
+T69	Commodity 628 637	petroleum
+T70	Movement-down-loss 15 20	falls
+E23	Movement-down-loss:T70 Item:T71
+T71	Commodity 3 14	Brent crude
+T72	Position-low 33 36	low
+E24	Position-low:T72 Duration:T73
+T73	DURATION 24 32	13-month
+T74	Position-low 743 749	lowest
+E25	Position-low:T74 Initial_reference_point:T75
+T75	DATE 762 774	July 1, 2013
+T76	MODALITY_cue 2637 2645	forecast
+T77	Economic_item 2442 2449	markets
+T78	Commodity 2438 2441	Oil
+T79	COUNTRY 2476 2480	U.S.
+T80	Commodity 2481 2484	oil
+T81	Financial_attribute 2485 2496	inventories
+T82	Economic_item 2331 2337	market
+T83	Financial_attribute 2350 2356	demand
+T84	POLARITY_cue 2144 2151	not yet
+T85	MODALITY_cue 2215 2223	expected
+T86	MODALITY_cue 1976 1981	would
+T88	Financial_attribute 1233 1239	output
+T90	Production_unit 1248 1266	around 450,000 bpd
+T89	Financial_attribute 1402 1408	output
+T91	Production_unit 1417 1428	430,000 bpd
+T92	Financial_attribute 1439 1449	Production
+T93	Cause-movement-down-loss 1487 1495	affected
+E26	Cause-movement-down-loss:T93 Polarity_cue:T94 Attribute:T92
+T94	POLARITY_cue 1485 1487	un
+A11	Polarity E26 Negative
+T95	Financial_attribute 1505 1512	exports
+T96	Production_unit 1562 1584	around 2.5 million bpd
+T97	Commodity 1587 1590	Oil
+T98	Financial_attribute 1591 1597	prices
+T87	Cause-movement-down-loss 1982 1988	reduce
+E27	Cause-movement-down-loss:T87 Modality_cue:T86
+A12	Modality E27 Other
+T99	MODALITY_cue 2007 2012	fears
+T100	Negative_sentiment 61 68	worries
+E28	Negative_sentiment:T100 Attribute:T101
+T101	Financial_attribute 54 60	demand
+T102	Negative_sentiment 603 610	worries
+E29	Negative_sentiment:T102 Attribute:T68 Item:T69
+T103	Oversupply 40 52	ample supply
+E30	Oversupply:T103 
+T104	Negative_sentiment 370 378	concerns
+E31	Negative_sentiment:T104 Polarity_cue:T105
+T105	POLARITY_cue 363 369	dampen
+A13	Polarity E31 Negative
+T29	Oversupply 1011 1030	supplies were ample
+E9	Oversupply:T29 
+T30	DURATION 1092 1102	five-month
+T106	Commodity 2032 2035	oil
+T107	Slow-weak 2020 2027	bearish
+E32	Slow-weak:T107 Item:T106 Modality_cue:T86
+A14	Modality E32 Other
+T108	Financial_attribute 792 800	contract

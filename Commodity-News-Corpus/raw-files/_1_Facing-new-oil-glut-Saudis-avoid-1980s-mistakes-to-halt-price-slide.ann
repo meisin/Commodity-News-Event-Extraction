@@ -1,0 +1,231 @@
+T1	Movement-down-loss 350 354	drop
+E1	Movement-down-loss:T1 Item:T2 Attribute:T3
+T2	Commodity 358 361	oil
+T3	Financial_attribute 362 368	prices
+A1	Polarity E1 Negative
+A2	Modality E1 Asserted
+T4	Cause-movement-down-loss 372 380	slashing
+E2	Cause-movement-down-loss:T4 Attribute:T5 Difference:T6 Reference_point_time:T7
+T5	Financial_attribute 381 391	production
+T6	NUMBER 395 416	almost three quarters
+T7	DATE 424 429	1980s
+T8	Oversupply 532 536	glut
+E3	Oversupply:T8 Item:T9 Reference_point_time:T10
+T9	Commodity 528 531	oil
+T10	DATE 544 549	1980s
+T11	Movement-down-loss 849 854	slide
+E4	Movement-down-loss:T11 Difference:T12 Item:T13 Attribute:T14 Final_value:T15
+T12	PERCENTAGE 838 848	25 percent
+T13	Commodity 858 861	oil
+T14	Financial_attribute 862 868	prices
+T15	Price_unit 872 890	below $90 a barrel
+T16	Movement-down-loss 932 937	slump
+E5	Movement-down-loss:T16 Reference_point_time:T17 Item:T18 Initial_value:T19 Final_value:T20
+T17	DATE 926 931	1980s
+T18	Commodity 948 953	crude
+T19	MONEY 959 962	$35
+T20	MONEY 966 975	below $10
+T21	COUNTRY 1192 1196	Iran
+T22	DATE 1199 1203	1979
+T23	Civil-unrest 1204 1214	revolution
+E6	Civil-unrest:T23 Reference_point_time:T22 Place:T21
+T24	Cause-movement-down-loss 1215 1221	sapped
+E7	Cause-movement-down-loss:T24 Type:T25 Item:T26 Attribute:T27
+T25	LOCATION 1222 1228	global
+T26	Commodity 1229 1232	oil
+T27	Financial_attribute 1233 1239	demand
+T28	Movement-up-gain 1136 1141	spike
+E8	Movement-up-gain:T28 Attribute:T29
+T29	Financial_attribute 1145 1151	prices
+T30	Embargo 1180 1187	embargo
+E9	Embargo:T30 Item:T33 Imposee:T32 Reference_point_time:T31
+T31	DATE 1166 1170	1973
+T32	Group 1171 1175	Arab
+T33	Commodity 1176 1179	oil
+T34	Oversupply 1354 1359	awash
+E10	Oversupply:T34 Place:T36 Item:T35
+T35	Commodity 1363 1366	oil
+T36	LOCATION 1340 1353	world markets
+T37	COUNTRY 1513 1524	The kingdom
+T38	Cause-movement-down-loss 1525 1532	slashed
+E11	Cause-movement-down-loss:T38 Attribute:T39 Difference:T40 Initial_reference_point:T41 Final_value:T42 Reference_point_time:T43 Supplier_Consumer:T37
+T39	Financial_attribute 1541 1547	output
+T40	Production_unit 1553 1589	more than 10 million barrels per day
+T41	DATE 1593 1597	1980
+T42	Production_unit 1601 1626	less than 2.5 million bpd
+T43	DATE 1630 1637	1985-86
+T44	Movement-down-loss 1820 1824	fell
+E12	Movement-down-loss:T44 Attribute:T45
+T45	Financial_attribute 1813 1819	Prices
+T46	Cause-movement-up-gain 1974 1984	revving up
+E13	Cause-movement-up-gain:T46 Attribute:T47
+T47	Financial_attribute 1985 1991	output
+T48	Cause-movement-down-loss 1996 2003	cutting
+E14	Cause-movement-down-loss:T48 Attribute:T49
+T49	Financial_attribute 2004 2010	prices
+T50	Cause-movement-down-loss 2159 2162	cut
+E15	Cause-movement-down-loss:T50 Attribute:T51
+T51	Financial_attribute 2163 2173	production
+T52	Cause-movement-up-gain 2184 2188	prop
+E16	Cause-movement-up-gain:T52 Attribute:T53 Modality_cue:T129
+T53	Financial_attribute 2193 2199	prices
+T54	Movement-down-loss 2214 2218	fell
+E17	Movement-down-loss:T54 Attribute:T55
+T55	Financial_attribute 2208 2213	price
+T56	Movement-down-loss 2391 2395	fell
+E18	Movement-down-loss:T56 Attribute:T57
+T57	Financial_attribute 2385 2390	price
+T58	Movement-down-loss 2774 2778	down
+E19	Movement-down-loss:T58 Attribute:T59 Item:T60 Modality_cue:T139 Polarity_cue:T140
+A3	Polarity E19 Negative
+A4	Modality E19 Other
+T59	Financial_attribute 2767 2773	prices
+T60	Commodity 2763 2766	oil
+T61	Cause-movement-down-loss 2929 2932	cut
+E20	Cause-movement-down-loss:T61 Attribute:T62
+T62	Financial_attribute 2941 2947	prices
+T64	Price_unit 3183 3201	below $88 a barrel
+T65	Commodity 3160 3175	Brent crude oil
+T66	DATE 3205 3211	Monday
+T67	Oversupply 3323 3327	glut
+E22	Oversupply:T67 Item:T68
+T68	Commodity 3319 3322	oil
+T69	Movement-down-loss 3643 3651	collapse
+E23	Movement-down-loss:T69 Attribute:T70 Polarity_cue:T148 Modality_cue:T149
+T70	Financial_attribute 3637 3642	price
+T71	Movement-down-loss 3731 3735	drop
+E24	Movement-down-loss:T71 Supplier_Consumer:T72 Type:T73 Attribute:T74
+T72	COUNTRY 3739 3743	U.S.
+T73	NATIONALITY 3748 3756	European
+T74	Financial_attribute 3757 3768	consumption
+T76	Financial_attribute 3835 3841	demand
+T77	LOCATION 3847 3851	Asia
+T78	Oversupply 3974 3984	oversupply
+E26	Oversupply:T78 Modality_cue:T157
+T79	Grow-strong 4088 4092	rise
+E27	Grow-strong:T79 Supplier_Consumer:T80
+T80	COUNTRY 4096 4101	China
+T81	Grow-strong 4132 4136	boom
+E28	Grow-strong:T81 Attribute:T82 Duration:T83
+T82	Financial_attribute 4126 4131	price
+T83	DURATION 4114 4125	decade-long
+T84	ORGANIZATION 4208 4212	OPEC
+T85	Cause-movement-down-loss 4228 4231	cut
+E29	Cause-movement-down-loss:T85 Supplier_Consumer:T84 Item:T86 Attribute:T87 Modality_cue:T155 Polarity_cue:T156
+T86	Commodity 4232 4235	oil
+T87	Financial_attribute 4236 4246	production
+A5	Polarity E29 Negative
+A6	Modality E29 Other
+T88	Cause-movement-up-gain 4263 4270	prop up
+E30	Cause-movement-up-gain:T88 Attribute:T89
+T89	Financial_attribute 4271 4277	prices
+T90	Financial_attribute 4674 4680	output
+T91	Cause-movement-down-loss 4681 4685	cuts
+E31	Cause-movement-down-loss:T91 Attribute:T90
+T92	COUNTRY 4734 4738	Iran
+T93	COUNTRY 4743 4747	Iraq
+T94	Geopolitical-tension 4786 4789	war
+E32	Geopolitical-tension:T94 Impacted_countries:T93 Impacted_countries2:T92
+T95	Geopolitical-tension 4894 4897	War
+E33	Geopolitical-tension:T95 Place:T97 Reference_point_time:T96
+T96	DATE 4911 4916	1990s
+T97	LOCATION 4889 4893	Gulf
+T98	Movement-up-gain 5236 5245	increased
+E34	Movement-up-gain:T98 Supplier_Consumer:T100 Attribute:T99
+T99	Financial_attribute 5246 5256	production
+T100	Group 5231 5235	they
+T101	Movement-down-loss 5274 5278	down
+E35	Movement-down-loss:T101 Attribute:T102
+T102	Financial_attribute 5267 5273	prices
+T103	Movement-down-loss 5591 5598	falling
+E36	Movement-down-loss:T103 Attribute:T104
+T104	Financial_attribute 5599 5605	prices
+T105	Movement-down-loss 5707 5711	down
+E37	Movement-down-loss:T105 Attribute:T106 Modality_cue:T166
+T106	Financial_attribute 5693 5699	prices
+A7	Polarity E37 Positive
+A8	Modality E37 Other
+T107	Movement-down-loss 1843 1848	slump
+E38	Movement-down-loss:T107 
+T108	Cause-movement-down-loss 3301 3305	curb
+E39	Cause-movement-down-loss:T108 Polarity_cue:T143
+A9	Polarity E39 Positive
+A10	Modality E39 Asserted
+T109	Movement-down-loss 5053 5057	down
+E40	Movement-down-loss:T109 Attribute:T110 Final_value:T111
+T110	Financial_attribute 5046 5052	prices
+T111	Price_unit 5061 5073	$10 a barrel
+T112	Movement-down-loss 2044 2049	slump
+E41	Movement-down-loss:T112 Item:T113
+T113	Economic_item 2053 2060	markets
+T115	STATE_OR_PROVINCE 3798 3807	North Sea
+T114	Grow-strong 3786 3790	rise
+E42	Grow-strong:T114 Supplier_Consumer:T115
+T63	Movement-down-loss 3176 3182	dipped
+E21	Movement-down-loss:T63 Item:T65 Difference:T64 Reference_point_time:T66
+T75	Movement-down-loss 66 71	slide
+E25	Movement-down-loss:T75 Polarity_cue:T117 Attribute:T116 Type:T118
+T116	Financial_attribute 60 65	price
+T117	POLARITY_cue 55 59	halt
+A11	Polarity E25 Negative
+T118	NATIONALITY 24 30	Saudis
+T119	Oversupply 18 22	glut
+E43	Oversupply:T119 Item:T120
+T120	Commodity 14 17	oil
+T121	Commodity 580 585	crude
+T122	Economic_item 586 592	market
+T123	Economic_item 1021 1027	market
+T124	LOCATION 1014 1020	global
+T125	Commodity 1327 1332	crude
+T126	Financial_attribute 1417 1423	prices
+T127	Financial_attribute 1497 1504	futures
+T128	Economic_item 1505 1511	market
+A12	Modality E16 Other
+T129	MODALITY_cue 2177 2180	try
+T130	Economic_item 2321 2327	market
+T131	Commodity 2469 2472	oil
+T132	Economic_item 2473 2479	market
+T133	Movement-down-loss 2618 2623	lower
+E44	Movement-down-loss:T133 Attribute:T134
+T134	Financial_attribute 2624 2630	prices
+T135	Position-low 2644 2647	low
+E45	Position-low:T135 Modality_cue:T137 Final_value:T136
+T136	Price_unit 2651 2663	$80 a barrel
+T137	MODALITY_cue 2633 2640	perhaps
+A13	Modality E45 Other
+T138	Economic_item 2685 2691	market
+T139	MODALITY_cue 2748 2754	trying
+T140	POLARITY_cue 2744 2747	not
+T141	Commodity 2783 2786	oil
+T142	Movement-up-gain 2104 2112	recovery
+E46	Movement-up-gain:T142 
+T143	POLARITY_cue 3289 3297	no hurry
+T144	Position-low 3217 3223	lowest
+E47	Position-low:T144 Duration:T145
+T145	DURATION 3234 3244	four years
+T146	Economic_item 3542 3550	economic
+T147	Economic_item 3591 3597	growth
+T148	POLARITY_cue 3627 3634	preempt
+A14	Polarity E23 Negative
+A15	Modality E23 Other
+T149	MODALITY_cue 3618 3623	wants
+T150	Economic_item 3871 3877	growth
+T153	Economic_item 3933 3939	market
+T154	Commodity 3929 3932	oil
+T155	MODALITY_cue 4218 4224	likely
+T156	POLARITY_cue 4216 4218	un
+T157	MODALITY_cue 3940 3951	potentially
+A16	Modality E26 Other
+T158	Commodity 4416 4419	oil
+T159	Economic_item 5024 5030	market
+T160	Economic_item 5111 5117	market
+T161	Financial_attribute 5140 5146	prices
+T162	Grow-strong 5156 5163	recover
+E48	Grow-strong:T162 Attribute:T161 Duration:T163
+T163	DURATION 5127 5135	16 years
+T164	Commodity 5554 5563	crude oil
+T165	Financial_attribute 5564 5572	reserves
+T166	MODALITY_cue 5689 5692	let
+T167	trade-financial-tension 5842 5851	price war
+E49	trade-financial-tension:T167 
+T151	Commodity 3881 3895	U.S. shale oil

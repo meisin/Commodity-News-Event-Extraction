@@ -1,0 +1,59 @@
+T1	Movement-up-gain 234 238	rise
+E1	Movement-up-gain:T1 Attribute:T2 Item:T3
+T2	Financial_attribute 227 233	prices
+T3	Commodity 217 226	Crude oil
+T4	Grow-strong 273 280	healthy
+E2	Grow-strong:T4 Type:T5 Item:T43 Modality_cue:T6
+T5	LOCATION 281 286	world
+T7	Cause-movement-down-loss 338 343	curbs
+E3	Cause-movement-down-loss:T7 Attribute:T8
+T8	Financial_attribute 327 337	production
+T9	LOCATION 460 465	world
+T10	Economic_item 466 481	economic growth
+T11	PERCENTAGE 485 489	3.9%
+T13	Movement-up-gain 514 516	up
+E4	Movement-up-gain:T13 Difference:T11 Item:T10 Type:T9 Supplier_Consumer:T14 Initial_value:T15 Initial_reference_point:T28 Reference_point_time:T29 Reference_point_time2:T12 Forecast:T27 Forecaster:T45
+T14	ORGANIZATION 522 525	its
+T15	PERCENTAGE 526 530	3.7%
+T16	Cause-movement-down-loss 940 948	drawdown
+E5	Cause-movement-down-loss:T16 Supplier_Consumer:T18 Attribute:T17 Modality_cue:T37
+T17	Financial_attribute 957 967	stockpiles
+T18	COUNTRY 952 956	U.S.
+A1	Polarity E5 Positive
+A2	Modality E5 Other
+T19	Grow-strong 30 38	stronger
+E6	Grow-strong:T19 Item:T20
+T20	Economic_item 43 66	economic growth outlook
+T21	MONEY 20 23	$70
+T22	Commodity 3 14	Brent crude
+T23	Position-high 256 261	highs
+E7	Position-high:T23 Duration:T24
+T24	DURATION 246 255	multiyear
+T26	Commodity 381 386	Brent
+T27	Forecast_target 447 455	forecast
+T28	DATE 561 568	October
+T12	DATE 499 503	2018
+T29	DATE 508 512	2019
+T30	Commodity 642 645	oil
+T31	Economic_item 646 652	market
+T32	Financial_attribute 618 624	demand
+T33	LOCATION 734 740	global
+T34	Financial_attribute 745 751	demand
+T35	Commodity 741 744	oil
+T36	Financial_attribute 756 773	oil-demand growth
+T37	MODALITY_cue 910 918	expected
+T38	MODALITY_cue 1104 1109	could
+T39	Cause-movement-down-loss 1132 1136	cuts
+E8	Cause-movement-down-loss:T39 Modality_cue:T38 Reference_point_time:T40 Attribute:T46
+T40	DATE 1144 1148	2018
+A3	Modality E8 Other
+T41	Grow-strong 613 617	rosy
+E9	Grow-strong:T41 Attribute:T32 Modality_cue:T42
+T42	MODALITY_cue 625 634	prospects
+T6	MODALITY_cue 303 312	prospects
+T43	Economic_item 287 302	economic growth
+A4	Modality E2 Other
+T44	Forecast_target 866 875	estimates
+T45	ORGANIZATION 412 415	IMF
+T46	Financial_attribute 1121 1131	production
+T25	Commodity 345 359	U.S. WTI crude

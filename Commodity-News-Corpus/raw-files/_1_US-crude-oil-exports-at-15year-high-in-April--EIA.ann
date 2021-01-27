@@ -1,0 +1,43 @@
+T1	Movement-up-gain 485 494	increased
+E1	Movement-up-gain:T1 Attribute:T2 Reference_point_time:T3 Difference:T20 Duration:T32
+T2	Financial_attribute 472 479	Exports
+T3	DATE 522 526	2013
+T4	Movement-up-gain 706 712	rising
+E2	Movement-up-gain:T4 Supplier_Consumer:T24 Item:T23 Attribute:T22
+T5	Embargo 824 831	embargo
+E3	Embargo:T5 Item:T11 Imposee:T12 Reference_point_time:T13
+T6	Prohibiting 747 753	banned
+E4	Prohibiting:T6 Imposer:T7 Imposee:T10 Item:T9 Attribute:T8
+T7	ORGANIZATION 738 746	Congress
+T8	Financial_attribute 774 781	exports
+T9	Commodity 764 773	crude oil
+T10	COUNTRY 759 763	U.S.
+T11	Commodity 820 823	oil
+T12	Group 815 819	Arab
+T13	DATE 810 814	1973
+T21	Movement-up-gain 663 671	increase
+E6	Movement-up-gain:T21 
+T22	Financial_attribute 724 734	production
+T23	Commodity 718 723	crude
+T24	COUNTRY 713 717	U.S.
+T14	Position-high 37 41	high
+E5	Position-high:T14 Duration:T15 Reference_point_time:T16 Attribute:T17 Item:T18 Supplier_Consumer:T19
+T15	DURATION 29 36	15-year
+T16	DATE 45 50	April
+T17	Financial_attribute 18 25	exports
+T18	Commodity 8 17	crude oil
+T19	COUNTRY 3 7	U.S.
+T25	Financial_attribute 268 275	exports
+T26	Commodity 258 267	Crude oil
+T27	COUNTRY 285 298	United States
+T28	Production_unit 304 327	268,000 barrels per day
+T29	DATE 331 336	April
+T30	Position-high 342 349	highest
+E7	Position-high:T30 Duration:T31
+T31	DURATION 353 361	15 years
+T20	Production_unit 536 556	exceeded 200,000 bpd
+T32	DURATION 560 587	five of the past six months
+T33	Commodity 892 895	oil
+T34	Financial_attribute 916 923	exports
+T35	Financial_attribute 952 957	sales
+T36	Financial_attribute 1191 1198	exports

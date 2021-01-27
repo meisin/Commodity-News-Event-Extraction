@@ -1,0 +1,110 @@
+T2	Price_unit 336 355	above $108 a barrel
+T5	DATE 359 365	Friday
+T6	Civil-unrest 370 378	fighting
+E2	Civil-unrest:T6 Place:T7
+T7	COUNTRY 382 389	Ukraine
+T1	Commodity 291 306	Brent crude oil
+T3	Movement-up-gain 323 330	jumping
+E1	Movement-up-gain:T3 Item:T1 Final_value:T2 Reference_point_time:T5
+T4	Geopolitical-tension 394 417	deteriorating relations
+E3	Geopolitical-tension:T4 Impacted_countries:T8 Impacted_countries2:T9
+T8	COUNTRY 426 432	Russia
+T9	COUNTRY 441 454	United States
+T10	Cause-movement-down-loss 483 494	disruptions
+E4	Cause-movement-down-loss:T10 Attribute:T11 Modality_cue:T59
+T11	Financial_attribute 476 482	supply
+T12	Civil-unrest 708 716	fighting
+E5	Civil-unrest:T12 Place:T13 Place2:T14
+T13	STATE_OR_PROVINCE 700 704	Kiev
+T14	Group 717 740	pro-Russian separatists
+T15	Movement-up-gain 877 882	gains
+E6	Movement-up-gain:T15 Difference:T17 Item:T16
+T16	Commodity 861 866	Brent
+T17	MONEY 886 893	over $1
+T18	Movement-up-gain 1199 1203	rose
+E7	Movement-up-gain:T18 Difference:T19 Initial_value:T22 Item:T20 Contract_date:T54 Final_value:T21
+T19	MONEY 1204 1212	81 cents
+T20	Commodity 1164 1175	Brent crude
+T21	Price_unit 1216 1232	$107.89 a barrel
+T22	MONEY 1291 1298	$108.20
+T25	Movement-up-gain 1335 1339	rose
+E8	Movement-up-gain:T25 Difference:T26 Final_value:T27 Contract_date:T55 Item:T23
+T26	MONEY 1340 1347	2 cents
+T27	Price_unit 1351 1367	$102.09 a barrel
+T28	Movement-down-loss 1375 1382	falling
+E9	Movement-down-loss:T28 Final_value:T29
+T29	Price_unit 1393 1406	$101 a barrel
+T30	Movement-up-gain 1445 1451	rising
+E10	Movement-up-gain:T30 Attribute:T31
+T31	Financial_attribute 1432 1438	Prices
+T32	Embargo 1765 1774	sanctions
+E11	Embargo:T32 Imposer:T33 Modality_cue:T71
+T33	COUNTRY 1760 1764	U.S.
+T34	Crisis 1989 1995	crisis
+E12	Crisis:T34 Place:T35
+T35	COUNTRY 1999 2006	Ukraine
+T36	ORGANIZATION 2211 2225	European Union
+T37	Embargo 2248 2257	sanctions
+E13	Embargo:T37 Imposee:T38 Imposer:T36
+T38	COUNTRY 2261 2267	Russia
+T39	Civil-unrest 2281 2289	violence
+E14	Civil-unrest:T39 Place:T40 Place2:T41
+T40	COUNTRY 2293 2298	Libya
+T41	COUNTRY 2303 2309	Israel
+T42	COUNTRY 2356 2361	Libya
+T43	Financial_attribute 2367 2377	production
+T44	Commodity 2363 2366	oil
+T45	Movement-up-gain 2382 2387	risen
+E15	Movement-up-gain:T45 Attribute:T43 Item:T44 Supplier_Consumer:T42 Final_value:T46
+T46	Production_unit 2391 2414	500,000 barrels per day
+T47	Financial_attribute 2946 2957	inventories
+T48	Commodity 2942 2945	Oil
+T49	STATE_OR_PROVINCE 2961 2968	Cushing
+T50	Movement-down-loss 3015 3019	fell
+E16	Movement-down-loss:T50 Supplier_Consumer:T49 Attribute:T47 Item:T48 Difference:T51 Reference_point_time:T52
+T51	Quantity 3020 3043	another 163,000 barrels
+T52	DATE 3049 3073	the four days to July 22
+T53	Movement-up-gain 790 800	rebounding
+E17	Movement-up-gain:T53 Item:T63 Item2:T62
+T54	DATE 1180 1189	September
+T55	DATE 1316 1325	September
+T56	Movement-up-gain 7 12	rises
+E18	Movement-up-gain:T56 Final_value:T58 Item:T57
+T57	Commodity 3 6	Oil
+T58	MONEY 13 23	above $108
+T59	MODALITY_cue 467 472	fears
+A1	Modality E4 Other
+T60	Economic_item 502 508	market
+T61	Movement-down-loss 607 611	fell
+E19	Movement-down-loss:T61 
+T62	Economic_item 818 824	market
+T63	Commodity 814 817	oil
+T65	Economic_item 1070 1078	economic
+T66	Position-high 1283 1287	high
+E20	Position-high:T66 Duration:T67
+T67	DURATION 1274 1282	intraday
+T68	Position-low 1386 1389	low
+E21	Position-low:T68 
+T69	Commodity 1678 1681	oil
+T70	Commodity 1702 1705	gas
+T71	MODALITY_cue 1731 1742	speculation
+A2	Modality E11 Other
+T72	Commodity 2339 2342	oil
+T73	Financial_attribute 2343 2349	prices
+T75	Financial_attribute 3004 3013	contracts
+T77	Financial_attribute 2742 2748	prices
+T78	Commodity 2738 2741	Oil
+T79	Commodity 2464 2467	oil
+T80	Economic_item 2833 2841	economic
+T81	Grow-strong 2842 2850	recovery
+E22	Grow-strong:T81 Item:T80
+T82	Position-low 2913 2919	lowest
+E23	Position-low:T82 Reference_point_time:T83
+T83	DATE 2926 2939	February 2006
+T85	Financial_attribute 65 71	supply
+T84	Commodity 991 997	energy
+T74	Commodity 2993 3003	U.S. crude
+T64	Commodity 898 908	U.S. crude
+T76	Movement-up-gain 909 925	turning positive
+E24	Movement-up-gain:T76 Item:T64
+T23	Commodity 1301 1311	U.S. crude

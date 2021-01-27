@@ -1,0 +1,377 @@
+T1	Movement-up-gain 20 22	up
+E1	Movement-up-gain:T1 Attribute:T3 Item:T4 Difference:T2 Reference_point_time:T5
+T2	PERCENTAGE 23 42	more than 4 percent
+T3	Financial_attribute 6 12	prices
+T4	Commodity 0 5	Crude
+T5	DATE 46 54	Thursday
+T6	Civil-unrest 65 73	violence
+E2	Civil-unrest:T6 Place:T7
+T7	COUNTRY 86 91	Libya
+T8	Commodity 107 110	oil
+T9	Financial_attribute 111 117	demand
+T11	Financial_attribute 181 187	output
+T12	Commodity 177 180	oil
+T13	DATE 191 195	2016
+T14	PERCENTAGE 204 220	only 2.2 percent
+T15	LOCATION 168 176	domestic
+T10	Cause-movement-up-gain 98 103	boost
+E3	Cause-movement-up-gain:T10 Item:T8 Attribute:T9
+T16	Grow-strong 199 203	grow
+E4	Grow-strong:T16 Item:T12 Attribute:T11 Initial_reference_point:T13 Final_value:T14 Type:T15 Modality_cue:T242
+T17	Movement-up-gain 360 365	risen
+E5	Movement-up-gain:T17 Item:T18 Attribute:T19
+T18	Commodity 352 355	oil
+T20	Quantity 389 415	nearly 1.8 billion gallons
+T21	DATE 419 423	2013
+T22	Quantity 429 448	1.1 billion gallons
+T23	DATE 452 456	2012
+T19	Financial_attribute 338 348	Production
+T24	Civil-unrest 635 643	fighting
+E6	Civil-unrest:T24 Place:T25
+T25	COUNTRY 647 651	Iraq
+T27	Financial_attribute 664 670	output
+T28	COUNTRY 676 682	Angola
+T29	ORGANIZATION 502 506	OPEC
+T26	Cause-movement-down-loss 656 663	reduced
+E7	Cause-movement-down-loss:T26 Attribute:T27 Supplier_Consumer:T28
+T30	Commodity 509 512	oil
+T31	Financial_attribute 513 523	production
+T32	Movement-up-gain 524 528	rose
+E8	Movement-up-gain:T32 Attribute:T31 Item:T30 Reference_point_time:T33 Initial_reference_point:T34 Supplier_Consumer:T29
+T33	DATE 532 536	July
+T34	DATE 542 546	June
+T35	Grow-strong 598 606	recovery
+E9	Grow-strong:T35 Attribute:T36 Type:T37
+T36	Financial_attribute 617 623	supply
+T37	NATIONALITY 610 616	Libyan
+T39	Movement-down-loss 701 710	collapsed
+E10	Movement-down-loss:T39 Attribute:T40 Item:T41
+T40	Financial_attribute 689 695	prices
+T41	Commodity 685 688	Oil
+T42	Oversupply 838 842	glut
+E11	Oversupply:T42 Place:T43
+T43	LOCATION 831 837	global
+T46	Financial_attribute 874 880	output
+T47	Financial_attribute 896 909	demand growth
+T48	Slow-weak 885 895	diminished
+E13	Slow-weak:T48 Attribute:T47 Supplier_Consumer:T49
+T49	COUNTRY 915 920	China
+T50	Oversupply 1001 1005	glut
+E14	Oversupply:T50 Place:T51 Item:T55
+T51	LOCATION 994 1000	global
+T38	Movement-down-loss 934 938	fell
+E15	Movement-down-loss:T38 Attribute:T52 Item:T53 Reference_point_time:T54
+T52	Financial_attribute 927 933	prices
+T53	Commodity 923 926	Oil
+T54	DATE 942 951	Wednesday
+T55	Commodity 1009 1014	crude
+T56	Civil-unrest 1193 1201	violence
+E16	Civil-unrest:T56 Place:T57 Place2:T58
+T57	LOCATION 1209 1220	Middle East
+T58	LOCATION 1225 1237	North Africa
+T59	Movement-up-gain 1030 1034	rose
+E17	Movement-up-gain:T59 Item:T61 Final_value:T60 Reference_point_time:T62
+T60	Price_unit 1038 1051	$105 a barrel
+T61	Commodity 1018 1029	Brent crude
+T62	DATE 1055 1061	Monday
+T63	Oversupply 1149 1159	oversupply
+E18	Oversupply:T63 Place:T64
+T64	LOCATION 1142 1148	global
+T68	Price_unit 1267 1287	around $110 a barrel
+T69	DATE 1291 1298	Tuesday
+T70	Financial_attribute 1320 1326	supply
+T71	Slow-weak 1314 1319	tight
+E20	Slow-weak:T71 Attribute:T70
+T65	Movement-up-gain 1256 1263	climbed
+E19	Movement-up-gain:T65 Item:T66 Difference:T68 Reference_point_time:T69
+T66	Commodity 1240 1255	Brent crude oil
+T72	Financial_attribute 1338 1351	demand growth
+T73	Group 1357 1387	the world 's top oil consumers
+T74	COUNTRY 1393 1406	United States
+T75	COUNTRY 1411 1416	China
+T67	Grow-strong 1331 1337	strong
+E21	Grow-strong:T67 Attribute:T72 Supplier_Consumer:T73 Supplier_Consumer2:T74 Supplier_Consumer3:T75
+T76	Movement-up-gain 1425 1432	soaring
+E22	Movement-up-gain:T76 Final_value:T77 Reference_point_time:T78
+T77	Price_unit 1433 1451	above $19 a barrel
+T78	DATE 1455 1462	Tuesday
+T79	Financial_attribute 1468 1474	prices
+T80	Commodity 1464 1467	oil
+T81	Movement-down-loss 1475 1479	fell
+E23	Movement-down-loss:T81 Attribute:T79 Item:T80 Reference_point_time:T82 Final_value:T83
+T82	DATE 1485 1495	last night
+T83	MONEY 1499 1505	$18.84
+T86	Financial_attribute 1564 1574	production
+T87	DATE 1575 1585	next month
+T88	Civil-unrest 1708 1716	violence
+E25	Civil-unrest:T88 Place:T89
+T89	COUNTRY 1720 1724	Iraq
+T90	Cause-movement-down-loss 1731 1738	disrupt
+E26	Cause-movement-down-loss:T90 Attribute:T91 Modality_cue:T234
+T91	Financial_attribute 1739 1747	supplies
+T92	Movement-up-gain 1599 1603	rose
+E27	Movement-up-gain:T92 Attribute:T94 Item:T95 Reference_point_time:T93
+T93	DATE 1615 1623	Thursday
+T94	Financial_attribute 1592 1598	prices
+T95	Commodity 1588 1591	Oil
+T96	Commodity 1629 1640	Brent crude
+T97	Movement-up-gain 1641 1649	climbing
+E28	Movement-up-gain:T97 Item:T96 Final_value:T98 Initial_reference_point:T99
+T98	MONEY 1650 1660	above $112
+T99	DATE 1686 1691	March
+T100	Civil-unrest 1782 1792	insurgency
+E29	Civil-unrest:T100 Place:T101
+T101	COUNTRY 1796 1800	Iraq
+T102	Cause-movement-down-loss 1883 1890	disrupt
+E30	Cause-movement-down-loss:T102 Item:T103 Attribute:T104 Modality_cue:T251
+T103	Commodity 1891 1894	oil
+T104	Financial_attribute 1895 1901	supply
+T106	Commodity 1958 1961	oil
+T107	Financial_attribute 1962 1970	supplies
+T108	Geopolitical-tension 2075 2083	tensions
+E32	Geopolitical-tension:T108 Impacted_countries:T109 Impacted_countries2:T110
+T109	LOCATION 2091 2102	Middle East
+T110	COUNTRY 2117 2122	Yemen
+T111	Movement-up-gain 1991 1995	rose
+E33	Movement-up-gain:T111 Reference_point_time:T112 Attribute:T116 Item:T117
+T112	DATE 1999 2006	Tuesday
+T115	Financial_attribute 2036 2046	production
+T116	Financial_attribute 1983 1990	futures
+T117	Commodity 1973 1982	Crude oil
+T118	Movement-down-loss 2160 2167	falling
+E35	Movement-down-loss:T118 Attribute:T119 Item:T121 Type:T122 Initial_reference_point:T123 Final_value:T124 Reference_point_time:T125
+T119	Financial_attribute 2140 2150	production
+T113	Commodity 2032 2035	oil
+T114	COUNTRY 2027 2031	U.S.
+T120	Movement-down-loss 2019 2026	falling
+E34	Movement-down-loss:T120 Item:T113 Attribute:T115 Supplier_Consumer:T114
+T121	Commodity 2136 2139	oil
+T122	NATIONALITY 2125 2135	Venezuelan
+T123	DATE 2171 2187	the recent years
+T124	Production_unit 2203 2237	around 1.7 million barrels per day
+T125	DATE 2241 2249	December
+T126	PERCENTAGE 2297 2309	0.1 per cent
+T127	Financial_attribute 2285 2291	output
+T128	DATE 2313 2331	the fourth quarter
+T129	Movement-down-loss 2292 2296	fell
+E36	Movement-down-loss:T129 Attribute:T127 Difference:T126 Reference_point_time:T128
+T131	PERCENTAGE 2452 2463	12 per cent
+T132	Financial_attribute 2437 2443	output
+T130	Movement-down-loss 2444 2448	fell
+E37	Movement-down-loss:T130 Difference:T131 Attribute:T132 Reference_point_time:T134 Initial_reference_point:T133
+T133	DATE 2424 2428	1974
+T134	DATE 2432 2436	1975
+T135	Cause-movement-down-loss 2530 2539	reduction
+E38	Cause-movement-down-loss:T135 Attribute:T136 Difference:T137
+T136	Financial_attribute 2543 2549	output
+T137	PERCENTAGE 2553 2577	no less than 17 per cent
+T138	Movement-down-loss 2639 2646	falling
+E39	Movement-down-loss:T138 Reference_point_time:T142 Attribute:T141 Item:T140 Type:T139
+T139	NATIONALITY 2604 2614	Venezuelan
+T140	Commodity 2615 2618	oil
+T141	Financial_attribute 2619 2629	production
+T142	DATE 2658 2662	2014
+T143	Production_unit 2792 2817	more than 2.5 million bpd
+T144	Cause-movement-down-loss 2785 2788	cut
+E40	Cause-movement-down-loss:T144 Difference:T143 Attribute:T145
+T145	Financial_attribute 2778 2784	supply
+T146	COUNTRY 2867 2879	Saudi Arabia
+T147	Cause-movement-down-loss 2894 2901	reduced
+E41	Cause-movement-down-loss:T147 Attribute:T148 Supplier_Consumer:T146
+T148	Financial_attribute 2902 2908	supply
+T149	ORGANIZATION 2955 2959	U.S.
+T150	Embargo 2960 2969	sanctions
+E42	Embargo:T150 Imposee:T151 Imposee2:T152 Imposer:T149
+T151	COUNTRY 2998 3007	Venezuela
+T152	COUNTRY 3012 3016	Iran
+T153	Embargo 3027 3036	sanctions
+E43	Embargo:T153 Imposee:T155 Imposer:T154
+T154	Group 3019 3026	Western
+T155	COUNTRY 3040 3044	Iran
+T157	Group 3074 3087	oil producers
+T156	Civil-unrest 3049 3056	turmoil
+E44	Civil-unrest:T156 Place:T157
+T158	Financial_attribute 3106 3112	supply
+T159	Cause-movement-down-loss 3098 3105	reduced
+E45	Cause-movement-down-loss:T159 Attribute:T158
+T161	DATE 3197 3204	Tuesday
+T162	Financial_attribute 3172 3178	prices
+T163	Commodity 3168 3171	Oil
+T164	Movement-down-loss 3324 3328	drop
+E47	Movement-down-loss:T164 Attribute:T165 Type:T166 Modality_cue:T235
+T165	Financial_attribute 3310 3318	supplies
+T166	LOCATION 3303 3309	global
+T167	STATE_OR_PROVINCE 3336 3346	Washington
+T168	Embargo 3349 3358	sanctions
+E48	Embargo:T168 Imposee:T169 Imposer:T167
+T169	COUNTRY 3362 3366	Iran
+T170	Financial_attribute 3381 3388	exports
+T171	COUNTRY 3369 3378	Venezuela
+T172	Movement-down-loss 3405 3412	dropped
+E49	Movement-down-loss:T172 Final_value:T173 Attribute:T170 Supplier_Consumer:T171 Item:T259 Item2:T260
+T173	Production_unit 3416 3439	920,000 barrels per day
+T174	Financial_attribute 3492 3502	production
+T175	Cause-movement-down-loss 3503 3507	cuts
+E50	Cause-movement-down-loss:T175 Attribute:T174 Supplier_Consumer:T176 Supplier_Consumer2:T177
+T176	COUNTRY 3513 3519	Canada
+T177	COUNTRY 3523 3530	Nigeria
+T178	Oversupply 3541 3545	glut
+E51	Oversupply:T178 Polarity_cue:T241
+A1	Polarity E51 Negative
+T179	ORGANIZATION 3599 3603	OPEC
+T180	Cause-movement-down-loss 3606 3609	cut
+E52	Cause-movement-down-loss:T180 Difference:T181 Supplier_Consumer:T179
+T181	Production_unit 3613 3624	800,000 bpd
+T182	Embargo 3701 3710	sanctions
+E53	Embargo:T182 
+T183	Cause-movement-down-loss 3746 3750	cuts
+E54	Cause-movement-down-loss:T183 Attribute:T184 Supplier_Consumer:T185
+T184	Financial_attribute 3739 3745	supply
+T185	ORGANIZATION 3765 3814	Organization of the Petroleum Exporting Countries
+T186	Financial_attribute 3928 3934	prices
+T190	DATE 3952 3959	Tuesday
+T191	Cause-movement-down-loss 3970 3981	disruptions
+E56	Cause-movement-down-loss:T191 Attribute:T192
+T192	Financial_attribute 3963 3969	supply
+T193	Civil-unrest 3993 4002	conflicts
+E57	Civil-unrest:T193 Place:T194 Place2:T195
+T194	COUNTRY 4006 4010	Iraq
+T195	COUNTRY 4015 4022	Ukraine
+T196	PERCENTAGE 4034 4043	5 percent
+T197	DATE 4081 4087	Monday
+T198	Movement-down-loss 4029 4033	fell
+E58	Movement-down-loss:T198 Difference:T196 Reference_point_time:T197 Item:T199
+T199	Commodity 4025 4028	Oil
+T200	Movement-down-loss 4180 4184	fall
+E59	Movement-down-loss:T200 Attribute:T201 Modality_cue:T263
+T201	Financial_attribute 4167 4173	prices
+A3	Polarity E59 Positive
+A4	Modality E59 Other
+T202	Cause-movement-down-loss 4234 4241	cutting
+E60	Cause-movement-down-loss:T202 Attribute:T203 Supplier_Consumer:T204 Polarity_cue:T264
+T203	Financial_attribute 4242 4248	output
+T204	Group 4197 4215	Gulf oil producers
+A5	Polarity E60 Negative
+A6	Modality E60 Asserted
+T205	Movement-down-loss 4264 4271	plunged
+E61	Movement-down-loss:T205 Attribute:T206 Item:T207 Reference_point_time:T208
+T206	Financial_attribute 4257 4263	prices
+T207	Commodity 4251 4256	Crude
+T208	DATE 4283 4289	Monday
+T209	ORGANIZATION 4317 4319	it
+T187	Commodity 3918 3927	Crude oil
+T188	Cause-movement-down-loss 4329 4332	cut
+E55	Cause-movement-down-loss:T188 Item:T189 Attribute:T210 Supplier_Consumer:T209 Polarity_cue:T265 Modality_cue:T266
+A7	Polarity E55 Negative
+A8	Modality E55 Other
+T189	Commodity 4333 4336	oil
+T210	Financial_attribute 4337 4343	output
+T211	Oversupply 4363 4367	glut
+E62	Oversupply:T211 Modality_cue:T267
+T212	Financial_attribute 4476 4483	futures
+T215	DATE 4507 4513	Friday
+T217	Commodity 4585 4590	crude
+T218	Financial_attribute 4591 4602	inventories
+T219	Movement-up-gain 4676 4681	build
+E64	Movement-up-gain:T219 Attribute:T220
+T220	Financial_attribute 4669 4675	supply
+T216	Movement-down-loss 4577 4581	fall
+E65	Movement-down-loss:T216 Item:T217 Attribute:T218
+T213	Commodity 4472 4475	oil
+T214	COUNTRY 4467 4471	U.S.
+T221	Movement-up-gain 4500 4506	higher
+E63	Movement-up-gain:T221 Reference_point_time:T215 Attribute:T212 Item:T213 Supplier_Consumer:T214
+T224	Financial_attribute 4740 4750	production
+T225	Financial_attribute 4819 4829	production
+T226	Movement-up-gain 4830 4836	surged
+E67	Movement-up-gain:T226 Reference_point_time:T227 Attribute:T225 Item:T228 Supplier_Consumer:T229
+T227	DATE 4860 4867	October
+T228	Commodity 4815 4818	oil
+T229	COUNTRY 4810 4814	U.S.
+A13	Polarity E4 Positive
+A14	Modality E4 Other
+T230	Movement-up-gain 3935 3939	rose
+E68	Movement-up-gain:T230 Reference_point_time:T190 Attribute:T186 Item:T187
+A15	Polarity E47 Positive
+A16	Modality E47 Other
+A17	Polarity E26 Positive
+A18	Modality E26 Other
+T222	ORGANIZATION 4709 4719	ExxonMobil
+T223	Cause-movement-up-gain 4729 4735	triple
+E66	Cause-movement-up-gain:T223 Attribute:T224 Supplier_Consumer:T222 Modality_cue:T269
+A9	Polarity E66 Positive
+A10	Modality E66 Other
+T85	COUNTRY 1547 1549	it
+T84	Cause-movement-down-loss 1556 1559	cut
+E24	Cause-movement-down-loss:T84 Supplier_Consumer:T85 Attribute:T86 Reference_point_time:T87 Modality_cue:T250
+T44	Grow-strong 853 862	expanding
+E12	Grow-strong:T44 Attribute:T46 Item:T45
+T232	Negative_sentiment 1695 1702	worries
+E69	Negative_sentiment:T232 
+T233	Negative_sentiment 1128 1135	worries
+E70	Negative_sentiment:T233 
+T234	MODALITY_cue 1725 1730	could
+T235	MODALITY_cue 3319 3323	will
+T236	Negative_sentiment 3290 3297	worries
+E71	Negative_sentiment:T236 
+T237	Position-high 3281 3286	highs
+E72	Position-high:T237 Duration:T238
+T238	DURATION 3271 3280	four-year
+T239	Negative_sentiment 1178 1186	concerns
+E73	Negative_sentiment:T239 
+T240	Negative_sentiment 1750 1758	Concerns
+E74	Negative_sentiment:T240 
+T241	POLARITY_cue 3531 3536	eased
+T160	Movement-down-loss 3179 3184	drops
+E46	Movement-down-loss:T160 Reference_point_time:T161 Attribute:T162 Item:T163
+T242	MODALITY_cue 160 166	expect
+T243	Grow-strong 331 335	boom
+E75	Grow-strong:T243 Item:T244 Duration:T245 Supplier_Consumer:T246 Polarity_cue:T247
+T244	Commodity 325 330	shale
+T245	DURATION 315 324	five-year
+T246	COUNTRY 301 312	the country
+T247	POLARITY_cue 282 297	puts the brakes
+A2	Polarity E75 Negative
+T248	Position-low 1090 1093	low
+E76	Position-low:T248 Duration:T249
+T249	DURATION 1079 1089	four-month
+A19	Modality E24 Other
+T250	MODALITY_cue 1550 1555	would
+A20	Modality E30 Other
+T251	MODALITY_cue 1870 1879	potential
+T253	Slow-weak 2048 2056	weakness
+E77	Slow-weak:T253 Item:T254
+T254	Economic_item 2064 2070	dollar
+T255	Commodity 2262 2273	oil and gas
+T256	Position-high 2382 2386	peak
+E78	Position-high:T256 Reference_point_time:T257
+T257	DATE 2390 2416	the second quarter of 1990
+T258	Production_unit 2693 2718	1.7 million barrels a day
+T259	Commodity 3449 3454	crude
+T260	Commodity 3459 3463	fuel
+T261	Position-low 4051 4057	lowest
+E79	Position-low:T261 Duration:T262
+T262	DURATION 4061 4077	nearly six years
+T263	MODALITY_cue 4174 4179	would
+T264	POLARITY_cue 4223 4233	no sign of
+T265	POLARITY_cue 4325 4328	not
+T266	MODALITY_cue 4320 4324	will
+T267	MODALITY_cue 4352 4357	fears
+A21	Modality E62 Other
+T268	Financial_attribute 4458 4464	prices
+T269	MODALITY_cue 4720 4725	plans
+T270	DURATION 4842 4849	46-year
+T271	Movement-flat 787 795	maintain
+E80	Movement-flat:T271 Attribute:T272 Supplier_Consumer:T105
+T272	Financial_attribute 814 820	output
+T105	ORGANIZATION 728 777	Organization of the Petroleum Exporting Countries
+T252	Position-low 968 971	low
+E31	Position-low:T252 Duration:T273
+T273	DURATION 957 967	5-1/2-year
+T274	Negative_sentiment 1918 1927	concerned
+E81	Negative_sentiment:T274 
+T275	Forecast_target 2754 2763	estimates
+T276	Financial_attribute 3570 3575	price
+T277	Movement-up-gain 377 385	climbing
+E82	Movement-up-gain:T277 Difference:T20 Reference_point_time:T21 Difference2:T22 Reference_point_time2:T23
+T45	Commodity 863 873	U.S. shale
