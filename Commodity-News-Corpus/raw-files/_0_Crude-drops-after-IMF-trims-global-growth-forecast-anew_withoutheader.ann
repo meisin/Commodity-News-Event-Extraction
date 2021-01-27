@@ -1,0 +1,121 @@
+T1	Movement-down-loss 27 31	fell
+E1	Movement-down-loss:T1 Attribute:T2 Item:T3 Reference_point_time:T4
+T2	Financial_attribute 20 26	prices
+T3	Commodity 16 19	Oil
+T4	DATE 35 44	Wednesday
+T5	ORGANIZATION 55 82	International Monetary Fund
+T11	Movement-down-loss 200 204	less
+E4	Movement-down-loss:T11 Item:T12 Modality_cue:T77 Item2:T83
+T12	Commodity 205 210	fuels
+A1	Polarity E4 Positive
+A2	Modality E4 Other
+T14	Movement-down-loss 278 282	down
+E5	Movement-down-loss:T14 Attribute:T15
+T15	Financial_attribute 283 289	prices
+T16	Financial_attribute 347 354	futures
+T17	Commodity 329 346	light sweet crude
+T18	Movement-down-loss 383 387	down
+E6	Movement-down-loss:T18 Attribute:T16 Item:T17 Difference:T19 Final_value:T20 Contract_date:T70 Reference_point_time:T21
+T19	PERCENTAGE 388 393	2.24%
+T20	Price_unit 397 414	USD87.04 a barrel
+T21	DATE 418 427	Wednesday
+T22	ORGANIZATION 534 536	it
+T26	LOCATION 554 559	world
+T27	PERCENTAGE 588 592	3.3%
+T28	Movement-down-loss 594 598	down
+E8	Movement-down-loss:T28 Initial_reference_point:T31 Initial_value:T29 Forecast:T30
+T29	PERCENTAGE 628 632	3.5%
+T30	Forecast_target 614 624	projection
+T31	DATE 606 613	January
+T33	PERCENTAGE 708 712	4.0%
+T34	PERCENTAGE 718 722	4.1%
+T37	Financial_attribute 1071 1082	inventories
+T38	Quantity 1091 1112	1.233 million barrels
+T39	Commodity 1061 1070	crude oil
+T40	COUNTRY 1056 1060	U.S.
+T41	Movement-down-loss 1083 1087	fell
+E10	Movement-down-loss:T41 Supplier_Consumer:T40 Item:T39 Attribute:T37 Final_value:T38 Reference_point_time:T42
+T42	DATE 1113 1122	last week
+T43	Movement-up-gain 1135 1139	gain
+E11	Movement-up-gain:T43 Difference:T44 Initial_reference_point:T45
+T44	NUMBER 1143 1150	250,000
+T45	DATE 1154 1172	the preceding week
+T46	Financial_attribute 1203 1213	stockpiles
+T47	Commodity 1199 1202	oil
+T48	Movement-up-gain 1217 1221	rise
+E12	Movement-up-gain:T48 Attribute:T46 Item:T47 Difference:T49 Reference_point_time:T50 Modality_cue:T84
+T49	Quantity 1225 1246	1.350 million barrels
+T50	DATE 1247 1256	last week
+A3	Polarity E12 Positive
+A4	Modality E12 Other
+T51	Financial_attribute 1368 1379	inventories
+T52	Movement-down-loss 1392 1396	fell
+E13	Movement-down-loss:T52 Difference:T53 Attribute:T51 Item:T57 Supplier_Consumer:T58
+T53	Quantity 1400 1415	633,000 barrels
+T54	Movement-up-gain 1422 1428	rising
+E14	Movement-up-gain:T54 Difference:T55 Initial_reference_point:T56
+T55	NUMBER 1429 1442	1.699 million
+T56	DATE 1446 1464	the preceding week
+T57	Commodity 1359 1367	gasoline
+T58	COUNTRY 1354 1358	U.S.
+T59	Movement-down-loss 1515 1519	fall
+E15	Movement-down-loss:T59 Attribute:T60 Item:T61 Difference:T62 Modality_cue:T85
+T60	Financial_attribute 1500 1511	inventories
+T61	Commodity 1491 1499	gasoline
+T62	NUMBER 1523 1530	800,000
+A5	Polarity E15 Positive
+A6	Modality E15 Other
+T63	Commodity 1570 1579	Brent oil
+T64	Financial_attribute 1580 1587	futures
+T65	Movement-down-loss 1611 1615	down
+E16	Movement-down-loss:T65 Attribute:T64 Item:T63 Difference:T66 Final_value:T67 Contract_date:T71
+T66	PERCENTAGE 1616 1621	1.94%
+T67	Price_unit 1625 1642	USD97.97 a barrel
+T68	Movement-up-gain 1644 1646	up
+E17	Movement-up-gain:T68 Difference:T69
+T69	MONEY 1647 1655	USD10.93
+T70	DATE 371 375	June
+T71	DATE 1592 1596	June
+T8	DATE 118 122	2013
+T24	Cause-movement-down-loss 537 544	trimmed
+E7	Cause-movement-down-loss:T24 Supplier_Consumer:T22 Type:T26 Difference:T27 Reference_point_time:T25 Item:T23 Forecast:T87
+T25	DATE 549 553	2013
+T35	Movement-down-loss 700 704	fell
+E9	Movement-down-loss:T35 Final_value:T33 Initial_value:T34 Reference_point_time:T36 Supplier_Consumer:T72 Item:T32 Forecast:T88
+T36	DATE 679 683	2014
+T72	ORGANIZATION 644 676	multilateral lending institution
+T7	LOCATION 91 97	global
+T73	Cause-movement-down-loss 83 86	cut
+E2	Cause-movement-down-loss:T73 Supplier_Consumer:T5 Type:T7 Reference_point_time:T8 Forecast:T6 Item:T86
+T9	Economic_item 180 187	economy
+T10	LOCATION 173 179	global
+T74	Slow-weak 166 172	slower
+E3	Slow-weak:T74 Type:T10 Item:T9
+T75	Oversupply 1337 1351	awash in crude
+E18	Oversupply:T75 Place:T76
+T76	COUNTRY 1321 1325	U.S.
+T77	MODALITY_cue 188 192	will
+T78	Position-high 448 452	high
+E19	Position-high:T78 Final_value:T79
+T79	MONEY 456 464	USD89.36
+T80	Movement-up-gain 469 471	up
+E20	Movement-up-gain:T80 
+T81	Position-low 496 499	low
+E21	Position-low:T81 Final_value:T82
+T82	MONEY 503 511	USD86.42
+T83	Commodity 215 221	energy
+T84	MODALITY_cue 1189 1198	expecting
+T85	MODALITY_cue 1481 1490	expecting
+T6	Forecast_target 105 113	forecast
+T86	Economic_item 98 104	growth
+T23	Economic_item 560 575	economic growth
+T87	Forecast_target 576 584	forecast
+T32	Economic_item 684 690	growth
+T88	Forecast_target 691 699	forecast
+T89	Economic_item 782 788	growth
+T90	Financial_attribute 804 810	output
+T91	Economic_item 835 841	market
+T92	Negative_sentiment 908 913	fears
+E22	Negative_sentiment:T92 
+T93	LOCATION 923 929	global
+T94	Economic_item 930 937	economy

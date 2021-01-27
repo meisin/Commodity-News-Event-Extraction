@@ -1,0 +1,127 @@
+T1	Economic_item 38 53	economic growth
+T3	PERCENTAGE 65 76	7.2 percent
+T4	DATE 82 92	a year ago
+T5	COUNTRY 0 5	China
+T6	Movement-down-loss 183 187	fell
+E2	Movement-down-loss:T6 Attribute:T7 Item:T8 Final_value:T9
+T7	Financial_attribute 176 182	prices
+T2	Slow-weak 54 61	slowing
+E1	Slow-weak:T2 Item:T1 Final_value:T3 Initial_reference_point:T4 Supplier_Consumer:T5
+T8	Commodity 160 175	Brent crude oil
+T9	Price_unit 188 206	below $49 a barrel
+T12	MONEY 232 244	more than $1
+T13	DATE 248 254	Monday
+T14	Economic_item 272 288	economic outlook
+T15	LOCATION 265 271	global
+T16	Slow-weak 289 295	weaken
+E4	Slow-weak:T16 Item:T14 Type:T15
+T17	Financial_attribute 350 356	demand
+T18	Commodity 346 349	oil
+T19	LOCATION 339 345	Global
+T20	Slow-weak 360 369	softening
+E5	Slow-weak:T20 Attribute:T17 Item:T18 Type:T19
+T21	NATIONALITY 405 413	European
+T22	Slow-weak 398 404	weaker
+E6	Slow-weak:T22 Item:T24 Type:T21 Type2:T23
+T23	NATIONALITY 418 425	Chinese
+T24	Economic_item 426 435	economies
+T25	Economic_item 488 503	economic growth
+T26	Slow-weak 483 487	Weak
+E7	Slow-weak:T26 Item:T25
+T27	Movement-down-loss 553 557	down
+E8	Movement-down-loss:T27 Attribute:T29 Item:T30 Reference_point_time:T28
+T28	DATE 601 605	June
+T29	Financial_attribute 546 552	prices
+T30	Commodity 542 545	oil
+T33	COUNTRY 728 733	China
+T34	DATE 780 798	the second quarter
+T35	Grow-strong 904 908	grow
+E10	Grow-strong:T35 Attribute:T38 Item:T36 Type:T37 Modality_cue:T84 Reference_point_time:T41
+T36	Commodity 875 881	diesel
+T37	LOCATION 868 872	Asia
+T38	Financial_attribute 882 888	demand
+T39	Slow-weak 980 987	slowing
+E11	Slow-weak:T39 Item:T40
+T40	Economic_item 988 997	economies
+T42	Cause-movement-down-loss 998 1005	squeeze
+E12	Cause-movement-down-loss:T42 Attribute:T43
+T43	Financial_attribute 1006 1017	consumption
+T44	Cause-movement-down-loss 1191 1197	curbed
+E13	Cause-movement-down-loss:T44 Item:T45 Attribute:T46
+T45	Commodity 1198 1201	oil
+T46	Financial_attribute 1202 1208	demand
+T47	Slow-weak 1121 1128	slowing
+E14	Slow-weak:T47 Item:T48 Type:T49
+T48	Economic_item 1136 1151	economic growth
+T49	LOCATION 1129 1135	global
+T50	Economic_item 1257 1264	outlook
+T51	LOCATION 1250 1256	global
+T52	Slow-weak 1268 1277	softening
+E15	Slow-weak:T52 Item:T50 Type:T51
+T53	Commodity 1366 1381	Brent crude oil
+T54	Price_unit 1390 1408	below $66 a barrel
+T55	Movement-down-loss 1382 1389	slipped
+E16	Movement-down-loss:T55 Difference:T54 Reference_point_time:T56 Item:T53
+T56	DATE 1412 1421	Wednesday
+T57	Slow-weak 1487 1497	lackluster
+E17	Slow-weak:T57 Attribute:T58
+T58	Financial_attribute 1498 1504	demand
+T59	Economic_item 1515 1530	economic growth
+T60	Slow-weak 1531 1538	falters
+E18	Slow-weak:T60 Item:T59 Type:T61
+T61	LOCATION 1508 1514	global
+T62	Financial_attribute 1563 1569	demand
+T63	Commodity 1559 1562	oil
+T64	Grow-strong 1584 1594	picking up
+E19	Grow-strong:T64 Attribute:T62 Item:T63
+T65	Slow-weak 1624 1633	below-par
+E20	Slow-weak:T65 Item:T67 Type:T66
+T66	LOCATION 1634 1640	global
+T67	Economic_item 1641 1656	economic growth
+T68	Price_unit 1668 1689	more than $1 a barrel
+T69	DATE 1693 1701	Thursday
+T70	Movement-down-loss 1663 1667	fell
+E21	Movement-down-loss:T70 Difference:T68 Reference_point_time:T69 Final_value:T72 Item:T71
+T71	Commodity 1659 1662	Oil
+T72	Price_unit 1721 1739	below $83 a barrel
+T75	Oversupply 518 530	ample supply
+E23	Oversupply:T75 
+T76	Oversupply 1035 1042	surplus
+E24	Oversupply:T76 
+T31	Economic_item 769 775	growth
+T32	Slow-weak 762 768	slower
+E9	Slow-weak:T32 Item:T31 Reference_point_time:T34 Supplier_Consumer:T33
+T77	Slow-weak 807 814	weakest
+E25	Slow-weak:T77 Item:T78 Reference_point_time:T79 Duration:T80
+T78	Economic_item 815 844	expansion in factory activity
+T79	DATE 848 852	June
+T80	DURATION 856 865	two years
+T81	Movement-down-loss 227 231	fell
+E3	Movement-down-loss:T81 Difference:T12 Reference_point_time:T13 Item:T10
+T73	Negative_sentiment 1751 1759	concerns
+E22	Negative_sentiment:T73 
+T74	Position-high 565 569	high
+E26	Position-high:T74 Reference_point_time:T83 Final_value:T82
+T82	MONEY 583 593	above $115
+T83	DATE 574 582	the year
+A1	Modality E10 Other
+T84	MODALITY_cue 892 900	expected
+T85	Position-low 1446 1449	low
+E27	Position-low:T85 Duration:T86
+T86	DURATION 1436 1445	five-year
+T87	Oversupply 1472 1482	oversupply
+E28	Oversupply:T87 
+T88	Position-low 1717 1720	low
+E29	Position-low:T88 Duration:T89
+T89	DURATION 1707 1716	four-year
+T90	Crisis 151 157	crisis
+E30	Crisis:T90 Item:T91 Place:T92
+T91	Economic_item 142 150	economic
+T92	LOCATION 135 141	global
+T93	Crisis 970 976	crisis
+E31	Crisis:T93 Reference_point_time:T94
+T94	DATE 955 959	1998
+T95	Position-low 933 939	lowest
+E32	Position-low:T95 
+T41	DATE 909 918	this year
+T10	Commodity 211 221	U.S. crude
