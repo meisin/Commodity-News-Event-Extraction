@@ -1,0 +1,102 @@
+T1	Movement-down-loss 21 26	lower
+E1	Movement-down-loss:T1 Attribute:T2 Item:T3
+T2	Financial_attribute 13 20	futures
+T3	Commodity 3 12	Crude oil
+T4	Geopolitical-tension 42 50	tensions
+E2	Geopolitical-tension:T4 Place:T6
+T5	POLARITY_cue 51 55	ease
+T6	LOCATION 30 41	Middle East
+A1	Polarity E2 Negative
+T8	Movement-down-loss 220 227	slipped
+E4	Movement-down-loss:T8 Attribute:T9 Item:T10 Reference_point_time:T7
+T9	Financial_attribute 212 219	futures
+T10	Commodity 202 211	Crude oil
+T7	DATE 267 273	Friday
+T11	POLARITY_cue 278 284	easing
+T12	Geopolitical-tension 285 293	tensions
+E3	Geopolitical-tension:T12 Polarity_cue:T11 Impacted_countries:T13
+A2	Polarity E3 Negative
+T13	LOCATION 301 312	Middle East
+T14	Financial_attribute 324 330	prices
+T15	Economic_item 338 344	market
+T16	DATE 484 492	November
+T17	Movement-down-loss 553 557	down
+E5	Movement-down-loss:T17 Difference:T19 Difference2:T18 Attribute:T20 Item:T21 Contract_date:T16
+T18	PERCENTAGE 558 563	0.42%
+T19	Price_unit 503 521	USD102.60 a barrel
+T20	Financial_attribute 460 467	futures
+T21	Commodity 442 459	light sweet crude
+T22	Movement-up-gain 596 598	up
+E6	Movement-up-gain:T22 Contract_date:T26 Difference:T23 Final_value:T24 Reference_point_time:T25 Attribute:T77
+T23	PERCENTAGE 599 604	0.36%
+T24	Price_unit 608 626	USD102.03 a barrel
+T25	DATE 630 638	Thursday
+T26	DATE 570 578	November
+T27	Position-low 715 718	low
+E7	Position-low:T27 Reference_point_time:T28 Attribute:T33 Item:T34
+T28	DATE 704 712	Thursday
+T29	Price_unit 737 755	USD103.95 a barrel
+T30	Position-high 761 765	high
+E8	Position-high:T30 Initial_reference_point:T31 Difference:T29
+T31	DATE 771 783	September 25
+T32	Price_unit 684 702	USD102.20 a barrel
+T33	Financial_attribute 645 652	futures
+T34	Commodity 641 644	Oil
+T35	Slow-weak 797 805	weakened
+E9	Slow-weak:T35 Attribute:T36 Item:T37
+T36	Financial_attribute 790 796	prices
+T37	Commodity 786 789	Oil
+T38	Movement-down-loss 811 816	lower
+E10	Movement-down-loss:T38 Attribute:T39 Supplier_Consumer:T41
+T39	Financial_attribute 817 823	supply
+T40	Negative_sentiment 824 832	concerns
+E11	Negative_sentiment:T40 
+T41	LOCATION 842 853	Middle East
+T42	Commodity 1010 1013	oil
+T43	Geopolitical-tension 1042 1050	tensions
+E12	Geopolitical-tension:T43 Modality_cue:T44 Impacted_countries:T46
+T44	MODALITY_cue 1024 1027	any
+A3	Modality E12 Other
+T45	Cause-movement-down-loss 1076 1083	disrupt
+E13	Cause-movement-down-loss:T45 Modality_cue:T47 Attribute:T48
+T46	LOCATION 1058 1069	Middle East
+T47	MODALITY_cue 1070 1075	could
+T48	Financial_attribute 1084 1089	flows
+A4	Modality E13 Other
+T49	LOCATION 1140 1145	world
+T50	Commodity 1148 1151	oil
+T51	Negative_sentiment 1298 1306	concerns
+E14	Negative_sentiment:T51 
+T52	Movement-up-gain 1520 1528	increase
+E15	Movement-up-gain:T52 
+T53	Economic_item 1667 1674	markets
+T54	Negative_sentiment 1733 1741	concerns
+E16	Negative_sentiment:T54 
+T55	Economic_item 1844 1851	economy
+T56	Grow-strong 1852 1860	expanded
+E17	Grow-strong:T56 Item:T55 Supplier_Consumer:T59 Difference:T57 Initial_reference_point:T58
+T57	PERCENTAGE 1864 1868	2.5%
+T58	DATE 1872 1890	the second quarter
+T59	COUNTRY 1839 1843	U.S.
+T60	MODALITY_cue 1904 1916	expectations
+T61	Grow-strong 1928 1937	expansion
+E18	Grow-strong:T61 Final_value:T62 Modality_cue:T60
+T62	PERCENTAGE 1923 1927	2.6%
+A5	Modality E18 Other
+T63	Cause-movement-up-gain 2014 2022	boosting
+E19	Cause-movement-up-gain:T63 Attribute:T64 Item:T65
+T64	Financial_attribute 2027 2032	price
+T65	Commodity 2036 2047	commodities
+T66	Economic_item 2088 2094	dollar
+T67	Financial_attribute 2147 2154	futures
+T68	DATE 2159 2167	November
+T69	PERCENTAGE 2182 2187	0.34%
+T70	Price_unit 2200 2218	USD108.84 a barrel
+T71	Commodity 2137 2146	Brent oil
+T72	Movement-down-loss 2177 2181	fell
+E20	Movement-down-loss:T72 Contract_date:T68 Attribute:T67 Item:T71 Difference:T69 Final_value:T70
+T73	Financial_attribute 2264 2273	contracts
+T74	Commodity 2258 2263	crude
+T75	Commodity 2248 2253	Brent
+T76	Price_unit 2286 2302	USD6.24 a barrel
+T77	Financial_attribute 579 587	contract
