@@ -13,6 +13,5 @@ The diagram below shows the annotation details using the tool called Brat Annota
 ![Annotation](brat_annotation.png)
 
 
-
-
 ## Preprocessing
+In data pre-processing, the annotation information in Brat standoff format (.ann file) is combined with the text (.txt file) to produce a corresponding .json file as input to the event extraction model.
