@@ -1,0 +1,7 @@
+torch==1.2.0+cu92
+seqeval==0.0.12
+transformers==2.11.0
+numpy==1.18.1
+pandas==0.25.3
+scikit_learn==0.24.1
+tensorboardX==2.1
