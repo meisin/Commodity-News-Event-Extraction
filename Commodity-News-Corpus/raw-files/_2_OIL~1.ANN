@@ -1,0 +1,168 @@
+T2	Financial_attribute 382 388	demand
+T3	COUNTRY 392 431	the world's second-largest oil consumer
+T4	Movement-up-gain 228 235	climbed
+E2	Movement-up-gain:T4 Attribute:T6 Item:T7 Difference:T5 Reference_point_time:T8
+T5	PERCENTAGE 236 248	more than 2%
+T6	Financial_attribute 221 227	prices
+T7	Commodity 217 220	Oil
+T8	DATE 252 261	Wednesday
+T9	Slow-weak 693 699	slowed
+E3	Slow-weak:T9 Item:T122
+T10	Movement-up-gain 489 491	up
+E4	Movement-up-gain:T10 Item:T13 Difference:T11 Difference2:T12 Final_value:T14
+T11	MONEY 492 497	$1.48
+T12	PERCENTAGE 502 506	2.7%
+T13	Commodity 473 484	Brent crude
+T14	Price_unit 511 528	$55.47 per barrel
+T16	Movement-up-gain 559 563	rose
+E5	Movement-up-gain:T16 Difference:T17 Difference2:T18 Final_value:T20 Item:T15
+T17	MONEY 564 569	$1.11
+T18	PERCENTAGE 574 578	2.2%
+T19	Cause-movement-down-loss 891 894	cut
+E6	Cause-movement-down-loss:T19 Item:T24 Attribute:T25
+T20	Price_unit 583 600	$51.05 per barrel
+T21	Cause-movement-down-loss 960 966	reduce
+E7	Cause-movement-down-loss:T21 Attribute:T74 Difference:T75 Modality_cue:T120
+T22	Financial_attribute 1042 1053	consumption
+T23	Movement-down-loss 1054 1058	drop
+E8	Movement-down-loss:T23 Attribute:T22 Difference:T86
+T24	Commodity 895 899	fuel
+T25	Financial_attribute 900 905	usage
+T26	Economic_item 1177 1193	market sentiment
+T27	Grow-strong 1164 1172	improved
+E9	Grow-strong:T27 Item:T26
+T28	Movement-down-loss 1141 1150	decreased
+E10	Movement-down-loss:T28 Item:T123
+T29	Movement-down-loss 1385 1389	down
+E11	Movement-down-loss:T29 Difference:T31
+T31	PERCENTAGE 1390 1403	more than 20%
+T32	DATE 1426 1433	January
+T33	Cause-movement-down-loss 1496 1499	cut
+E12	Cause-movement-down-loss:T33 Type:T35 Item:T34 Reference_point_time:T37 Difference:T38 Attribute:T36 Forecast:T100 Forecaster:T30
+T34	Commodity 1511 1514	oil
+T35	LOCATION 1504 1510	global
+T37	DATE 1542 1551	this year
+T38	Production_unit 1555 1566	310,000 bpd
+T39	Cause-movement-down-loss 1589 1595	crimps
+E13	Cause-movement-down-loss:T39 Item:T40 Attribute:T41 Supplier_Consumer:T42
+T40	Commodity 1596 1599	oil
+T41	Financial_attribute 1600 1611	consumption
+T42	COUNTRY 1615 1620	China
+T46	Movement-down-loss 1994 1998	down
+E15	Movement-down-loss:T46 Attribute:T47 Difference:T48
+T47	Financial_attribute 1983 1989	prices
+T48	PERCENTAGE 1999 2009	around 20%
+T49	Cause-movement-down-loss 2402 2405	cut
+E16	Cause-movement-down-loss:T49 Difference:T50 Supplier_Consumer:T71 Supplier_Consumer2:T70 Attribute:T113 Reference_point_time:T114 Modality_cue:T119
+T50	Production_unit 2409 2420	600,000 bpd
+T51	Movement-down-loss 2453 2457	fall
+E17	Movement-down-loss:T51 Attribute:T52 Item:T53 Polarity_cue:T98 Modality_cue:T119
+T52	Financial_attribute 2447 2452	price
+T53	Commodity 2443 2446	oil
+T54	Cause-movement-down-loss 2608 2611	cut
+E18	Cause-movement-down-loss:T54 Attribute:T55 Item:T56 Supplier_Consumer:T59 Modality_cue:T121
+T55	Financial_attribute 2601 2607	supply
+T56	Commodity 2597 2600	oil
+T57	COUNTRY 2469 2475	Russia
+T58	Cause-movement-down-loss 2522 2525	cut
+E19	Cause-movement-down-loss:T58 Supplier_Consumer:T57 Polarity_cue:T99 Modality_cue:T125
+A3	Polarity E19 Negative
+T59	Group 2553 2579	global major oil producers
+A5	Polarity E18 Positive
+A6	Modality E18 Other
+T60	Financial_attribute 2625 2636	inventories
+T61	Commodity 2619 2624	crude
+T62	COUNTRY 2614 2618	U.S.
+T63	Movement-up-gain 2637 2641	rose
+E20	Movement-up-gain:T63 Attribute:T60 Item:T61 Supplier_Consumer:T62 Difference:T64 Initial_reference_point:T65 Reference_point_time:T66 Difference2:T67
+T64	Quantity 2645 2662	6 million barrels
+T65	DATE 2666 2674	the week
+T66	DATE 2678 2684	Feb. 7
+T67	Quantity 2688 2709	438.9 million barrels
+T68	Movement-up-gain 2749 2757	increase
+E21	Movement-up-gain:T68 Difference:T69 Modality_cue:T101
+T69	Quantity 2761 2778	3 million barrels
+A7	Polarity E21 Positive
+A8	Modality E21 Other
+T70	ORGANIZATION 2278 2330	Organization of Petroleum Exporting Countries (OPEC)
+T71	COUNTRY 2356 2362	Russia
+A9	Polarity E16 Positive
+A10	Modality E16 Other
+T1	Commodity 377 381	fuel
+T72	Grow-strong 445 452	recover
+E1	Grow-strong:T72 Supplier_Consumer:T3 Item:T1 Attribute:T2 Modality_cue:T116
+A1	Polarity E1 Positive
+A2	Modality E1 Other
+T74	Financial_attribute 973 983	processing
+T75	Production_unit 993 1022	940,000 barrels per day (bpd)
+T76	Slow-weak 29 37	slowdown
+E22	Slow-weak:T76 
+T77	PERCENTAGE 13 25	more than 2%
+T78	Movement-up-gain 7 12	jumps
+E23	Movement-up-gain:T78 Difference:T77 Item:T79
+T79	Commodity 3 6	Oil
+T80	Commodity 75 79	fuel
+T81	Financial_attribute 80 86	demand
+T85	Position-high 825 829	peak
+E26	Position-high:T85 
+A11	Modality E7 Other
+T86	PERCENTAGE 1063 1071	about 7%
+T87	Position-low 1334 1340	lowest
+E27	Position-low:T87 Duration:T88 Reference_point_time:T89
+T88	DURATION 1344 1353	13 months
+T89	DATE 1357 1363	Monday
+T90	Position-high 1409 1414	highs
+E28	Position-high:T90 Reference_point_time:T32
+T44	Oversupply 1797 1811	ample supplies
+E14	Oversupply:T44 
+T45	Movement-flat 1842 1851	unchanged
+E29	Movement-flat:T45 Item:T91 Difference:T92 Initial_reference_point:T93
+T91	Commodity 1833 1838	Brent
+T92	Price_unit 1855 1874	15 cents per barrel
+T93	DATE 1880 1894	a week earlier
+T94	Commodity 1906 1909	WTI
+T95	Price_unit 1925 1942	24 cents a barrel
+T96	MONEY 1949 1957	17 cents
+T97	DATE 1958 1967	last week
+T102	Position-low 284 290	lowest
+E32	Position-low:T102 Reference_point_time:T103
+T103	DATE 335 347	late January
+T104	Negative_sentiment 1630 1637	worries
+E33	Negative_sentiment:T104 Attribute:T105
+T105	Financial_attribute 1623 1629	Demand
+T106	Economic_item 1654 1660	market
+T107	Commodity 1650 1653	oil
+T108	Economic_item 1690 1696	market
+T109	Financial_attribute 1713 1719	prices
+T110	Financial_attribute 1734 1743	contracts
+T111	Financial_attribute 1775 1784	contracts
+T112	Commodity 2084 2090	crudes
+T113	Financial_attribute 2261 2267	supply
+T114	DATE 2421 2430	last week
+T82	Negative_sentiment 87 95	concerns
+E24	Negative_sentiment:T82 Attribute:T81 Item:T80 Polarity_cue:T83
+T83	POLARITY_cue 69 74	eases
+A13	Polarity E24 Negative
+T84	Negative_sentiment 1277 1285	concerns
+E25	Negative_sentiment:T84 Attribute:T115
+T115	Financial_attribute 1270 1276	demand
+T116	MODALITY_cue 432 435	may
+T117	Position-low 707 713	lowest
+E34	Position-low:T117 Initial_reference_point:T118
+T118	DATE 720 727	Jan. 30
+T119	MODALITY_cue 2380 2391	recommended
+T98	POLARITY_cue 2434 2438	stem
+A12	Polarity E17 Negative
+A14	Modality E17 Other
+T99	POLARITY_cue 2485 2493	hesitant
+T101	MODALITY_cue 2729 2741	expectations
+T120	MODALITY_cue 955 959	will
+T121	MODALITY_cue 2583 2588	agree
+T36	Financial_attribute 1515 1528	demand growth
+T100	Forecast_target 1529 1537	forecast
+T122	Economic_item 643 649	growth
+T123	Economic_item 1112 1118	growth
+T125	MODALITY_cue 2497 2503	commit
+A4	Modality E19 Other
+T15	Commodity 530 558	U.S. West Texas Intermediate
+T30	ORGANIZATION 1440 1484	U.S. Energy Information Administration (EIA)

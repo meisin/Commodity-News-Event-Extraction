@@ -1,0 +1,104 @@
+T1	Financial_attribute 193 203	stockpiles
+T2	Movement-up-gain 209 218	ballooned
+E1	Movement-up-gain:T2 Attribute:T1 Item:T3 Type:T4
+T3	Commodity 183 192	crude oil
+T4	LOCATION 176 182	Global
+T5	Slow-weak 394 401	slowing
+E2	Slow-weak:T5 Type:T7 Item:T6
+T6	Economic_item 409 416	economy
+T7	LOCATION 402 408	global
+T8	Oversupply 434 438	glut
+E3	Oversupply:T8 
+T9	Situation_deteriorate 423 429	worsen
+E4	Situation_deteriorate:T9 Situation:T31 Modality_cue:T72
+T10	Grow-strong 448 456	Vigorous
+E5	Grow-strong:T10 Attribute:T11 Supplier_Consumer:T12 Supplier_Consumer2:T13 Supplier_Consumer3:T14
+T11	Financial_attribute 457 467	production
+T12	ORGANIZATION 471 533	Organization of Petroleum Exporting Countries (OPEC) countries
+T13	COUNTRY 535 541	Russia
+T14	STATE_OR_PROVINCE 546 559	North America
+T15	Oversupply 662 669	surplus
+E6	Oversupply:T15 
+T16	Slow-weak 766 772	slowed
+E7	Slow-weak:T16 Type:T26 Reference_point_time:T27 Final_value:T28 Initial_value:T29 Initial_reference_point:T30 Attribute:T25
+T17	Movement-up-gain 1012 1017	surge
+E8	Movement-up-gain:T17 Attribute:T18 Initial_reference_point:T19 Item:T20 Type:T21
+T18	Financial_attribute 998 1011	demand growth
+T19	DATE 1021 1025	2015
+T20	Commodity 994 997	oil
+T21	LOCATION 987 993	global
+T22	Financial_attribute 1450 1456	demand
+T23	Grow-strong 1443 1449	strong
+E9	Grow-strong:T23 Attribute:T22 Supplier_Consumer:T24
+T24	COUNTRY 1460 1465	India
+T25	Financial_attribute 754 765	stockpiling
+T26	LOCATION 747 753	global
+T27	DATE 780 797	the third quarter
+T28	Production_unit 801 828	1.6 million barrels per day
+T29	Production_unit 834 861	2.3 million barrels per day
+T30	DATE 869 887	the second quarter
+T31	Phenomenon 434 438	glut
+T32	Oversupply 1076 1096	bulging stock levels
+E10	Oversupply:T32 
+T33	Situation_deteriorate 1261 1267	worsen
+E11	Situation_deteriorate:T33 Situation:T35 Modality_cue:T48
+T34	Oversupply 1272 1276	glut
+E12	Oversupply:T34 
+T35	Phenomenon 1272 1276	glut
+T36	Financial_attribute 1358 1364	output
+T37	NATIONALITY 1350 1357	Russian
+T38	Grow-strong 1382 1388	robust
+E13	Grow-strong:T38 Reference_point_time:T39 Attribute:T36 Type:T37 Modality_cue:T74
+A1	Polarity E13 Positive
+A2	Modality E13 Other
+T39	DATE 1392 1396	2016
+T40	Financial_attribute 1484 1490	demand
+T41	Commodity 1480 1483	oil
+T42	LOCATION 1473 1479	global
+T43	Position-high 1506 1510	high
+E14	Position-high:T43 Attribute:T40 Item:T41 Type:T42 Reference_point_time:T44
+T44	DATE 1514 1539	the third quarter of 2015
+T45	Oversupply 1548 1562	glut in supply
+E15	Oversupply:T45 
+T46	Grow-strong 1590 1594	boom
+E16	Grow-strong:T46 Item:T47
+T47	Commodity 1580 1589	shale oil
+T49	Financial_attribute 1136 1142	prices
+T50	Commodity 1126 1135	crude oil
+T52	Movement-down-loss 1632 1647	weighed heavily
+E18	Movement-down-loss:T52 Item:T53 Attribute:T54
+T53	Commodity 1651 1654	oil
+T54	Financial_attribute 1655 1661	prices
+A7	Polarity E4 Positive
+A8	Modality E4 Other
+T55	Movement-flat 1293 1302	no change
+E19	Movement-flat:T55 Attribute:T56 Reference_point_time:T57 Modality_cue:T73
+T56	Financial_attribute 1310 1316	supply
+T57	DATE 1335 1344	near-term
+A9	Polarity E19 Positive
+A10	Modality E19 Other
+T58	LOCATION 3 9	Global
+T59	Oversupply 14 18	Glut
+E20	Oversupply:T59 Item:T61 Place:T58
+T60	Situation_deteriorate 26 32	Worsen
+E21	Situation_deteriorate:T60 Situation:T62 Modality_cue:T71
+T61	Commodity 10 13	Oil
+T62	Phenomenon 14 18	Glut
+A11	Modality E21 Other
+T63	Financial_attribute 573 579	demand
+T64	Financial_attribute 608 614	prices
+T65	Commodity 604 607	oil
+T67	Position-high 697 704	highest
+E22	Position-high:T67 Duration:T68
+T68	DURATION 708 716	a decade
+T69	DURATION 1496 1505	five-year
+T70	Position-high 231 235	high
+E23	Position-high:T70 
+T51	Economic_item 1236 1243	markets
+A12	Modality E11 Other
+T71	MODALITY_cue 19 25	Set To
+T72	MODALITY_cue 417 422	could
+T66	Price_unit 622 642	below $50 per barrel
+T48	MODALITY_cue 1255 1260	could
+T73	MODALITY_cue 1286 1289	may
+T74	MODALITY_cue 1365 1371	likely

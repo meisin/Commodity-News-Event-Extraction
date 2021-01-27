@@ -1,0 +1,128 @@
+T1	Slow-weak 441 449	slowdown
+E1	Slow-weak:T1 Item:T2 Type:T3
+T2	Economic_item 432 440	economic
+T3	LOCATION 425 431	global
+T4	Movement-down-loss 501 505	fall
+E2	Movement-down-loss:T4 Item:T6 Difference:T5 Attribute:T71
+T5	PERCENTAGE 509 512	20%
+T6	Commodity 452 455	Oil
+T7	DATE 537 547	late April
+T8	Movement-down-loss 593 597	fall
+E3	Movement-down-loss:T8 Attribute:T10 Item:T9 Difference:T11 Initial_reference_point:T12 Modality_cue:T80
+T9	Commodity 554 569	Brent crude oil
+T10	Financial_attribute 570 577	futures
+T11	Price_unit 598 618	below $60 per barrel
+A1	Polarity E3 Positive
+A2	Modality E3 Other
+T12	DATE 644 651	January
+T13	Slow-weak 807 814	slowing
+E4	Slow-weak:T13 Item:T14 Type:T15 Modality_cue:T81
+T14	Economic_item 791 806	economic growth
+T15	LOCATION 784 790	global
+T16	Slow-weak 897 904	bearish
+E5	Slow-weak:T16 Attribute:T17 Modality_cue:T82
+T17	Financial_attribute 875 888	demand growth
+A3	Polarity E5 Positive
+A4	Modality E5 Other
+T18	Financial_attribute 1025 1032	futures
+T19	Commodity 1013 1024	Brent crude
+T20	Movement-down-loss 1038 1042	down
+E6	Movement-down-loss:T20 Attribute:T18 Item:T19 Difference:T21 Reference_point_time:T22
+T21	PERCENTAGE 1050 1052	1%
+T22	DATE 1056 1063	Tuesday
+T23	Economic_item 1209 1217	economic
+T24	Slow-weak 1218 1226	slowdown
+E7	Slow-weak:T24 Item:T23
+T28	PERCENTAGE 1509 1513	2.6%
+T29	PERCENTAGE 1519 1523	2.7%
+T30	DATE 1528 1532	2019
+T31	Movement-down-loss 1658 1663	slump
+E9	Movement-down-loss:T31 Item:T33 Attribute:T32
+T32	Financial_attribute 1674 1680	prices
+T33	Commodity 1667 1673	energy
+T34	trade-financial-tension 1241 1251	trade wars
+E10	trade-financial-tension:T34 Modality_cue:T83
+A5	Polarity E10 Positive
+A6	Modality E10 Other
+T37	COUNTRY 1772 1777	China
+T38	trade-financial-tension 1809 1823	trade tensions
+E12	trade-financial-tension:T38 
+T39	Economic_item 1901 1907	growth
+T41	Financial_attribute 2491 2497	demand
+T42	Movement-down-loss 2473 2478	lower
+E14	Movement-down-loss:T42 Attribute:T44 Modality_cue:T84
+T43	Movement-down-loss 2498 2504	stalls
+E15	Movement-down-loss:T43 Attribute:T41 Modality_cue:T85
+T44	Financial_attribute 2479 2485	prices
+T36	trade-financial-tension 1715 1729	trade tensions
+E11	trade-financial-tension:T36 Participating_countries2:T37 Participating_countries:T35
+T46	Commodity 479 483	fuel
+T47	Slow-weak 45 53	slowdown
+E16	Slow-weak:T47 Item:T48 Forecast:T79
+T48	Economic_item 36 44	economic
+T49	Movement-down-loss 24 32	pummeled
+E17	Movement-down-loss:T49 Attribute:T50 Item:T51 Type:T52
+T50	Financial_attribute 17 23	prices
+T51	Commodity 10 16	energy
+T52	LOCATION 3 9	Global
+T53	Financial_attribute 362 373	consumption
+T54	Commodity 377 380	oil
+T55	Commodity 382 393	natural gas
+T56	Economic_item 281 288	markets
+T57	Commodity 274 280	Energy
+T58	Financial_attribute 659 665	prices
+A8	Modality E4 Other
+T59	Commodity 842 848	energy
+T60	Commodity 937 943	energy
+T61	Movement-down-loss 1145 1149	fell
+E18	Movement-down-loss:T61 Reference_point_time:T62
+T62	DATE 1153 1156	May
+T64	Commodity 1334 1340	energy
+T65	Financial_attribute 1341 1347	prices
+T66	Slow-weak 1405 1413	slowdown
+E20	Slow-weak:T66 
+T67	Movement-down-loss 1840 1844	fall
+E21	Movement-down-loss:T67 
+T68	Cause-movement-up-gain 2098 2104	raised
+E22	Cause-movement-up-gain:T68 
+T69	Financial_attribute 2446 2453	imports
+A7	Modality E14 Other
+T70	Commodity 2436 2445	crude oil
+T71	Financial_attribute 494 500	prices
+T72	Position-high 529 533	peak
+E23	Position-high:T72 Reference_point_time:T7
+T45	Commodity 696 707	natural gas
+T73	Position-low 768 772	lows
+E24	Position-low:T73 Duration:T74 Item:T45 Attribute:T58
+T74	DURATION 757 767	multi-year
+T75	Position-low 1164 1177	weakest level
+E25	Position-low:T75 Duration:T76
+T76	DURATION 1181 1202	more than 2-1/2 years
+T77	Movement-down-loss 411 419	hit hard
+E13	Movement-down-loss:T77 Modality_cue:T78 Item:T55 Item2:T54 Attribute:T53
+T78	MODALITY_cue 403 407	will
+A9	Modality E13 Other
+T79	Forecast_target 54 63	forecasts
+T80	MODALITY_cue 578 589	threatening
+T81	MODALITY_cue 776 780	Fear
+T82	MODALITY_cue 889 893	will
+T83	MODALITY_cue 1231 1237	threat
+T26	Cause-movement-down-loss 1462 1465	cut
+E8	Cause-movement-down-loss:T26 Forecaster:T27 Final_value:T28 Initial_value:T29 Reference_point_time:T30 Forecast:T90 Type:T63 Item:T25
+T27	ORGANIZATION 1454 1457	EIU
+T84	MODALITY_cue 2457 2469	anticipation
+A11	Modality E15 Other
+T85	MODALITY_cue 2486 2490	once
+T86	Negative_sentiment 862 869	worries
+E26	Negative_sentiment:T86 
+T87	Negative_sentiment 348 356	concerns
+E27	Negative_sentiment:T87 
+T88	Commodity 2017 2023	energy
+T89	Financial_attribute 2129 2135	import
+T25	Economic_item 1490 1505	economic growth
+T63	LOCATION 1483 1489	global
+T90	Forecast_target 1470 1478	forecast
+T40	Economic_item 1585 1591	growth
+T91	LOCATION 1579 1584	world
+T92	Forecast_target 1565 1574	forecasts
+T35	COUNTRY 1754 1767	United States

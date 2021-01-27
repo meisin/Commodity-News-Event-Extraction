@@ -1,0 +1,170 @@
+T1	Movement-up-gain 287 291	rose
+E1	Movement-up-gain:T1 Attribute:T2 Item:T3 Difference:T4
+T2	Financial_attribute 280 286	prices
+T3	Commodity 276 279	oil
+T4	Price_unit 295 308	$110 a barrel
+T6	COUNTRY 402 407	Libya
+T8	COUNTRY 428 432	Iran
+T9	Financial_attribute 623 629	supply
+T10	Movement-up-gain 616 622	higher
+E4	Movement-up-gain:T10 Supplier_Consumer:T11 Supplier_Consumer2:T12 Attribute:T9 Supplier_Consumer3:T13
+T11	COUNTRY 635 640	Libya
+T12	COUNTRY 642 646	Iran
+T14	Grow-strong 679 686	bullish
+E5	Grow-strong:T14 Initial_reference_point:T74 Forecast:T120 Attribute:T15
+T16	Financial_attribute 941 947	output
+T17	Movement-flat 956 965	unchanged
+E6	Movement-flat:T17 Final_value:T18 Attribute:T16 Reference_point_time:T19 Supplier_Consumer:T20 Modality_cue:T101
+T18	Production_unit 914 940	30 million barrels per day
+T19	DATE 978 988	six months
+T20	ORGANIZATION 783 832	Organization of the Petroleum Exporting Countries
+T21	Shortage 1519 1529	shortfalls
+E7	Shortage:T21 
+T22	Oversupply 1542 1547	gluts
+E8	Oversupply:T22 Polarity_cue:T75
+T23	Financial_attribute 1702 1708	output
+T24	Cause-movement-up-gain 1696 1701	boost
+E9	Cause-movement-up-gain:T24 Attribute:T23 Supplier_Consumer:T25 Modality_cue:T99
+T25	COUNTRY 1712 1742	OPEC's second biggest producer
+A1	Polarity E9 Positive
+A2	Modality E9 Other
+T26	COUNTRY 2728 2733	Libya
+T27	Civil-unrest 2736 2748	civil strife
+E10	Civil-unrest:T27 Place:T26
+T28	Financial_attribute 2774 2780	output
+T29	Movement-up-gain 2767 2773	rising
+E11	Movement-up-gain:T29 Attribute:T28
+T30	Grow-strong 2812 2816	boom
+E12	Grow-strong:T30 Supplier_Consumer:T31 Attribute:T32
+T31	COUNTRY 2820 2824	U.S.
+T32	Financial_attribute 2825 2835	production
+T33	Movement-up-gain 2970 2978	increase
+E13	Movement-up-gain:T33 Attribute:T34 Modality_cue:T107
+T34	Financial_attribute 2954 2964	production
+A3	Polarity E13 Positive
+A4	Modality E13 Other
+T35	Movement-down-loss 3332 3345	deterioration
+E14	Movement-down-loss:T35 Attribute:T36 Modality_cue:T112 Polarity_cue:T111
+T36	Financial_attribute 3325 3331	supply
+A5	Polarity E14 Negative
+T38	Financial_attribute 4006 4013	exports
+T39	Commodity 4002 4005	oil
+T40	Movement-up-gain 3993 4001	increase
+E16	Movement-up-gain:T40 Item:T39 Attribute:T38 Difference:T41 Modality_cue:T113
+T41	Production_unit 4017 4040	500,000 barrels per day
+T42	Embargo 4074 4083	sanctions
+E17	Embargo:T42 Polarity_cue:T92 Modality_cue:T93
+T46	Commodity 4315 4318	oil
+T48	DATE 4459 4463	2014
+T49	Cause-movement-up-gain 4448 4454	raised
+E19	Cause-movement-up-gain:T49 Reference_point_time:T48 Difference:T50 Forecaster:T51 Attribute:T103 Forecast:T47
+T50	Production_unit 4480 4497	29.76 million bpd
+T51	ORGANIZATION 4439 4443	OPEC
+T55	Financial_attribute 1362 1368	output
+T56	COUNTRY 1384 1388	Iran
+T57	COUNTRY 1393 1397	Iraq
+T58	Movement-up-gain 2543 2549	higher
+E22	Movement-up-gain:T58 Type:T60 Attribute:T59 Reference_point_time:T80
+T59	Financial_attribute 2559 2570	consumption
+T60	LOCATION 2550 2558	domestic
+T62	Movement-up-gain 3615 3626	bounce back
+E23	Movement-up-gain:T62 Attribute:T63 Final_value:T64 Duration:T65 Modality_cue:T85
+T63	Financial_attribute 3602 3608	Output
+T64	Production_unit 3653 3668	1.4 million bpd
+T65	DURATION 3672 3683	nine months
+A15	Polarity E23 Positive
+A16	Modality E23 Other
+T37	Civil-unrest 328 334	strife
+E15	Civil-unrest:T37 
+T67	Financial_attribute 352 358	output
+T68	Situation_deteriorate 363 369	deepen
+E25	Situation_deteriorate:T68 Situation:T69 Modality_cue:T66
+T52	Shortage 379 388	shortfall
+E20	Shortage:T52 Modality_cue:T66 Place:T6 Place2:T8
+T53	Financial_attribute 372 378	supply
+T69	Phenomenon 379 388	shortfall
+T70	Commodity 435 438	Oil
+T71	Financial_attribute 482 488	supply
+T72	Financial_attribute 494 500	prices
+T73	Financial_attribute 566 573	exports
+T74	DATE 708 717	this week
+T54	Grow-strong 1347 1358	rising tide
+E21	Grow-strong:T54 Attribute:T55 Supplier_Consumer:T56 Supplier_Consumer2:T57 Modality_cue:T102
+A11	Modality E21 Other
+T76	Commodity 1862 1865	oil
+T77	Commodity 2206 2209	oil
+T78	Financial_attribute 2372 2378	output
+T79	Production_unit 2389 2405	10.2 million bpd
+T80	DATE 2582 2595	summer months
+T81	Civil-unrest 2617 2626	conflicts
+E27	Civil-unrest:T81 
+T82	Financial_attribute 2712 2719	exports
+T84	Movement-down-loss 2720 2724	lost
+E29	Movement-down-loss:T84 Attribute:T82 Polarity_cue:T83
+T61	Economic_item 3288 3294	market
+T86	Financial_attribute 3424 3430	export
+T87	Financial_attribute 3441 3447	output
+T88	Commodity 3580 3591	oil and gas
+T89	Embargo 3896 3905	sanctions
+E30	Embargo:T89 Polarity_cue:T90 Modality_cue:T91
+T94	Movement-up-gain 4107 4115	increase
+E33	Movement-up-gain:T94 Difference:T95 Modality_cue:T114
+T95	Quantity 4119 4133	half a million
+T96	Movement-up-gain 4170 4178	increase
+E34	Movement-up-gain:T96 Difference:T97 Modality_cue:T115
+T97	Production_unit 4185 4208	700,000 barrels per day
+T43	Slow-weak 10 17	tremors
+E18	Slow-weak:T43 Attribute:T44
+T44	Financial_attribute 3 9	Supply
+T45	Commodity 1474 1477	oil
+T66	MODALITY_cue 335 340	could
+A8	Modality E25 Other
+A9	Modality E20 Other
+T75	POLARITY_cue 1530 1541	rather than
+A10	Polarity E8 Negative
+T98	Negative_sentiment 1500 1507	concern
+E24	Negative_sentiment:T98 
+T83	POLARITY_cue 2758 2763	eased
+T85	MODALITY_cue 3609 3614	could
+T99	MODALITY_cue 1687 1692	plans
+T100	Negative_sentiment 312 319	concern
+E26	Negative_sentiment:T100 
+T5	Commodity 879 882	oil
+T7	LOCATION 871 876	world
+A14	Modality E6 Other
+T101	MODALITY_cue 884 890	agreed
+T102	MODALITY_cue 1333 1341	prospect
+T104	NATIONALITY 2200 2205	Iraqi
+T105	Production_unit 2251 2266	9.7 million bpd
+T106	LOCATION 2481 2486	world
+A13	Polarity E29 Negative
+T107	MODALITY_cue 2965 2969	will
+T108	Economic_item 3151 3157	market
+T111	POLARITY_cue 3305 3307	no
+A6	Modality E14 Other
+T112	MODALITY_cue 3308 3316	room for
+T90	POLARITY_cue 3935 3944	withdrawn
+A12	Polarity E30 Negative
+A17	Modality E30 Other
+T91	MODALITY_cue 3877 3881	once
+A18	Modality E16 Other
+T113	MODALITY_cue 3987 3992	could
+T92	POLARITY_cue 4063 4070	lifting
+A7	Polarity E17 Negative
+A19	Modality E17 Other
+T93	MODALITY_cue 4059 4062	any
+T114	MODALITY_cue 4103 4106	can
+A20	Modality E33 Other
+T115	MODALITY_cue 4166 4169	can
+T116	Movement-up-gain 4310 4314	more
+E3	Movement-up-gain:T116 Supplier_Consumer:T119 Attribute:T117 Item:T46 Modality_cue:T118
+T117	Financial_attribute 4303 4309	export
+T118	MODALITY_cue 4286 4294	allowing
+T119	COUNTRY 4295 4299	Iran
+A21	Modality E3 Other
+T47	Forecast_target 4471 4479	forecast
+T103	Financial_attribute 4464 4470	demand
+T15	Financial_attribute 700 707	exports
+T120	Forecast_target 687 696	estimates
+T13	COUNTRY 651 655	Iraq
+T109	Commodity 3120 3130	U.S. shale
