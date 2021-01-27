@@ -8,7 +8,7 @@ This folder contains the raw files of the Commodity News Corpus, which is made u
 - 21 Argument roles 
 For complete list of the above, please refer to Event Annotation Guidelines.pdf
 
-![Annotation](annotation.png)
+![Annotation](brat_annotation.png)
 
 
 
