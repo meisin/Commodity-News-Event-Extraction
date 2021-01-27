@@ -1,0 +1,96 @@
+T1	Movement-up-gain 33 39	Rising
+E1	Movement-up-gain:T1 
+T2	Financial_attribute 40 46	Output
+T3	trade-financial-tension 19 28	Trade War
+E2	trade-financial-tension:T3 
+T4	PERCENTAGE 13 15	2%
+T5	Movement-down-loss 7 12	Falls
+E3	Movement-down-loss:T5 
+T6	Commodity 3 6	Oil
+T7	Movement-down-loss 207 211	fell
+E4	Movement-down-loss:T7 Difference:T10 Reference_point_time:T11 Attribute:T8 Item:T9
+T8	Financial_attribute 200 206	prices
+T9	Commodity 196 199	Oil
+T10	PERCENTAGE 212 221	around 2%
+T11	DATE 225 232	Tuesday
+T12	Movement-down-loss 244 249	lower
+E5	Movement-down-loss:T12 
+T14	trade-financial-tension 289 298	trade war
+E6	trade-financial-tension:T14 
+T13	Economic_item 313 320	economy
+T15	LOCATION 306 312	global
+T16	Movement-up-gain 325 331	rising
+E7	Movement-up-gain:T16 Supplier_Consumer:T17 Supplier_Consumer2:T18
+T17	ORGANIZATION 332 336	OPEC
+T18	ORGANIZATION 337 343	output
+T19	Movement-down-loss 361 365	down
+E8	Movement-down-loss:T19 Difference:T20 Difference2:T21 Difference3:T22 Item:T23
+T20	MONEY 366 371	$1.36
+T21	PERCENTAGE 376 380	2.5%
+T22	Price_unit 385 400	$53.73 a barrel
+T25	Movement-down-loss 469 473	down
+E9	Movement-down-loss:T25 Item:T28 Difference:T26 Final_value:T27
+T26	MONEY 474 482	97 cents
+T27	Price_unit 486 501	$57.66 a barrel
+T28	Commodity 459 464	Brent
+T30	trade-financial-tension 684 693	trade war
+E10	trade-financial-tension:T30 Participating_countries:T31
+T31	COUNTRY 702 735	the world’s two largest economies
+T32	Negative_sentiment 896 904	Concerns
+E11	Negative_sentiment:T32 
+T34	LOCATION 914 920	global
+T33	trade-financial-tension 921 937	economic fallout
+E12	trade-financial-tension:T33 
+T35	Economic_item 994 1001	economy
+T36	Position-low 1194 1200	lowest
+E13	Position-low:T36 Initial_reference_point:T37
+T37	DATE 1221 1225	2012
+T38	Slow-weak 1266 1274	struggle
+E14	Slow-weak:T38 Modality_cue:T40 Item:T39
+T39	Commodity 1257 1260	Oil
+T40	MODALITY_cue 1261 1265	will
+A1	Modality E14 Other
+T41	Financial_attribute 1444 1454	production
+T42	Movement-up-gain 1602 1608	higher
+E15	Movement-up-gain:T42 Attribute:T43 Supplier_Consumer:T44 Supplier_Consumer2:T45
+T43	Financial_attribute 1609 1615	supply
+T44	COUNTRY 1621 1625	Iraq
+T45	COUNTRY 1630 1637	Nigeria
+T46	Financial_attribute 1511 1517	Output
+T47	ORGANIZATION 1527 1583	Organization of the Petroleum Exporting Countries (OPEC)
+T48	Movement-up-gain 1584 1588	rose
+E16	Movement-up-gain:T48 Reference_point_time:T49 Supplier_Consumer:T47 Attribute:T46
+T49	DATE 1592 1598	August
+T50	Cause-movement-down-loss 1649 1653	cuts
+E17	Cause-movement-down-loss:T50 Supplier_Consumer:T52
+T51	Movement-down-loss 1687 1693	losses
+E18	Movement-down-loss:T51 
+T52	COUNTRY 1670 1682	Saudi Arabia
+T53	Embargo 1709 1718	sanctions
+E19	Embargo:T53 Imposee:T54 Imposer:T55
+T54	COUNTRY 1722 1726	Iran
+T55	COUNTRY 1704 1708	U.S.
+T56	Financial_attribute 1741 1751	production
+T57	Commodity 1737 1740	oil
+T58	NATIONALITY 1729 1736	Russian
+T59	DATE 1755 1761	August
+T60	Movement-up-gain 1762 1766	rose
+E20	Movement-up-gain:T60 Final_value:T61 Reference_point_time:T59 Attribute:T56 Item:T57 Type:T58
+T61	Production_unit 1770 1806	11.294 million barrels per day (bpd)
+T62	Position-high 1843 1850	highest
+E21	Position-high:T62 Reference_point_time:T63
+T63	DATE 1857 1862	March
+T64	MODALITY_cue 1996 2002	agreed
+T66	Cause-movement-down-loss 2018 2024	reduce
+E22	Cause-movement-down-loss:T66 Attribute:T67 Difference:T68 Reference_point_time:T69 Modality_cue:T64 Supplier_Consumer:T71 Supplier_Consumer2:T70 Supplier_Consumer3:T65
+T67	Financial_attribute 2025 2030	suppl
+T68	Production_unit 2035 2050	1.2 million bpd
+T69	DATE 2056 2072	Jan. 1 this year
+A2	Modality E22 Other
+T65	ORGANIZATION 1944 1948	OPEC
+T70	COUNTRY 1950 1956	Russia
+T71	COUNTRY 1961 1978	other non-members
+T72	Financial_attribute 2102 2111	inventory
+T73	COUNTRY 278 288	U.S.-China
+T23	Commodity 346 356	U.S. crude
+T24	Commodity 612 622	U.S. crude

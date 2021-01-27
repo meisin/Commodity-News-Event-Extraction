@@ -1,0 +1,86 @@
+T1	COUNTRY 3 15	Saudi Arabia
+T2	trade-financial-tension 26 35	Price War
+E1	trade-financial-tension:T2 Participating_countries:T1
+T3	Movement-up-gain 57 61	Hike
+E2	Movement-up-gain:T3 Attribute:T4 Item:T5
+T4	Financial_attribute 50 56	Output
+T5	Commodity 46 49	Oil
+T6	COUNTRY 217 229	Saudi Arabia
+T7	trade-financial-tension 248 257	price war
+E3	trade-financial-tension:T7 Participating_countries:T6 Item:T8 Participating_countries2:T9 Reference_point_time:T10
+T8	Commodity 244 247	oil
+T9	COUNTRY 263 269	Russia
+T10	DATE 273 280	Tuesday
+T11	Production_unit 339 365	12.3 million barrels a day
+T12	Movement-up-gain 399 403	hike
+E4	Movement-up-gain:T12 Attribute:T13
+T13	Financial_attribute 388 398	production
+T14	Economic_item 417 423	market
+T15	Movement-up-gain 437 441	hike
+E5	Movement-up-gain:T15 Attribute:T16
+T16	Financial_attribute 430 436	output
+T18	Movement-up-gain 459 461	up
+E6	Movement-up-gain:T18 Difference:T17
+T19	Financial_attribute 614 625	inventories
+T20	Commodity 642 647	crude
+T21	Economic_item 682 688	market
+T22	Production_unit 731 756	9.7 million barrels a day
+T23	trade-financial-tension 822 831	price war
+E7	trade-financial-tension:T23 Participating_countries:T24 Participating_countries2:T25
+T24	COUNTRY 840 846	Russia
+T25	COUNTRY 851 863	Saudi Arabia
+T26	Movement-down-loss 896 900	fell
+E8	Movement-down-loss:T26 Attribute:T27 Item:T28 Reference_point_time:T29 Difference:T30
+T27	Financial_attribute 889 895	prices
+T28	Commodity 885 888	oil
+T29	DATE 868 874	Monday
+T30	PERCENTAGE 901 914	more than 20%
+T17	PERCENTAGE 445 458	more than 25%
+T31	Movement-up-gain 936 940	drop
+E9	Movement-up-gain:T31 Duration:T32
+T32	DURATION 928 935	one-day
+T33	LOCATION 988 994	global
+T34	Economic_item 1011 1018	markets
+T35	Grow-strong 1044 1054	recovering
+E10	Grow-strong:T35 Attribute:T36 Item:T37
+T36	Financial_attribute 1025 1031	prices
+T37	Commodity 1021 1024	Oil
+T38	Movement-up-gain 1074 1080	plunge
+E11	Movement-up-gain:T38 Reference_point_time:T39
+T39	DATE 1081 1094	a day earlier
+T40	POLARITY_cue 1108 1115	gave up
+T41	Movement-up-gain 1130 1135	gains
+E12	Movement-up-gain:T41 Polarity_cue:T40
+A1	Polarity E12 Negative
+T42	Commodity 1137 1148	Brent crude
+T43	Movement-up-gain 1164 1170	higher
+E13	Movement-up-gain:T43 Difference:T44 Final_value:T45
+T44	PERCENTAGE 1161 1163	4%
+T45	Price_unit 1174 1189	$35.75 a barrel
+T46	Commodity 1316 1322	energy
+T47	Cause-movement-up-gain 1366 1371	boost
+E14	Cause-movement-up-gain:T47 Modality_cue:T49 Supplier_Consumer:T48 Attribute:T50 Difference:T51
+T48	COUNTRY 1340 1346	Russia
+T49	MODALITY_cue 1355 1362	ability
+A2	Modality E14 Other
+T50	Financial_attribute 1372 1382	production
+T51	Production_unit 1386 1407	500,000 barrels a day
+T52	Production_unit 1460 1486	11.8 million barrels a day
+T53	Financial_attribute 1438 1444	output
+T54	COUNTRY 1424 1435	the country
+T55	Economic_item 1522 1528	market
+T56	Commodity 1742 1745	oil
+T57	LOCATION 1735 1741	global
+T58	Economic_item 1746 1752	market
+T59	Economic_item 1769 1776	economy
+T60	Negative_sentiment 1849 1854	worry
+E15	Negative_sentiment:T60 
+T61	trade-financial-tension 1869 1878	price war
+E16	trade-financial-tension:T61 Participating_countries:T63 Item:T62
+T62	Commodity 1865 1868	oil
+T63	COUNTRY 1887 1937	two of the world’s most powerful petroleum nations
+T64	Economic_item 2064 2071	markets
+T65	Commodity 2060 2063	oil
+T66	Cause-movement-up-gain 2094 2103	ramped up
+E17	Cause-movement-up-gain:T66 Attribute:T67
+T67	Financial_attribute 2104 2114	production

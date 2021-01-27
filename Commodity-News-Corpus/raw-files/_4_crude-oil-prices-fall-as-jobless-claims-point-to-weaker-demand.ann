@@ -1,0 +1,86 @@
+T1	Slow-weak 52 58	Weaker
+E1	Slow-weak:T1 Attribute:T2
+T2	Financial_attribute 59 65	Demand
+T3	Movement-down-loss 20 24	Fall
+E2	Movement-down-loss:T3 Attribute:T4 Item:T5
+T4	Financial_attribute 13 19	Prices
+T5	Commodity 3 12	Crude Oil
+T6	Movement-down-loss 249 254	lower
+E3	Movement-down-loss:T6 Reference_point_time:T7 Attribute:T8 Item:T9
+T7	DATE 285 293	Thursday
+T8	Financial_attribute 237 243	prices
+T9	Commodity 227 236	Crude oil
+T10	LOCATION 417 422	local
+T11	Commodity 423 426	oil
+T12	Financial_attribute 427 433	demand
+T13	Movement-up-gain 459 463	rose
+E4	Movement-up-gain:T13 Initial_reference_point:T14 Final_value:T15
+T14	DATE 489 505	the end of March
+T15	NUMBER 510 526	over 1.1 million
+T16	Cause-movement-down-loss 656 659	cut
+E5	Cause-movement-down-loss:T16 Reference_point_time:T21
+T17	Movement-up-gain 695 704	increases
+E6	Movement-up-gain:T17 
+T18	Commodity 1080 1088	Gasoline
+T19	Financial_attribute 1094 1101	futures
+T20	Movement-down-loss 1107 1111	down
+E7	Movement-down-loss:T20 Attribute:T19 Item:T18 Difference:T34 Final_value:T35
+T21	DATE 666 688	the start of the month
+T22	Financial_attribute 739 745	demand
+T23	Movement-down-loss 903 907	down
+E8	Movement-down-loss:T23 Difference:T27 Final_value:T28 Attribute:T26 Item:T24
+T26	Financial_attribute 890 897	futures
+T27	PERCENTAGE 908 912	2.2%
+T28	Price_unit 916 931	$42.16 a barrel
+T29	Movement-down-loss 970 974	down
+E9	Movement-down-loss:T29 Difference:T30 Final_value:T31 Item:T32 Type:T33
+T30	PERCENTAGE 975 979	0.9%
+T31	Price_unit 983 998	$44.51 a barrel
+T32	Commodity 960 965	Brent
+T33	LOCATION 943 949	global
+T34	PERCENTAGE 1112 1116	2.5%
+T35	Price_unit 1120 1136	$1.2588 a gallon
+T36	Movement-flat 2660 2669	no change
+E10	Movement-flat:T36 
+T37	Financial_attribute 2699 2705	output
+T38	Commodity 2489 2492	oil
+T39	Economic_item 2493 2499	market
+T40	Oversupply 1867 1877	oversupply
+E11	Oversupply:T40 Modality_cue:T41
+A1	Modality E11 Other
+T41	MODALITY_cue 1859 1863	risk
+T42	LOCATION 1885 1891	global
+T43	Economic_item 1892 1898	market
+T44	Cause-movement-down-loss 2004 2011	cutting
+E12	Cause-movement-down-loss:T44 Attribute:T45 Modality_cue:T46
+T45	Financial_attribute 2012 2018	output
+T46	MODALITY_cue 1996 2000	pact
+A2	Modality E12 Other
+T47	Production_unit 2053 2078	2.3 million barrels a day
+T48	Production_unit 2189 2217	half a million barrels a day
+T49	Financial_attribute 1587 1593	demand
+T50	Grow-strong 1763 1769	strong
+E13	Grow-strong:T50 Attribute:T51 Modality_cue:T52
+T51	Financial_attribute 1770 1776	demand
+T52	MODALITY_cue 1748 1754	should
+A3	Modality E13 Other
+T53	Commodity 1196 1199	oil
+T54	Financial_attribute 1200 1206	stocks
+T55	Slow-weak 1285 1292	stalled
+E14	Slow-weak:T55 Attribute:T56
+T56	Financial_attribute 1269 1280	consumption
+T58	Commodity 1309 1317	gasoline
+T59	Commodity 1322 1328	diesel
+T60	Financial_attribute 1329 1340	consumption
+T61	Movement-down-loss 1412 1416	down
+E15	Movement-down-loss:T61 Difference:T63 Item:T62 Attribute:T64
+T62	Commodity 1407 1411	fuel
+T63	PERCENTAGE 1417 1427	nearly 50%
+T64	Financial_attribute 1391 1399	supplies
+T65	Movement-down-loss 1018 1022	down
+E16	Movement-down-loss:T65 Difference:T66
+T66	PERCENTAGE 1023 1038	around 50 cents
+T67	Shortage 2357 2367	shortfalls
+E17	Shortage:T67 Reference_point_time:T68
+T68	DATE 2371 2394	May, June and July 2020
+T24	Commodity 875 889	U.S. crude oil
