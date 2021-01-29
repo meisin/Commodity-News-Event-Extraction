@@ -28,9 +28,12 @@ This folder contains the raw files of the Commodity News Corpus, which is made u
   | 20. Quantity          | *1.3500 million barrels, 1.8 million gallons, 18 million tonnes*            |
   | 21. State or province | *Washington, Moscow, Cushing, North America*                                |
   
-
 - 19 event types
+  1. **Geo-political News**
+     > Civil unrest (*civil-unrest*):  Violence or turmoil within the oil producing country.
+    
 - 21 Argument roles 
+
 For complete list of the above, please refer to Event Annotation Guidelines.pdf
 
 
