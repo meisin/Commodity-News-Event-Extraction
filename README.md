@@ -40,7 +40,10 @@ The results are written to (1) Tensorboard and (2) "runs/logfiles/output_XX.log'
 To access results on Tensorboard, first you need to have Tensorboard install and to bring up to bring up tensorboardX, use this command: ```tensorboard --logdir runs```
 
 ## Results
+| Tables   |      Are      |  Cool |
+
 |       Argument role      | precision |  recall  | f1-score |
+|--------------------------|:---------:|---------:|---------:|
 | NONE                     |   0.95    |   0.97   |   0.96   |
 | Attribute                |   0.94    |   0.88   |   0.91   |
 | Item                     |   0.96    |   0.88   |   0.92   |
@@ -62,10 +65,6 @@ To access results on Tensorboard, first you need to have Tensorboard install and
 | Forecaster               |   0.85    |   1.00   |   0.92   |
 | Forecast                 |   0.95    |   0.87   |   0.91   |
 
-
-| Tables   |      Are      |  Cool |
-|----------|:-------------:|------:|
-| col 1 is |  left-aligned | $1600 |
 
 ## Citation
 If you find the codes or the paper useful, please cite using the following:
