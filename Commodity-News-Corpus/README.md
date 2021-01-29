@@ -4,15 +4,16 @@ This folder contains the raw files of the Commodity News Corpus, which is made u
 
 ## Summary information
 - 21 Entity types covering both named and nominal entities
+  | Tables   |      Are      |  Cool |
+  |----------|:-------------:|------:|
+  | col 1 is |  left-aligned | $1600 |
+  | col 2 is |    centered   |   $12 |
+  | col 3 is | right-aligned |    $1 |
 - 19 event types
 - 21 Argument roles 
 For complete list of the above, please refer to Event Annotation Guidelines.pdf
 
-| Tables   |      Are      |  Cool |
-|----------|:-------------:|------:|
-| col 1 is |  left-aligned | $1600 |
-| col 2 is |    centered   |   $12 |
-| col 3 is | right-aligned |    $1 |
+
 
 
 
