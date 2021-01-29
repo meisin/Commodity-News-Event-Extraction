@@ -30,7 +30,7 @@ This folder contains the raw files of the Commodity News Corpus, which is made u
   
 - 19 event types
   1. **Geo-political News**
-    * Civil unrest (*civil-unrest*):  Violence or turmoil within the oil producing country.
+      * Civil unrest (*civil-unrest*):  Violence or turmoil within the oil producing country.
     
 - 21 Argument roles 
 
