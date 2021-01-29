@@ -63,5 +63,7 @@ To access results on Tensorboard, first you need to have Tensorboard install and
 | Forecast                 |   0.95    |   0.87   |   0.91   |
 
 
+  |      Entity Types     |                                  Examples                                   |
+
 ## Citation
 If you find the codes or the paper useful, please cite using the following:
