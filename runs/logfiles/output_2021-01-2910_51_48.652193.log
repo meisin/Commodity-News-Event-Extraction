@@ -1,0 +1,3626 @@
+INFO:transformers.tokenization_utils:Model name 'ComBERT/' not found in model shortcut name list (bert-base-uncased, bert-large-uncased, bert-base-cased, bert-large-cased, bert-base-multilingual-uncased, bert-base-multilingual-cased, bert-base-chinese, bert-base-german-cased, bert-large-uncased-whole-word-masking, bert-large-cased-whole-word-masking, bert-large-uncased-whole-word-masking-finetuned-squad, bert-large-cased-whole-word-masking-finetuned-squad, bert-base-cased-finetuned-mrpc, bert-base-german-dbmdz-cased, bert-base-german-dbmdz-uncased, TurkuNLP/bert-base-finnish-cased-v1, TurkuNLP/bert-base-finnish-uncased-v1, wietsedv/bert-base-dutch-cased). Assuming 'ComBERT/' is a path, a model identifier, or url to a directory containing tokenizer files.
+INFO:transformers.tokenization_utils:loading file ComBERT/vocab.txt
+INFO:transformers.tokenization_utils:loading file ComBERT/added_tokens.json
+INFO:transformers.tokenization_utils:loading file ComBERT/special_tokens_map.json
+INFO:transformers.tokenization_utils:loading file ComBERT/tokenizer_config.json
+INFO:__main__:Training/evaluation parameters Namespace(DIST=1, GCN_hidden_dim=200, GCN_num_layers=2, batch_size=2, bidirectional=True, deptags_embedding_dim=50, dropout=0.25, entity_embedding_dim=50, eval_data_file='dataset/event_extraction_test.json', learning_rate=2e-05, n_epochs=60, n_layers=2, postag_embedding_dim=50, train_data_file='dataset/event_extraction_train.json', transformer_type='combert', trigger_embedding_dim=50)
+INFO:transformers.configuration_utils:loading configuration file ComBERT/config.json
+INFO:transformers.configuration_utils:Model config BertConfig {
+  "architectures": [
+    "BertForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "eos_token_ids": 0,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "output_past": true,
+  "pad_token_id": 0,
+  "type_vocab_size": 2,
+  "vocab_size": 28996
+}
+
+INFO:transformers.modeling_utils:loading weights file ComBERT/pytorch_model.bin
+INFO:__main__:***** Running training *****
+INFO:__main__:epoch # 1
+INFO:__main__:=====Trigger Classification=====
+INFO:__main__:accuracy - 0.9619739371929075
+INFO:__main__:precision - 0.5974955277280859
+INFO:__main__:recall - 0.5622895622895623
+INFO:__main__:f1 - 0.5793581960104076
+INFO:__main__:                       precision    recall  f1-score   support
+
+                 WEAK       0.24      0.11      0.15        37
+                  LOW       0.58      0.26      0.36        27
+                 LOSS       0.78      0.93      0.85       229
+              EMBARGO       0.05      0.20      0.08        20
+               UNREST       0.00      0.00      0.00        15
+                 GAIN       0.66      0.76      0.71       105
+               STRONG       0.00      0.00      0.00        25
+              TENSION       0.00      0.00      0.00        31
+                 HIGH       0.39      1.00      0.57        13
+           OVERSUPPLY       0.71      0.19      0.30        26
+                 FLAT       0.00      0.00      0.00        13
+SITUATION_DETERIORATE       0.00      0.00      0.00         8
+             SHORTAGE       0.00      0.00      0.00        11
+   NEGATIVE_SENTIMENT       0.88      0.37      0.52        19
+          PROHIBITING       0.00      0.00      0.00         8
+               CRISIS       0.00      0.00      0.00         7
+
+            micro avg       0.60      0.56      0.58       594
+            macro avg       0.53      0.56      0.52       594
+
+INFO:__main__:=======Argument Role Classification=========
+INFO:__main__:arg accuracy - 0.74949358541526
+INFO:__main__:arg precision - 0.5617406345786217
+INFO:__main__:arg recall - 0.74949358541526
+INFO:__main__:arg f1 - 0.642175129147772
+INFO:__main__:              precision    recall  f1-score   support
+
+           0       0.75      1.00      0.86      2220
+           1       0.00      0.00      0.00       202
+           2       0.00      0.00      0.00       161
+           3       0.00      0.00      0.00        37
+           4       0.00      0.00      0.00        13
+           5       0.00      0.00      0.00         2
+           6       0.00      0.00      0.00        84
+           7       0.00      0.00      0.00        85
+           8       0.00      0.00      0.00        93
+           9       0.00      0.00      0.00         2
+          10       0.00      0.00      0.00         7
+          11       0.00      0.00      0.00        18
+          12       0.00      0.00      0.00         2
+          14       0.00      0.00      0.00         5
+          15       0.00      0.00      0.00        11
+          19       0.00      0.00      0.00         7
+          20       0.00      0.00      0.00        13
+
+    accuracy                           0.75      2962
+   macro avg       0.04      0.06      0.05      2962
+weighted avg       0.56      0.75      0.64      2962
+
+INFO:__main__:epoch # 2
+INFO:__main__:=====Trigger Classification=====
+INFO:__main__:accuracy - 0.9765007477034822
+INFO:__main__:precision - 0.7649063032367973
+INFO:__main__:recall - 0.7558922558922558
+INFO:__main__:f1 - 0.7603725656223539
+INFO:__main__:                       precision    recall  f1-score   support
+
+                 LOSS       0.92      0.98      0.95       229
+              EMBARGO       0.36      0.85      0.51        20
+                 GAIN       0.89      0.80      0.84       105
+               STRONG       0.45      0.60      0.52        25
+   NEGATIVE_SENTIMENT       0.89      0.84      0.86        19
+                 WEAK       0.71      0.65      0.68        37
+                 HIGH       0.57      1.00      0.72        13
+           OVERSUPPLY       0.54      0.54      0.54        26
+          PROHIBITING       0.00      0.00      0.00         8
+                  LOW       0.58      0.56      0.57        27
+SITUATION_DETERIORATE       0.00      0.00      0.00         8
+                 FLAT       1.00      0.23      0.38        13
+              TENSION       0.44      0.35      0.39        31
+               UNREST       0.78      0.47      0.58        15
+             SHORTAGE       0.00      0.00      0.00        11
+               CRISIS       1.00      0.86      0.92         7
+
+            micro avg       0.76      0.76      0.76       594
+            macro avg       0.76      0.76      0.74       594
+
+INFO:__main__:=======Argument Role Classification=========
+INFO:__main__:arg accuracy - 0.7701599738818152
+INFO:__main__:arg precision - 0.6931435996746108
+INFO:__main__:arg recall - 0.7701599738818152
+INFO:__main__:arg f1 - 0.7044849074580343
+INFO:__main__:              precision    recall  f1-score   support
+
+           0       0.82      0.98      0.89      2188
+           1       0.48      0.58      0.53       231
+           2       0.45      0.11      0.18       189
+           3       0.00      0.00      0.00        43
+           4       0.00      0.00      0.00        16
+           5       0.00      0.00      0.00        13
+           6       1.00      0.01      0.02        95
+           7       0.52      0.60      0.56        90
+           8       0.00      0.00      0.00       105
+           9       0.00      0.00      0.00         8
+          10       0.00      0.00      0.00         7
+          11       0.00      0.00      0.00        27
+          12       0.00      0.00      0.00         6
+          14       0.00      0.00      0.00         5
+          15       0.00      0.00      0.00        18
+          18       0.00      0.00      0.00         1
+          19       0.00      0.00      0.00         7
+          20       0.00      0.00      0.00        14
+
+    accuracy                           0.77      3063
+   macro avg       0.18      0.13      0.12      3063
+weighted avg       0.69      0.77      0.70      3063
+
+INFO:__main__:epoch # 3
+INFO:__main__:=====Trigger Classification=====
+INFO:__main__:accuracy - 0.9820551164281136
+INFO:__main__:precision - 0.8199672667757774
+INFO:__main__:recall - 0.8434343434343434
+INFO:__main__:f1 - 0.8315352697095436
+INFO:__main__:                       precision    recall  f1-score   support
+
+                 LOSS       0.90      0.98      0.94       229
+                  LOW       1.00      1.00      1.00        27
+              EMBARGO       0.81      0.85      0.83        20
+               UNREST       1.00      0.87      0.93        15
+                 GAIN       0.83      0.85      0.84       105
+               STRONG       0.51      0.80      0.62        25
+   NEGATIVE_SENTIMENT       0.79      1.00      0.88        19
+             SHORTAGE       0.00      0.00      0.00        11
+                 WEAK       0.62      0.62      0.62        37
+                 HIGH       0.87      1.00      0.93        13
+SITUATION_DETERIORATE       0.00      0.00      0.00         8
+          PROHIBITING       0.00      0.00      0.00         8
+              TENSION       0.80      0.77      0.79        31
+                 FLAT       0.80      0.62      0.70        13
+           OVERSUPPLY       0.52      0.65      0.58        26
+               CRISIS       1.00      1.00      1.00         7
+
+            micro avg       0.82      0.84      0.83       594
+            macro avg       0.79      0.84      0.81       594
+
+INFO:__main__:=======Argument Role Classification=========
+INFO:__main__:arg accuracy - 0.8188451776649747
+INFO:__main__:arg precision - 0.771707017844194
+INFO:__main__:arg recall - 0.8188451776649747
+INFO:__main__:arg f1 - 0.7923006105647059
+INFO:__main__:              precision    recall  f1-score   support
+
+           0       0.89      0.93      0.91      2199
+           1       0.68      0.82      0.74       238
+           2       0.64      0.76      0.70       204
+           3       0.00      0.00      0.00        47
+           4       0.00      0.00      0.00        16
+           5       0.00      0.00      0.00        20
+           6       0.68      0.64      0.66       101
+           7       0.55      0.78      0.65        92
+           8       0.57      0.35      0.44       111
+           9       0.23      0.62      0.33         8
+          10       0.00      0.00      0.00         7
+          11       0.00      0.00      0.00        29
+          12       0.00      0.00      0.00         7
+          13       0.00      0.00      0.00        19
+          14       0.00      0.00      0.00         5
+          15       0.00      0.00      0.00        23
+          18       0.00      0.00      0.00         3
+          19       0.00      0.00      0.00         7
+          20       0.00      0.00      0.00        16
+
+    accuracy                           0.82      3152
+   macro avg       0.22      0.26      0.23      3152
+weighted avg       0.77      0.82      0.79      3152
+
+INFO:__main__:epoch # 4
+INFO:__main__:=====Trigger Classification=====
+INFO:__main__:accuracy - 0.9852595599230933
+INFO:__main__:precision - 0.8384
+INFO:__main__:recall - 0.8821548821548821
+INFO:__main__:f1 - 0.8597210828547991
+INFO:__main__:                       precision    recall  f1-score   support
+
+                 LOSS       0.91      0.98      0.94       229
+                  LOW       1.00      1.00      1.00        27
+                 GAIN       0.80      0.87      0.83       105
+               UNREST       1.00      0.73      0.85        15
+               STRONG       0.67      0.80      0.73        25
+               CRISIS       1.00      1.00      1.00         7
+                 HIGH       0.93      1.00      0.96        13
+           OVERSUPPLY       0.73      0.85      0.79        26
+              EMBARGO       0.74      0.85      0.79        20
+                 WEAK       0.63      0.84      0.72        37
+              TENSION       0.74      0.90      0.81        31
+             SHORTAGE       1.00      0.09      0.17        11
+                 FLAT       0.92      0.85      0.88        13
+SITUATION_DETERIORATE       1.00      0.25      0.40         8
+   NEGATIVE_SENTIMENT       0.95      1.00      0.97        19
+          PROHIBITING       0.00      0.00      0.00         8
+
+            micro avg       0.84      0.88      0.86       594
+            macro avg       0.84      0.88      0.85       594
+
+INFO:__main__:=======Argument Role Classification=========
+INFO:__main__:arg accuracy - 0.8292237442922374
+INFO:__main__:arg precision - 0.8178260931841402
+INFO:__main__:arg recall - 0.8292237442922374
+INFO:__main__:arg f1 - 0.8101530281143737
+INFO:__main__:              precision    recall  f1-score   support
+
+           0       0.90      0.92      0.91      2288
+           1       0.76      0.74      0.75       251
+           2       0.67      0.82      0.74       214
+           3       0.75      0.12      0.21        49
+           4       0.00      0.00      0.00        17
+           5       0.00      0.00      0.00        23
+           6       0.72      0.76      0.74       102
+           7       0.55      0.88      0.68        91
+           8       0.55      0.68      0.60       114
+           9       0.22      0.88      0.35         8
+          10       0.00      0.00      0.00         7
+          11       0.67      0.06      0.12        31
+          12       0.00      0.00      0.00         7
+          13       0.00      0.00      0.00        19
+          14       0.00      0.00      0.00         6
+          15       1.00      0.08      0.15        24
+          17       0.00      0.00      0.00         2
+          18       0.00      0.00      0.00         5
+          19       0.00      0.00      0.00         8
+          20       1.00      0.05      0.10        19
+
+    accuracy                           0.83      3285
+   macro avg       0.39      0.30      0.27      3285
+weighted avg       0.82      0.83      0.81      3285
+
+INFO:__main__:epoch # 5
+INFO:__main__:=====Trigger Classification=====
+INFO:__main__:accuracy - 0.9879299295022431
+INFO:__main__:precision - 0.8662420382165605
+INFO:__main__:recall - 0.9158249158249159
+INFO:__main__:f1 - 0.8903436988543373
+INFO:__main__:                       precision    recall  f1-score   support
+
+                 WEAK       0.83      0.78      0.81        37
+                  LOW       1.00      1.00      1.00        27
+                 LOSS       0.91      0.97      0.94       229
+              EMBARGO       0.77      0.85      0.81        20
+                 GAIN       0.87      0.96      0.91       105
+               STRONG       0.88      0.92      0.90        25
+              TENSION       0.77      0.87      0.82        31
+                 HIGH       1.00      1.00      1.00        13
+           OVERSUPPLY       0.59      0.73      0.66        26
+                 FLAT       0.92      0.92      0.92        13
+             SHORTAGE       1.00      0.73      0.84        11
+   NEGATIVE_SENTIMENT       0.68      1.00      0.81        19
+SITUATION_DETERIORATE       1.00      0.50      0.67         8
+               UNREST       0.87      0.87      0.87        15
+          PROHIBITING       1.00      0.25      0.40         8
+               CRISIS       1.00      1.00      1.00         7
+
+            micro avg       0.87      0.92      0.89       594
+            macro avg       0.87      0.92      0.89       594
+
+INFO:__main__:=======Argument Role Classification=========
+INFO:__main__:arg accuracy - 0.8447797967354481
+INFO:__main__:arg precision - 0.8210907269966154
+INFO:__main__:arg recall - 0.8447797967354481
+INFO:__main__:arg f1 - 0.8222793048556792
+INFO:__main__:              precision    recall  f1-score   support
+
+           0       0.85      0.98      0.91      2221
+           1       0.89      0.71      0.79       258
+           2       0.94      0.61      0.74       220
+           3       0.66      0.51      0.57        49
+           4       0.00      0.00      0.00        17
+           5       0.00      0.00      0.00        24
+           6       0.75      0.65      0.70       109
+           7       0.85      0.66      0.74        91
+           8       0.82      0.54      0.65       119
+           9       0.30      0.78      0.44         9
+          10       0.00      0.00      0.00         7
+          11       1.00      0.23      0.38        30
+          12       0.00      0.00      0.00         9
+          13       0.00      0.00      0.00        19
+          14       0.00      0.00      0.00         6
+          15       0.94      0.62      0.75        24
+          17       0.00      0.00      0.00         3
+          18       0.00      0.00      0.00         5
+          19       0.00      0.00      0.00         8
+          20       0.00      0.00      0.00        19
+
+    accuracy                           0.84      3247
+   macro avg       0.40      0.31      0.33      3247
+weighted avg       0.82      0.84      0.82      3247
+
+INFO:__main__:epoch # 6
+INFO:__main__:=====Trigger Classification=====
+INFO:__main__:accuracy - 0.9873958555864132
+INFO:__main__:precision - 0.865506329113924
+INFO:__main__:recall - 0.9208754208754208
+INFO:__main__:f1 - 0.8923327895595432
+INFO:__main__:                       precision    recall  f1-score   support
+
+                 WEAK       0.83      0.81      0.82        37
+                 LOSS       0.93      0.97      0.95       229
+              EMBARGO       0.65      0.85      0.74        20
+                 FLAT       0.80      0.92      0.86        13
+                 GAIN       0.87      0.95      0.91       105
+               UNREST       0.78      0.93      0.85        15
+           OVERSUPPLY       0.59      0.77      0.67        26
+   NEGATIVE_SENTIMENT       0.83      1.00      0.90        19
+              TENSION       0.84      0.87      0.86        31
+          PROHIBITING       1.00      0.50      0.67         8
+                 HIGH       1.00      1.00      1.00        13
+               STRONG       0.77      0.92      0.84        25
+             SHORTAGE       1.00      0.73      0.84        11
+                  LOW       1.00      1.00      1.00        27
+               CRISIS       1.00      0.86      0.92         7
+SITUATION_DETERIORATE       1.00      0.62      0.77         8
+
+            micro avg       0.87      0.92      0.89       594
+            macro avg       0.87      0.92      0.89       594
+
+INFO:__main__:=======Argument Role Classification=========
+INFO:__main__:arg accuracy - 0.8669054013727245
+INFO:__main__:arg precision - 0.8490937756357129
+INFO:__main__:arg recall - 0.8669054013727245
+INFO:__main__:arg f1 - 0.8561413125870361
+INFO:__main__:              precision    recall  f1-score   support
+
+           0       0.91      0.94      0.93      2297
+           1       0.77      0.81      0.79       267
+           2       0.84      0.83      0.84       228
+           3       0.59      0.76      0.66        49
+           4       0.00      0.00      0.00        17
+           5       0.00      0.00      0.00        27
+           6       0.77      0.80      0.79       110
+           7       0.74      0.76      0.75        91
+           8       0.77      0.72      0.74       124
+           9       1.00      0.38      0.55         8
+          10       0.00      0.00      0.00         7
+          11       0.74      0.53      0.62        32
+          12       0.25      0.67      0.36         9
+          13       0.00      0.00      0.00        19
+          14       0.00      0.00      0.00         6
+          15       0.56      0.83      0.67        24
+          17       0.00      0.00      0.00         5
+          18       0.00      0.00      0.00         5
+          19       1.00      0.38      0.55         8
+          20       0.82      0.50      0.62        18
+
+    accuracy                           0.87      3351
+   macro avg       0.49      0.44      0.44      3351
+weighted avg       0.85      0.87      0.86      3351
+
+INFO:__main__:epoch # 7
+INFO:__main__:=====Trigger Classification=====
+INFO:__main__:accuracy - 0.988784447767571
+INFO:__main__:precision - 0.8941368078175895
+INFO:__main__:recall - 0.9242424242424242
+INFO:__main__:f1 - 0.9089403973509933
+INFO:__main__:                       precision    recall  f1-score   support
+
+                 LOSS       0.91      0.97      0.94       229
+              EMBARGO       0.74      0.85      0.79        20
+                 FLAT       1.00      0.92      0.96        13
+                 GAIN       0.90      0.90      0.90       105
+                 WEAK       0.86      0.84      0.85        37
+                  LOW       1.00      1.00      1.00        27
+                 HIGH       1.00      1.00      1.00        13
+              TENSION       0.90      0.87      0.89        31
+SITUATION_DETERIORATE       1.00      0.75      0.86         8
+             SHORTAGE       1.00      1.00      1.00        11
+           OVERSUPPLY       0.71      0.77      0.74        26
+   NEGATIVE_SENTIMENT       0.76      1.00      0.86        19
+               UNREST       0.93      0.87      0.90        15
+          PROHIBITING       1.00      0.75      0.86         8
+               CRISIS       1.00      1.00      1.00         7
+               STRONG       0.89      0.96      0.92        25
+
+            micro avg       0.89      0.92      0.91       594
+            macro avg       0.90      0.92      0.91       594
+
+INFO:__main__:=======Argument Role Classification=========
+INFO:__main__:arg accuracy - 0.8699064292182312
+INFO:__main__:arg precision - 0.8595058593798527
+INFO:__main__:arg recall - 0.8699064292182312
+INFO:__main__:arg f1 - 0.8552464479387598
+INFO:__main__:              precision    recall  f1-score   support
+
+           0       0.87      0.98      0.92      2257
+           1       0.90      0.77      0.83       266
+           2       0.94      0.69      0.79       227
+           3       0.74      0.53      0.62        49
+           4       0.00      0.00      0.00        17
+           5       1.00      0.13      0.24        30
+           6       0.86      0.76      0.81       108
+           7       0.88      0.64      0.74        91
+           8       0.83      0.63      0.71       126
+           9       0.60      0.67      0.63         9
+          10       0.00      0.00      0.00         7
+          11       0.87      0.67      0.75        30
+          12       0.32      0.60      0.41        10
+          13       0.00      0.00      0.00        19
+          14       0.00      0.00      0.00         6
+          15       0.78      0.75      0.77        24
+          17       0.00      0.00      0.00         6
+          18       1.00      0.20      0.33         5
+          19       1.00      0.62      0.77         8
+          20       1.00      0.50      0.67        18
+
+    accuracy                           0.87      3313
+   macro avg       0.63      0.46      0.50      3313
+weighted avg       0.86      0.87      0.86      3313
+
+INFO:__main__:epoch # 8
+INFO:__main__:=====Trigger Classification=====
+INFO:__main__:accuracy - 0.9883571886349071
+INFO:__main__:precision - 0.8928
+INFO:__main__:recall - 0.9393939393939394
+INFO:__main__:f1 - 0.9155045118949959
+INFO:__main__:                       precision    recall  f1-score   support
+
+             SHORTAGE       1.00      1.00      1.00        11
+                 WEAK       0.80      0.86      0.83        37
+                 HIGH       0.93      1.00      0.96        13
+                 GAIN       0.87      0.95      0.91       105
+                 LOSS       0.93      0.97      0.95       229
+              EMBARGO       0.77      0.85      0.81        20
+               CRISIS       1.00      0.86      0.92         7
+           OVERSUPPLY       0.72      0.81      0.76        26
+          PROHIBITING       1.00      0.88      0.93         8
+   NEGATIVE_SENTIMENT       0.76      1.00      0.86        19
+              TENSION       0.93      0.87      0.90        31
+               UNREST       0.81      0.87      0.84        15
+                  LOW       1.00      1.00      1.00        27
+               STRONG       0.92      0.96      0.94        25
+                 FLAT       0.93      1.00      0.96        13
+SITUATION_DETERIORATE       1.00      0.88      0.93         8
+
+            micro avg       0.89      0.94      0.92       594
+            macro avg       0.90      0.94      0.92       594
+
+INFO:__main__:=======Argument Role Classification=========
+INFO:__main__:arg accuracy - 0.8812960235640648
+INFO:__main__:arg precision - 0.8693960071027464
+INFO:__main__:arg recall - 0.8812960235640648
+INFO:__main__:arg f1 - 0.8738496511297391
+INFO:__main__:              precision    recall  f1-score   support
+
+           0       0.92      0.94      0.93      2325
+           1       0.84      0.84      0.84       271
+           2       0.86      0.88      0.87       231
+           3       0.64      0.47      0.54        49
+           4       0.00      0.00      0.00        17
+           5       0.38      0.31      0.34        29
+           6       0.78      0.74      0.76       111
+           7       0.64      0.84      0.72        89
+           8       0.78      0.75      0.76       126
+           9       1.00      0.78      0.88         9
+          10       0.00      0.00      0.00         7
+          11       0.81      0.78      0.79        32
+          12       0.60      0.60      0.60        10
+          13       0.89      0.42      0.57        19
+          14       0.00      0.00      0.00         6
+          15       0.94      0.67      0.78        24
+          17       0.00      0.00      0.00         7
+          18       0.00      0.00      0.00         7
+          19       1.00      0.88      0.93         8
+          20       0.79      0.61      0.69        18
+
+    accuracy                           0.88      3395
+   macro avg       0.59      0.53      0.55      3395
+weighted avg       0.87      0.88      0.87      3395
+
+INFO:__main__:epoch # 9
+INFO:__main__:=====Trigger Classification=====
+INFO:__main__:accuracy - 0.988891262550737
+INFO:__main__:precision - 0.8834645669291339
+INFO:__main__:recall - 0.9444444444444444
+INFO:__main__:f1 - 0.9129373474369405
+INFO:__main__:                       precision    recall  f1-score   support
+
+                 WEAK       0.86      0.84      0.85        37
+                 LOSS       0.91      0.97      0.94       229
+                 GAIN       0.87      0.96      0.91       105
+               STRONG       0.92      0.96      0.94        25
+          PROHIBITING       1.00      0.88      0.93         8
+              TENSION       0.85      0.94      0.89        31
+               CRISIS       1.00      1.00      1.00         7
+           OVERSUPPLY       0.69      0.77      0.73        26
+             SHORTAGE       1.00      1.00      1.00        11
+              EMBARGO       0.68      0.85      0.76        20
+                 HIGH       0.93      1.00      0.96        13
+               UNREST       0.93      0.87      0.90        15
+                  LOW       1.00      1.00      1.00        27
+                 FLAT       0.93      1.00      0.96        13
+SITUATION_DETERIORATE       0.88      0.88      0.88         8
+   NEGATIVE_SENTIMENT       0.86      1.00      0.93        19
+
+            micro avg       0.88      0.94      0.91       594
+            macro avg       0.89      0.94      0.91       594
+
+INFO:__main__:=======Argument Role Classification=========
+INFO:__main__:arg accuracy - 0.8973615540736445
+INFO:__main__:arg precision - 0.8950049061036034
+INFO:__main__:arg recall - 0.8973615540736445
+INFO:__main__:arg f1 - 0.8922508923360319
+INFO:__main__:              precision    recall  f1-score   support
+
+           0       0.93      0.95      0.94      2369
+           1       0.83      0.86      0.84       271
+           2       0.87      0.90      0.89       230
+           3       0.68      0.79      0.73        48
+           4       1.00      0.12      0.21        17
+           5       0.57      0.45      0.50        29
+           6       0.81      0.83      0.82       112
+           7       0.85      0.79      0.82        91
+           8       0.81      0.80      0.81       126
+           9       0.88      0.78      0.82         9
+          10       1.00      0.14      0.25         7
+          11       0.84      0.84      0.84        31
+          12       0.58      0.64      0.61        11
+          13       0.93      0.46      0.62        28
+          14       0.00      0.00      0.00         6
+          15       0.80      0.83      0.82        24
+          17       0.00      0.00      0.00         7
+          18       1.00      0.43      0.60         7
+          19       0.89      1.00      0.94         8
+          20       1.00      0.50      0.67        18
+
+    accuracy                           0.90      3449
+   macro avg       0.76      0.61      0.64      3449
+weighted avg       0.90      0.90      0.89      3449
+
+INFO:__main__:epoch # 10
+INFO:__main__:=====Trigger Classification=====
+INFO:__main__:accuracy - 0.9901730399487289
+INFO:__main__:precision - 0.9079159935379645
+INFO:__main__:recall - 0.9461279461279462
+INFO:__main__:f1 - 0.9266281945589446
+INFO:__main__:                       precision    recall  f1-score   support
+
+             SHORTAGE       1.00      1.00      1.00        11
+                 WEAK       0.86      0.81      0.83        37
+                 LOSS       0.94      0.97      0.95       229
+                  LOW       1.00      1.00      1.00        27
+              EMBARGO       0.77      0.85      0.81        20
+                 HIGH       1.00      1.00      1.00        13
+SITUATION_DETERIORATE       1.00      0.88      0.93         8
+   NEGATIVE_SENTIMENT       0.95      1.00      0.97        19
+           OVERSUPPLY       0.70      0.81      0.75        26
+                 GAIN       0.91      0.95      0.93       105
+               UNREST       0.93      0.87      0.90        15
+                 FLAT       0.87      1.00      0.93        13
+              TENSION       0.91      0.97      0.94        31
+               CRISIS       1.00      1.00      1.00         7
+               STRONG       0.77      0.96      0.86        25
+          PROHIBITING       1.00      1.00      1.00         8
+
+            micro avg       0.91      0.95      0.93       594
+            macro avg       0.91      0.95      0.93       594
+
+INFO:__main__:=======Argument Role Classification=========
+INFO:__main__:arg accuracy - 0.8903903903903904
+INFO:__main__:arg precision - 0.887901079646309
+INFO:__main__:arg recall - 0.8903903903903904
+INFO:__main__:arg f1 - 0.885905672603526
+INFO:__main__:              precision    recall  f1-score   support
+
+           0       0.93      0.95      0.94      2246
+           1       0.83      0.87      0.85       270
+           2       0.86      0.87      0.87       230
+           3       0.78      0.72      0.75        50
+           4       0.90      0.53      0.67        17
+           5       0.67      0.07      0.12        29
+           6       0.82      0.82      0.82       114
+           7       0.76      0.82      0.79        91
+           8       0.84      0.76      0.80       128
+           9       1.00      0.67      0.80         9
+          10       0.80      0.57      0.67         7
+          11       0.83      0.91      0.87        32
+          12       0.75      0.55      0.63        11
+          13       0.00      0.00      0.00        24
+          14       1.00      0.50      0.67         6
+          15       0.88      0.88      0.88        24
+          17       0.00      0.00      0.00         6
+          18       0.08      0.43      0.13         7
+          19       1.00      0.89      0.94         9
+          20       0.75      0.60      0.67        20
+
+    accuracy                           0.89      3330
+   macro avg       0.72      0.62      0.64      3330
+weighted avg       0.89      0.89      0.89      3330
+
+INFO:__main__:epoch # 11
+INFO:__main__:=====Trigger Classification=====
+INFO:__main__:accuracy - 0.989104892117069
+INFO:__main__:precision - 0.8986928104575164
+INFO:__main__:recall - 0.9259259259259259
+INFO:__main__:f1 - 0.912106135986733
+INFO:__main__:                       precision    recall  f1-score   support
+
+                 WEAK       0.89      0.84      0.86        37
+                 HIGH       0.87      1.00      0.93        13
+                 LOSS       0.94      0.98      0.96       229
+               UNREST       0.81      0.87      0.84        15
+                 FLAT       0.93      1.00      0.96        13
+                 GAIN       0.91      0.96      0.94       105
+              TENSION       0.90      0.87      0.89        31
+              EMBARGO       0.68      0.85      0.76        20
+           OVERSUPPLY       0.62      0.58      0.60        26
+                  LOW       1.00      0.96      0.98        27
+               CRISIS       1.00      1.00      1.00         7
+   NEGATIVE_SENTIMENT       0.86      1.00      0.93        19
+          PROHIBITING       1.00      1.00      1.00         8
+               STRONG       0.88      0.88      0.88        25
+SITUATION_DETERIORATE       0.88      0.88      0.88         8
+             SHORTAGE       1.00      0.64      0.78        11
+
+            micro avg       0.90      0.93      0.91       594
+            macro avg       0.90      0.93      0.91       594
+
+INFO:__main__:=======Argument Role Classification=========
+INFO:__main__:arg accuracy - 0.9020603165123917
+INFO:__main__:arg precision - 0.9002385462307269
+INFO:__main__:arg recall - 0.9020603165123917
+INFO:__main__:arg f1 - 0.8996512924907353
+INFO:__main__:              precision    recall  f1-score   support
+
+           0       0.93      0.95      0.94      2274
+           1       0.84      0.88      0.86       274
+           2       0.92      0.86      0.89       233
+           3       0.72      0.81      0.76        48
+           4       0.70      0.41      0.52        17
+           5       0.57      0.70      0.63        23
+           6       0.81      0.81      0.81       111
+           7       0.92      0.66      0.77        91
+           8       0.82      0.79      0.80       126
+           9       0.88      0.78      0.82         9
+          10       0.60      0.43      0.50         7
+          11       0.88      0.85      0.86        33
+          12       0.80      0.73      0.76        11
+          13       0.88      0.68      0.77        22
+          14       0.67      0.33      0.44         6
+          15       0.87      0.87      0.87        23
+          17       0.00      0.00      0.00         7
+          18       1.00      0.71      0.83         7
+          19       0.73      0.89      0.80         9
+          20       0.92      0.67      0.77        18
+
+    accuracy                           0.90      3349
+   macro avg       0.77      0.69      0.72      3349
+weighted avg       0.90      0.90      0.90      3349
+
+INFO:__main__:epoch # 12
+INFO:__main__:=====Trigger Classification=====
+INFO:__main__:accuracy - 0.9897457808160649
+INFO:__main__:precision - 0.8888888888888888
+INFO:__main__:recall - 0.9427609427609428
+INFO:__main__:f1 - 0.915032679738562
+INFO:__main__:                       precision    recall  f1-score   support
+
+             SHORTAGE       1.00      0.91      0.95        11
+                 WEAK       0.91      0.84      0.87        37
+                 LOSS       0.93      0.97      0.95       229
+                 FLAT       0.81      1.00      0.90        13
+                 GAIN       0.88      0.94      0.91       105
+           OVERSUPPLY       0.67      0.85      0.75        26
+               UNREST       0.93      0.87      0.90        15
+              TENSION       0.85      0.94      0.89        31
+          PROHIBITING       0.89      1.00      0.94         8
+              EMBARGO       0.68      0.85      0.76        20
+               STRONG       0.82      0.92      0.87        25
+SITUATION_DETERIORATE       1.00      0.88      0.93         8
+                  LOW       1.00      1.00      1.00        27
+               CRISIS       1.00      0.86      0.92         7
+                 HIGH       0.93      1.00      0.96        13
+   NEGATIVE_SENTIMENT       0.90      1.00      0.95        19
+
+            micro avg       0.89      0.94      0.92       594
+            macro avg       0.89      0.94      0.92       594
+
+INFO:__main__:=======Argument Role Classification=========
+INFO:__main__:arg accuracy - 0.9061128985083358
+INFO:__main__:arg precision - 0.9070289445898286
+INFO:__main__:arg recall - 0.9061128985083358
+INFO:__main__:arg f1 - 0.9055931480756478
+INFO:__main__:              precision    recall  f1-score   support
+
+           0       0.95      0.93      0.94      2336
+           1       0.85      0.90      0.87       270
+           2       0.86      0.92      0.89       231
+           3       0.67      0.84      0.75        49
+           4       0.59      0.59      0.59        17
+           5       0.53      0.68      0.59        28
+           6       0.81      0.89      0.85       112
+           7       0.84      0.83      0.84        92
+           8       0.85      0.83      0.84       127
+           9       0.78      0.78      0.78         9
+          10       0.67      0.57      0.62         7
+          11       0.93      0.87      0.90        30
+          12       0.86      0.55      0.67        11
+          13       0.72      0.60      0.65        30
+          14       0.67      0.40      0.50         5
+          15       0.85      0.96      0.90        24
+          17       0.00      0.00      0.00         7
+          18       0.60      0.86      0.71         7
+          19       0.64      0.88      0.74         8
+          20       0.75      0.47      0.58        19
+
+    accuracy                           0.91      3419
+   macro avg       0.72      0.72      0.71      3419
+weighted avg       0.91      0.91      0.91      3419
+
+INFO:__main__:epoch # 13
+INFO:__main__:=====Trigger Classification=====
+INFO:__main__:accuracy - 0.9901730399487289
+INFO:__main__:precision - 0.9067524115755627
+INFO:__main__:recall - 0.9494949494949495
+INFO:__main__:f1 - 0.9276315789473685
+INFO:__main__:                       precision    recall  f1-score   support
+
+                 WEAK       0.89      0.89      0.89        37
+                  LOW       1.00      1.00      1.00        27
+                 LOSS       0.93      0.98      0.95       229
+              EMBARGO       0.77      0.85      0.81        20
+                 GAIN       0.88      0.94      0.91       105
+               STRONG       0.77      0.92      0.84        25
+              TENSION       0.97      1.00      0.98        31
+             SHORTAGE       1.00      1.00      1.00        11
+   NEGATIVE_SENTIMENT       1.00      1.00      1.00        19
+SITUATION_DETERIORATE       1.00      0.62      0.77         8
+               UNREST       0.93      0.87      0.90        15
+           OVERSUPPLY       0.81      0.85      0.83        26
+                 HIGH       1.00      1.00      1.00        13
+                 FLAT       0.76      1.00      0.87        13
+          PROHIBITING       1.00      0.88      0.93         8
+               CRISIS       1.00      1.00      1.00         7
+
+            micro avg       0.91      0.95      0.93       594
+            macro avg       0.91      0.95      0.93       594
+
+INFO:__main__:=======Argument Role Classification=========
+INFO:__main__:arg accuracy - 0.9120070629782225
+INFO:__main__:arg precision - 0.9130490832249215
+INFO:__main__:arg recall - 0.9120070629782225
+INFO:__main__:arg f1 - 0.9116288878522703
+INFO:__main__:              precision    recall  f1-score   support
+
+           0       0.95      0.94      0.95      2308
+           1       0.85      0.90      0.87       272
+           2       0.90      0.88      0.89       233
+           3       0.67      0.84      0.75        49
+           4       0.65      0.65      0.65        17
+           5       0.65      0.84      0.73        31
+           6       0.88      0.83      0.85       112
+           7       0.85      0.86      0.85        92
+           8       0.76      0.86      0.81       128
+           9       0.88      0.78      0.82         9
+          10       0.67      0.57      0.62         7
+          11       0.89      0.83      0.86        30
+          12       0.75      0.90      0.82        10
+          13       0.90      0.59      0.72        32
+          14       0.67      0.40      0.50         5
+          15       0.92      0.96      0.94        24
+          17       0.00      0.00      0.00         5
+          18       1.00      1.00      1.00         7
+          19       0.89      1.00      0.94         8
+          20       0.80      0.63      0.71        19
+
+    accuracy                           0.91      3398
+   macro avg       0.78      0.76      0.76      3398
+weighted avg       0.91      0.91      0.91      3398
+
+INFO:__main__:epoch # 14
+INFO:__main__:=====Trigger Classification=====
+INFO:__main__:accuracy - 0.9899594103823969
+INFO:__main__:precision - 0.889937106918239
+INFO:__main__:recall - 0.9528619528619529
+INFO:__main__:f1 - 0.9203252032520326
+INFO:__main__:                       precision    recall  f1-score   support
+
+              EMBARGO       0.74      0.85      0.79        20
+                 LOSS       0.93      0.97      0.95       229
+                 GAIN       0.86      0.96      0.91       105
+SITUATION_DETERIORATE       1.00      0.88      0.93         8
+              TENSION       0.97      1.00      0.98        31
+   NEGATIVE_SENTIMENT       0.95      1.00      0.97        19
+                 WEAK       0.80      0.86      0.83        37
+                 HIGH       1.00      1.00      1.00        13
+               UNREST       0.93      0.87      0.90        15
+               STRONG       0.77      0.96      0.86        25
+                  LOW       1.00      1.00      1.00        27
+           OVERSUPPLY       0.65      0.77      0.70        26
+               CRISIS       1.00      1.00      1.00         7
+             SHORTAGE       1.00      1.00      1.00        11
+                 FLAT       0.93      1.00      0.96        13
+          PROHIBITING       0.89      1.00      0.94         8
+
+            micro avg       0.89      0.95      0.92       594
+            macro avg       0.89      0.95      0.92       594
+
+INFO:__main__:=======Argument Role Classification=========
+INFO:__main__:arg accuracy - 0.9077993621339518
+INFO:__main__:arg precision - 0.908130792987554
+INFO:__main__:arg recall - 0.9077993621339518
+INFO:__main__:arg f1 - 0.9070189342282553
+INFO:__main__:              precision    recall  f1-score   support
+
+           0       0.94      0.95      0.94      2351
+           1       0.89      0.86      0.88       273
+           2       0.92      0.86      0.89       235
+           3       0.64      0.88      0.74        49
+           4       0.54      0.82      0.65        17
+           5       0.60      0.62      0.61        29
+           6       0.83      0.86      0.84       113
+           7       0.89      0.77      0.83        92
+           8       0.83      0.78      0.81       128
+           9       0.64      0.78      0.70         9
+          10       0.67      0.57      0.62         7
+          11       0.87      0.84      0.86        32
+          12       0.86      0.55      0.67        11
+          13       0.83      0.78      0.81        32
+          14       1.00      0.67      0.80         6
+          15       0.92      0.92      0.92        24
+          17       0.00      0.00      0.00         7
+          18       1.00      1.00      1.00         7
+          19       0.73      1.00      0.84         8
+          20       0.81      0.68      0.74        19
+
+    accuracy                           0.91      3449
+   macro avg       0.77      0.76      0.76      3449
+weighted avg       0.91      0.91      0.91      3449
+
+INFO:__main__:epoch # 15
+INFO:__main__:=====Trigger Classification=====
+INFO:__main__:accuracy - 0.989211706900235
+INFO:__main__:precision - 0.883177570093458
+INFO:__main__:recall - 0.9545454545454546
+INFO:__main__:f1 - 0.9174757281553398
+INFO:__main__:                       precision    recall  f1-score   support
+
+                 WEAK       0.80      0.95      0.86        37
+                  LOW       1.00      1.00      1.00        27
+                 LOSS       0.94      0.97      0.95       229
+              EMBARGO       0.71      0.85      0.77        20
+                 FLAT       0.87      1.00      0.93        13
+                 GAIN       0.89      0.96      0.92       105
+   NEGATIVE_SENTIMENT       0.95      1.00      0.97        19
+           OVERSUPPLY       0.58      0.81      0.68        26
+          PROHIBITING       0.89      1.00      0.94         8
+             SHORTAGE       1.00      1.00      1.00        11
+              TENSION       0.86      1.00      0.93        31
+                 HIGH       1.00      1.00      1.00        13
+               STRONG       0.77      0.96      0.86        25
+SITUATION_DETERIORATE       1.00      0.62      0.77         8
+               UNREST       0.88      0.93      0.90        15
+               CRISIS       1.00      1.00      1.00         7
+
+            micro avg       0.88      0.95      0.92       594
+            macro avg       0.89      0.95      0.92       594
+
+INFO:__main__:=======Argument Role Classification=========
+INFO:__main__:arg accuracy - 0.9018018018018018
+INFO:__main__:arg precision - 0.9068941786583353
+INFO:__main__:arg recall - 0.9018018018018018
+INFO:__main__:arg f1 - 0.9025818202404132
+INFO:__main__:              precision    recall  f1-score   support
+
+           0       0.93      0.94      0.94      2247
+           1       0.88      0.87      0.87       272
+           2       0.95      0.82      0.88       233
+           3       0.66      0.86      0.74        49
+           4       0.41      0.82      0.55        17
+           5       0.64      0.69      0.67        26
+           6       0.82      0.86      0.84       113
+           7       0.87      0.80      0.83        89
+           8       0.88      0.73      0.80       127
+           9       0.54      0.78      0.64         9
+          10       0.57      0.57      0.57         7
+          11       0.96      0.84      0.90        32
+          12       0.91      0.91      0.91        11
+          13       0.91      0.66      0.76        32
+          14       0.71      0.83      0.77         6
+          15       0.79      0.96      0.87        24
+          17       1.00      0.50      0.67         2
+          18       0.67      0.57      0.62         7
+          19       0.57      1.00      0.73         8
+          20       0.76      0.68      0.72        19
+
+    accuracy                           0.90      3330
+   macro avg       0.77      0.78      0.76      3330
+weighted avg       0.91      0.90      0.90      3330
+
+INFO:__main__:epoch # 16
+INFO:__main__:=====Trigger Classification=====
+INFO:__main__:accuracy - 0.9898525955992309
+INFO:__main__:precision - 0.8904538341158059
+INFO:__main__:recall - 0.9579124579124579
+INFO:__main__:f1 - 0.9229521492295215
+INFO:__main__:                       precision    recall  f1-score   support
+
+                 WEAK       0.89      0.92      0.91        37
+                  LOW       1.00      1.00      1.00        27
+                 LOSS       0.93      0.98      0.95       229
+              EMBARGO       0.74      0.85      0.79        20
+                 FLAT       0.80      0.92      0.86        13
+                 GAIN       0.89      0.96      0.92       105
+SITUATION_DETERIORATE       1.00      0.88      0.93         8
+               STRONG       0.83      0.96      0.89        25
+               UNREST       0.87      0.87      0.87        15
+                 HIGH       0.87      1.00      0.93        13
+             SHORTAGE       1.00      1.00      1.00        11
+   NEGATIVE_SENTIMENT       0.90      1.00      0.95        19
+           OVERSUPPLY       0.62      0.77      0.69        26
+              TENSION       0.91      1.00      0.95        31
+               CRISIS       1.00      1.00      1.00         7
+          PROHIBITING       1.00      1.00      1.00         8
+
+            micro avg       0.89      0.96      0.92       594
+            macro avg       0.89      0.96      0.92       594
+
+INFO:__main__:=======Argument Role Classification=========
+INFO:__main__:arg accuracy - 0.9117221418234442
+INFO:__main__:arg precision - 0.9148364231426301
+INFO:__main__:arg recall - 0.9117221418234442
+INFO:__main__:arg f1 - 0.9121379556910998
+INFO:__main__:              precision    recall  f1-score   support
+
+           0       0.95      0.94      0.94      2357
+           1       0.89      0.91      0.90       276
+           2       0.89      0.87      0.88       234
+           3       0.62      0.84      0.71        49
+           4       0.59      0.76      0.67        17
+           5       0.56      0.62      0.59        29
+           6       0.81      0.87      0.84       112
+           7       0.85      0.86      0.85        92
+           8       0.84      0.80      0.82       128
+           9       0.88      0.78      0.82         9
+          10       0.62      0.71      0.67         7
+          11       0.97      0.91      0.94        32
+          12       0.90      0.82      0.86        11
+          13       0.93      0.81      0.87        32
+          14       0.71      0.83      0.77         6
+          15       0.92      0.96      0.94        24
+          17       1.00      0.14      0.25         7
+          18       1.00      1.00      1.00         7
+          19       0.64      0.88      0.74         8
+          20       0.72      0.72      0.72        18
+
+    accuracy                           0.91      3455
+   macro avg       0.81      0.80      0.79      3455
+weighted avg       0.91      0.91      0.91      3455
+
+INFO:__main__:epoch # 17
+INFO:__main__:=====Trigger Classification=====
+INFO:__main__:accuracy - 0.9901730399487289
+INFO:__main__:precision - 0.8948194662480377
+INFO:__main__:recall - 0.9595959595959596
+INFO:__main__:f1 - 0.926076360682372
+INFO:__main__:                       precision    recall  f1-score   support
+
+                 LOSS       0.92      0.98      0.95       229
+                 WEAK       0.92      0.95      0.93        37
+                  LOW       1.00      1.00      1.00        27
+                 GAIN       0.89      0.96      0.92       105
+SITUATION_DETERIORATE       1.00      0.50      0.67         8
+           OVERSUPPLY       0.71      0.85      0.77        26
+              TENSION       0.91      1.00      0.95        31
+                 HIGH       1.00      1.00      1.00        13
+               STRONG       0.77      0.92      0.84        25
+                 FLAT       0.81      1.00      0.90        13
+              EMBARGO       0.74      0.85      0.79        20
+   NEGATIVE_SENTIMENT       0.90      1.00      0.95        19
+               CRISIS       1.00      1.00      1.00         7
+          PROHIBITING       1.00      1.00      1.00         8
+               UNREST       0.88      0.93      0.90        15
+             SHORTAGE       1.00      1.00      1.00        11
+
+            micro avg       0.89      0.96      0.93       594
+            macro avg       0.90      0.96      0.93       594
+
+INFO:__main__:=======Argument Role Classification=========
+INFO:__main__:arg accuracy - 0.91415313225058
+INFO:__main__:arg precision - 0.9146783435900031
+INFO:__main__:arg recall - 0.91415313225058
+INFO:__main__:arg f1 - 0.9135383164045765
+INFO:__main__:              precision    recall  f1-score   support
+
+           0       0.95      0.94      0.95      2345
+           1       0.89      0.89      0.89       278
+           2       0.86      0.89      0.88       234
+           3       0.69      0.73      0.71        49
+           4       0.69      0.65      0.67        17
+           5       0.86      0.59      0.70        32
+           6       0.78      0.89      0.83       113
+           7       0.79      0.84      0.81        92
+           8       0.83      0.85      0.84       128
+           9       0.88      0.78      0.82         9
+          10       0.83      0.71      0.77         7
+          11       0.88      0.90      0.89        31
+          12       0.77      0.91      0.83        11
+          13       0.90      0.82      0.86        34
+          14       1.00      0.50      0.67         6
+          15       1.00      0.83      0.91        24
+          17       0.00      0.00      0.00         4
+          18       1.00      1.00      1.00         7
+          19       0.73      1.00      0.84         8
+          20       0.92      0.63      0.75        19
+
+    accuracy                           0.91      3448
+   macro avg       0.81      0.77      0.78      3448
+weighted avg       0.91      0.91      0.91      3448
+
+INFO:__main__:epoch # 18
+INFO:__main__:=====Trigger Classification=====
+INFO:__main__:accuracy - 0.9903866695150609
+INFO:__main__:precision - 0.8955696202531646
+INFO:__main__:recall - 0.9528619528619529
+INFO:__main__:f1 - 0.9233278955954324
+INFO:__main__:                       precision    recall  f1-score   support
+
+                  LOW       1.00      1.00      1.00        27
+                 LOSS       0.95      0.97      0.96       229
+               UNREST       0.81      0.87      0.84        15
+                 FLAT       0.86      0.92      0.89        13
+                 GAIN       0.86      0.97      0.91       105
+               STRONG       0.73      0.96      0.83        25
+                 WEAK       0.85      0.92      0.88        37
+           OVERSUPPLY       0.71      0.85      0.77        26
+              TENSION       0.94      0.94      0.94        31
+             SHORTAGE       1.00      1.00      1.00        11
+                 HIGH       1.00      1.00      1.00        13
+              EMBARGO       0.82      0.90      0.86        20
+               CRISIS       1.00      1.00      1.00         7
+          PROHIBITING       1.00      1.00      1.00         8
+   NEGATIVE_SENTIMENT       0.86      1.00      0.93        19
+SITUATION_DETERIORATE       1.00      0.75      0.86         8
+
+            micro avg       0.90      0.95      0.92       594
+            macro avg       0.90      0.95      0.92       594
+
+INFO:__main__:=======Argument Role Classification=========
+INFO:__main__:arg accuracy - 0.9135730858468677
+INFO:__main__:arg precision - 0.9163674075620407
+INFO:__main__:arg recall - 0.9135730858468677
+INFO:__main__:arg f1 - 0.9138365190763912
+INFO:__main__:              precision    recall  f1-score   support
+
+           0       0.95      0.94      0.94      2347
+           1       0.90      0.89      0.90       275
+           2       0.87      0.92      0.89       235
+           3       0.71      0.82      0.76        50
+           4       0.52      0.76      0.62        17
+           5       0.75      0.68      0.71        31
+           6       0.79      0.88      0.83       113
+           7       0.78      0.85      0.81        92
+           8       0.86      0.80      0.83       129
+           9       1.00      0.78      0.88         9
+          10       0.62      0.71      0.67         7
+          11       0.97      0.91      0.94        32
+          12       0.91      0.91      0.91        11
+          13       0.72      0.75      0.74        28
+          14       0.83      0.83      0.83         6
+          15       0.92      0.96      0.94        24
+          17       1.00      0.17      0.29         6
+          18       1.00      1.00      1.00         7
+          19       0.73      0.89      0.80         9
+          20       0.87      0.65      0.74        20
+
+    accuracy                           0.91      3448
+   macro avg       0.83      0.81      0.80      3448
+weighted avg       0.92      0.91      0.91      3448
+
+INFO:__main__:epoch # 19
+INFO:__main__:=====Trigger Classification=====
+INFO:__main__:accuracy - 0.9883571886349071
+INFO:__main__:precision - 0.8646616541353384
+INFO:__main__:recall - 0.968013468013468
+INFO:__main__:f1 - 0.9134233518665608
+INFO:__main__:                       precision    recall  f1-score   support
+
+                 WEAK       0.83      0.92      0.87        37
+                  LOW       1.00      1.00      1.00        27
+                 LOSS       0.90      0.99      0.94       229
+               UNREST       0.54      0.87      0.67        15
+                 FLAT       0.93      1.00      0.96        13
+                 GAIN       0.87      0.97      0.92       105
+               STRONG       0.86      0.96      0.91        25
+   NEGATIVE_SENTIMENT       0.86      1.00      0.93        19
+               CRISIS       1.00      1.00      1.00         7
+           OVERSUPPLY       0.69      0.85      0.76        26
+              TENSION       0.79      1.00      0.89        31
+              EMBARGO       0.86      0.95      0.90        20
+          PROHIBITING       1.00      1.00      1.00         8
+SITUATION_DETERIORATE       1.00      0.75      0.86         8
+             SHORTAGE       1.00      1.00      1.00        11
+                 HIGH       0.81      1.00      0.90        13
+
+            micro avg       0.86      0.97      0.91       594
+            macro avg       0.87      0.97      0.92       594
+
+INFO:__main__:=======Argument Role Classification=========
+INFO:__main__:arg accuracy - 0.9155435759209344
+INFO:__main__:arg precision - 0.9138854383898305
+INFO:__main__:arg recall - 0.9155435759209344
+INFO:__main__:arg f1 - 0.9131793106365476
+INFO:__main__:              precision    recall  f1-score   support
+
+           0       0.94      0.95      0.94      2270
+           1       0.88      0.91      0.89       270
+           2       0.91      0.89      0.90       230
+           3       0.73      0.84      0.78        44
+           4       0.55      0.73      0.63        15
+           5       0.64      0.26      0.37        27
+           6       0.95      0.72      0.82       109
+           7       0.83      0.87      0.85        91
+           8       0.86      0.81      0.83       130
+           9       1.00      0.78      0.88         9
+          10       0.57      0.67      0.62         6
+          11       0.97      0.91      0.94        32
+          12       0.90      0.90      0.90        10
+          13       0.81      0.84      0.82        25
+          14       0.67      0.67      0.67         6
+          15       1.00      0.96      0.98        23
+          17       0.00      0.00      0.00         6
+          18       1.00      1.00      1.00         7
+          19       0.73      0.89      0.80         9
+          20       0.82      0.70      0.76        20
+
+    accuracy                           0.92      3339
+   macro avg       0.79      0.76      0.77      3339
+weighted avg       0.91      0.92      0.91      3339
+
+INFO:__main__:epoch # 20
+INFO:__main__:=====Trigger Classification=====
+INFO:__main__:accuracy - 0.9913480025635548
+INFO:__main__:precision - 0.9111111111111111
+INFO:__main__:recall - 0.9663299663299664
+INFO:__main__:f1 - 0.9379084967320261
+INFO:__main__:                       precision    recall  f1-score   support
+
+                 WEAK       0.92      0.89      0.90        37
+                 GAIN       0.90      0.97      0.94       105
+                 LOSS       0.93      0.99      0.96       229
+                  LOW       1.00      1.00      1.00        27
+              TENSION       0.91      1.00      0.95        31
+                 HIGH       0.87      1.00      0.93        13
+           OVERSUPPLY       0.71      0.85      0.77        26
+              EMBARGO       0.90      0.95      0.93        20
+   NEGATIVE_SENTIMENT       0.90      1.00      0.95        19
+          PROHIBITING       1.00      1.00      1.00         8
+               UNREST       0.81      0.87      0.84        15
+                 FLAT       0.92      0.92      0.92        13
+               STRONG       0.86      0.96      0.91        25
+             SHORTAGE       1.00      1.00      1.00        11
+SITUATION_DETERIORATE       1.00      0.88      0.93         8
+               CRISIS       1.00      1.00      1.00         7
+
+            micro avg       0.91      0.97      0.94       594
+            macro avg       0.91      0.97      0.94       594
+
+INFO:__main__:=======Argument Role Classification=========
+INFO:__main__:arg accuracy - 0.922307239552678
+INFO:__main__:arg precision - 0.9216862929241729
+INFO:__main__:arg recall - 0.922307239552678
+INFO:__main__:arg f1 - 0.9213548821712585
+INFO:__main__:              precision    recall  f1-score   support
+
+           0       0.94      0.96      0.95      2297
+           1       0.89      0.93      0.91       274
+           2       0.94      0.87      0.90       235
+           3       0.78      0.80      0.79        50
+           4       0.75      0.71      0.73        17
+           5       0.73      0.55      0.63        29
+           6       0.83      0.82      0.83       113
+           7       0.83      0.87      0.85        91
+           8       0.86      0.82      0.84       129
+           9       1.00      0.78      0.88         9
+          10       0.71      0.71      0.71         7
+          11       0.97      0.88      0.92        32
+          12       0.90      0.82      0.86        11
+          13       0.93      0.81      0.87        32
+          14       0.80      0.67      0.73         6
+          15       0.92      0.96      0.94        24
+          17       0.50      0.33      0.40         6
+          18       1.00      1.00      1.00         7
+          19       0.80      0.89      0.84         9
+          20       0.92      0.60      0.73        20
+
+    accuracy                           0.92      3398
+   macro avg       0.85      0.79      0.81      3398
+weighted avg       0.92      0.92      0.92      3398
+
+INFO:__main__:epoch # 21
+INFO:__main__:=====Trigger Classification=====
+INFO:__main__:accuracy - 0.9909207434308909
+INFO:__main__:precision - 0.9095238095238095
+INFO:__main__:recall - 0.9646464646464646
+INFO:__main__:f1 - 0.9362745098039216
+INFO:__main__:                       precision    recall  f1-score   support
+
+                  LOW       1.00      1.00      1.00        27
+              EMBARGO       0.90      0.95      0.93        20
+                 LOSS       0.95      0.98      0.96       229
+                 FLAT       0.81      1.00      0.90        13
+                 GAIN       0.88      0.98      0.93       105
+                 WEAK       0.89      0.86      0.88        37
+           OVERSUPPLY       0.73      0.85      0.79        26
+   NEGATIVE_SENTIMENT       0.90      1.00      0.95        19
+             SHORTAGE       1.00      1.00      1.00        11
+              TENSION       0.94      1.00      0.97        31
+                 HIGH       1.00      1.00      1.00        13
+               CRISIS       1.00      1.00      1.00         7
+               STRONG       0.73      0.96      0.83        25
+SITUATION_DETERIORATE       1.00      0.88      0.93         8
+               UNREST       1.00      0.87      0.93        15
+          PROHIBITING       1.00      1.00      1.00         8
+
+            micro avg       0.91      0.96      0.94       594
+            macro avg       0.91      0.96      0.94       594
+
+INFO:__main__:=======Argument Role Classification=========
+INFO:__main__:arg accuracy - 0.9187134502923977
+INFO:__main__:arg precision - 0.9208116349863131
+INFO:__main__:arg recall - 0.9187134502923977
+INFO:__main__:arg f1 - 0.9193479374455571
+INFO:__main__:              precision    recall  f1-score   support
+
+           0       0.95      0.94      0.95      2318
+           1       0.90      0.93      0.91       277
+           2       0.89      0.89      0.89       235
+           3       0.73      0.76      0.74        49
+           4       0.55      0.71      0.62        17
+           5       0.76      0.71      0.73        31
+           6       0.85      0.83      0.84       113
+           7       0.81      0.87      0.84        92
+           8       0.85      0.85      0.85       129
+           9       0.73      0.89      0.80         9
+          10       0.62      0.71      0.67         7
+          11       0.94      0.94      0.94        32
+          12       0.71      0.91      0.80        11
+          13       0.93      0.86      0.89        29
+          14       0.62      0.83      0.71         6
+          15       0.96      0.96      0.96        24
+          17       0.60      0.43      0.50         7
+          18       1.00      1.00      1.00         7
+          19       0.57      1.00      0.73         8
+          20       0.78      0.74      0.76        19
+
+    accuracy                           0.92      3420
+   macro avg       0.79      0.84      0.81      3420
+weighted avg       0.92      0.92      0.92      3420
+
+INFO:__main__:epoch # 22
+INFO:__main__:=====Trigger Classification=====
+INFO:__main__:accuracy - 0.9911343729972228
+INFO:__main__:precision - 0.9163987138263665
+INFO:__main__:recall - 0.9595959595959596
+INFO:__main__:f1 - 0.9375
+INFO:__main__:                       precision    recall  f1-score   support
+
+             SHORTAGE       1.00      1.00      1.00        11
+                 WEAK       0.91      0.81      0.86        37
+                 HIGH       1.00      1.00      1.00        13
+                  LOW       0.96      1.00      0.98        27
+                 LOSS       0.94      0.99      0.96       229
+                 GAIN       0.87      0.96      0.91       105
+   NEGATIVE_SENTIMENT       0.90      1.00      0.95        19
+              TENSION       0.94      1.00      0.97        31
+               STRONG       0.88      0.92      0.90        25
+           OVERSUPPLY       0.79      0.85      0.81        26
+                 FLAT       0.87      1.00      0.93        13
+               CRISIS       1.00      1.00      1.00         7
+               UNREST       0.93      0.87      0.90        15
+          PROHIBITING       1.00      1.00      1.00         8
+              EMBARGO       0.90      0.95      0.93        20
+SITUATION_DETERIORATE       1.00      0.88      0.93         8
+
+            micro avg       0.92      0.96      0.94       594
+            macro avg       0.92      0.96      0.94       594
+
+INFO:__main__:=======Argument Role Classification=========
+INFO:__main__:arg accuracy - 0.9119402985074627
+INFO:__main__:arg precision - 0.9189490117228367
+INFO:__main__:arg recall - 0.9119402985074627
+INFO:__main__:arg f1 - 0.913675070489779
+INFO:__main__:              precision    recall  f1-score   support
+
+           0       0.97      0.92      0.94      2262
+           1       0.81      0.95      0.87       274
+           2       0.83      0.94      0.88       231
+           3       0.72      0.78      0.75        49
+           4       0.60      0.71      0.65        17
+           5       0.76      0.86      0.81        29
+           6       0.84      0.86      0.85       112
+           7       0.80      0.87      0.83        90
+           8       0.79      0.92      0.85       126
+           9       1.00      0.89      0.94         9
+          10       0.50      0.71      0.59         7
+          11       0.78      0.97      0.86        32
+          12       0.90      0.82      0.86        11
+          13       0.93      0.88      0.90        32
+          14       1.00      0.83      0.91         6
+          15       0.88      0.96      0.92        24
+          17       0.60      0.50      0.55         6
+          18       1.00      1.00      1.00         7
+          19       0.67      1.00      0.80         8
+          20       0.89      0.89      0.89        18
+
+    accuracy                           0.91      3350
+   macro avg       0.81      0.86      0.83      3350
+weighted avg       0.92      0.91      0.91      3350
+
+INFO:__main__:epoch # 23
+INFO:__main__:=====Trigger Classification=====
+INFO:__main__:accuracy - 0.9907071138645589
+INFO:__main__:precision - 0.9076433121019108
+INFO:__main__:recall - 0.9595959595959596
+INFO:__main__:f1 - 0.9328968903436987
+INFO:__main__:                       precision    recall  f1-score   support
+
+             SHORTAGE       1.00      1.00      1.00        11
+                 WEAK       0.84      0.86      0.85        37
+              EMBARGO       0.90      0.95      0.93        20
+                  LOW       1.00      1.00      1.00        27
+                 LOSS       0.94      0.98      0.96       229
+                 GAIN       0.88      0.95      0.92       105
+   NEGATIVE_SENTIMENT       0.90      1.00      0.95        19
+SITUATION_DETERIORATE       1.00      0.88      0.93         8
+               CRISIS       1.00      1.00      1.00         7
+               STRONG       0.80      0.96      0.87        25
+                 FLAT       0.93      1.00      0.96        13
+              TENSION       0.89      1.00      0.94        31
+          PROHIBITING       1.00      1.00      1.00         8
+           OVERSUPPLY       0.76      0.85      0.80        26
+               UNREST       0.87      0.87      0.87        15
+                 HIGH       0.93      1.00      0.96        13
+
+            micro avg       0.91      0.96      0.93       594
+            macro avg       0.91      0.96      0.93       594
+
+INFO:__main__:=======Argument Role Classification=========
+INFO:__main__:arg accuracy - 0.9235611510791367
+INFO:__main__:arg precision - 0.9251521087031245
+INFO:__main__:arg recall - 0.9235611510791367
+INFO:__main__:arg f1 - 0.9236507564761843
+INFO:__main__:              precision    recall  f1-score   support
+
+           0       0.95      0.95      0.95      2246
+           1       0.89      0.92      0.90       273
+           2       0.90      0.91      0.90       233
+           3       0.74      0.82      0.78        49
+           4       0.52      0.71      0.60        17
+           5       0.79      0.81      0.80        27
+           6       0.85      0.85      0.85       112
+           7       0.84      0.84      0.84        89
+           8       0.87      0.84      0.85       129
+           9       1.00      0.78      0.88         9
+          10       0.67      0.57      0.62         7
+          11       0.88      0.94      0.91        32
+          12       0.91      0.91      0.91        11
+          13       0.93      0.82      0.87        34
+          14       1.00      0.83      0.91         6
+          15       0.88      0.96      0.92        24
+          17       1.00      0.20      0.33         5
+          18       1.00      1.00      1.00         7
+          19       0.73      1.00      0.84         8
+          20       0.85      0.94      0.89        18
+
+    accuracy                           0.92      3336
+   macro avg       0.86      0.83      0.83      3336
+weighted avg       0.93      0.92      0.92      3336
+
+INFO:__main__:epoch # 24
+INFO:__main__:=====Trigger Classification=====
+INFO:__main__:accuracy - 0.9916684469130528
+INFO:__main__:precision - 0.9170653907496013
+INFO:__main__:recall - 0.968013468013468
+INFO:__main__:f1 - 0.9418509418509419
+INFO:__main__:                       precision    recall  f1-score   support
+
+             SHORTAGE       1.00      1.00      1.00        11
+                 WEAK       0.89      0.89      0.89        37
+                  LOW       1.00      1.00      1.00        27
+                 LOSS       0.94      0.99      0.96       229
+              EMBARGO       0.90      0.95      0.93        20
+                 FLAT       0.87      1.00      0.93        13
+                 GAIN       0.88      0.95      0.92       105
+               CRISIS       1.00      1.00      1.00         7
+              TENSION       0.94      1.00      0.97        31
+           OVERSUPPLY       0.71      0.85      0.77        26
+               UNREST       0.93      0.93      0.93        15
+               STRONG       0.89      0.96      0.92        25
+   NEGATIVE_SENTIMENT       0.90      1.00      0.95        19
+SITUATION_DETERIORATE       1.00      1.00      1.00         8
+                 HIGH       1.00      1.00      1.00        13
+          PROHIBITING       1.00      1.00      1.00         8
+
+            micro avg       0.92      0.97      0.94       594
+            macro avg       0.92      0.97      0.94       594
+
+INFO:__main__:=======Argument Role Classification=========
+INFO:__main__:arg accuracy - 0.9249415887850467
+INFO:__main__:arg precision - 0.9260782201072943
+INFO:__main__:arg recall - 0.9249415887850467
+INFO:__main__:arg f1 - 0.9246509510365774
+INFO:__main__:              precision    recall  f1-score   support
+
+           0       0.95      0.95      0.95      2313
+           1       0.91      0.92      0.92       276
+           2       0.91      0.91      0.91       236
+           3       0.71      0.78      0.74        50
+           4       0.57      0.76      0.65        17
+           5       0.78      0.66      0.71        32
+           6       0.87      0.85      0.86       113
+           7       0.82      0.85      0.83        91
+           8       0.88      0.82      0.85       130
+           9       0.70      0.78      0.74         9
+          10       0.67      0.57      0.62         7
+          11       0.94      0.94      0.94        32
+          12       0.85      1.00      0.92        11
+          13       0.93      0.82      0.87        34
+          14       0.71      0.83      0.77         6
+          15       0.96      0.96      0.96        24
+          17       1.00      0.25      0.40         8
+          18       1.00      1.00      1.00         7
+          19       0.67      0.89      0.76         9
+          20       0.89      0.89      0.89        19
+
+    accuracy                           0.92      3424
+   macro avg       0.84      0.82      0.81      3424
+weighted avg       0.93      0.92      0.92      3424
+
+INFO:__main__:epoch # 25
+INFO:__main__:=====Trigger Classification=====
+INFO:__main__:accuracy - 0.9913480025635548
+INFO:__main__:precision - 0.9111111111111111
+INFO:__main__:recall - 0.9663299663299664
+INFO:__main__:f1 - 0.9379084967320261
+INFO:__main__:                       precision    recall  f1-score   support
+
+                 WEAK       0.89      0.89      0.89        37
+                 HIGH       1.00      1.00      1.00        13
+                 LOSS       0.95      0.98      0.96       229
+                  LOW       1.00      1.00      1.00        27
+              EMBARGO       0.90      0.95      0.93        20
+                 GAIN       0.88      0.97      0.92       105
+              TENSION       0.88      0.94      0.91        31
+               CRISIS       1.00      1.00      1.00         7
+SITUATION_DETERIORATE       1.00      1.00      1.00         8
+   NEGATIVE_SENTIMENT       0.90      1.00      0.95        19
+               UNREST       0.93      0.93      0.93        15
+               STRONG       0.80      0.96      0.87        25
+           OVERSUPPLY       0.71      0.85      0.77        26
+                 FLAT       0.93      1.00      0.96        13
+          PROHIBITING       1.00      1.00      1.00         8
+             SHORTAGE       1.00      1.00      1.00        11
+
+            micro avg       0.91      0.97      0.94       594
+            macro avg       0.91      0.97      0.94       594
+
+INFO:__main__:=======Argument Role Classification=========
+INFO:__main__:arg accuracy - 0.9173963806187975
+INFO:__main__:arg precision - 0.9199684685063951
+INFO:__main__:arg recall - 0.9173963806187975
+INFO:__main__:arg f1 - 0.9178435772967083
+INFO:__main__:              precision    recall  f1-score   support
+
+           0       0.96      0.94      0.95      2323
+           1       0.87      0.92      0.89       277
+           2       0.88      0.90      0.89       235
+           3       0.73      0.82      0.77        49
+           4       0.54      0.76      0.63        17
+           5       0.88      0.69      0.77        32
+           6       0.82      0.86      0.84       113
+           7       0.78      0.90      0.84        92
+           8       0.87      0.85      0.86       129
+           9       1.00      0.78      0.88         9
+          10       0.62      0.71      0.67         7
+          11       0.86      0.94      0.90        32
+          12       0.90      0.82      0.86        11
+          13       0.89      0.86      0.87        28
+          14       0.71      0.83      0.77         6
+          15       0.96      0.96      0.96        24
+          17       0.33      0.12      0.18         8
+          18       1.00      1.00      1.00         7
+          19       0.57      1.00      0.73         8
+          20       0.80      0.84      0.82        19
+
+    accuracy                           0.92      3426
+   macro avg       0.80      0.83      0.80      3426
+weighted avg       0.92      0.92      0.92      3426
+
+INFO:__main__:epoch # 26
+INFO:__main__:=====Trigger Classification=====
+INFO:__main__:accuracy - 0.9901730399487289
+INFO:__main__:precision - 0.8980891719745223
+INFO:__main__:recall - 0.9494949494949495
+INFO:__main__:f1 - 0.9230769230769231
+INFO:__main__:                       precision    recall  f1-score   support
+
+                 WEAK       0.84      0.86      0.85        37
+                 LOSS       0.92      0.96      0.94       229
+                  LOW       1.00      1.00      1.00        27
+              EMBARGO       0.90      0.95      0.93        20
+                 FLAT       0.93      1.00      0.96        13
+                 GAIN       0.88      0.96      0.92       105
+               STRONG       0.92      0.96      0.94        25
+              TENSION       0.83      0.94      0.88        31
+               CRISIS       1.00      1.00      1.00         7
+                 HIGH       1.00      1.00      1.00        13
+           OVERSUPPLY       0.74      0.77      0.75        26
+   NEGATIVE_SENTIMENT       0.83      1.00      0.90        19
+SITUATION_DETERIORATE       0.89      1.00      0.94         8
+             SHORTAGE       1.00      1.00      1.00        11
+               UNREST       0.81      0.87      0.84        15
+          PROHIBITING       1.00      1.00      1.00         8
+
+            micro avg       0.90      0.95      0.92       594
+            macro avg       0.90      0.95      0.92       594
+
+INFO:__main__:=======Argument Role Classification=========
+INFO:__main__:arg accuracy - 0.914388705316912
+INFO:__main__:arg precision - 0.9183817884305058
+INFO:__main__:arg recall - 0.914388705316912
+INFO:__main__:arg f1 - 0.9147964253453885
+INFO:__main__:              precision    recall  f1-score   support
+
+           0       0.95      0.94      0.95      2246
+           1       0.91      0.91      0.91       272
+           2       0.89      0.88      0.89       231
+           3       0.64      0.78      0.70        50
+           4       0.54      0.76      0.63        17
+           5       0.75      0.84      0.79        25
+           6       0.82      0.88      0.85       113
+           7       0.73      0.89      0.80        90
+           8       0.90      0.73      0.81       130
+           9       0.70      0.78      0.74         9
+          10       0.56      0.83      0.67         6
+          11       0.94      0.91      0.92        32
+          12       0.79      1.00      0.88        11
+          13       0.93      0.93      0.93        28
+          14       0.83      0.83      0.83         6
+          15       0.88      0.96      0.92        24
+          17       1.00      0.17      0.29         6
+          18       1.00      1.00      1.00         7
+          19       0.78      0.88      0.82         8
+          20       0.92      0.67      0.77        18
+
+    accuracy                           0.91      3329
+   macro avg       0.82      0.83      0.80      3329
+weighted avg       0.92      0.91      0.91      3329
+
+INFO:__main__:epoch # 27
+INFO:__main__:=====Trigger Classification=====
+INFO:__main__:accuracy - 0.9908139286477249
+INFO:__main__:precision - 0.912621359223301
+INFO:__main__:recall - 0.9494949494949495
+INFO:__main__:f1 - 0.9306930693069307
+INFO:__main__:                       precision    recall  f1-score   support
+
+                 LOSS       0.94      0.96      0.95       229
+                 WEAK       0.84      0.86      0.85        37
+              EMBARGO       0.86      0.95      0.90        20
+                 GAIN       0.89      0.96      0.92       105
+                 HIGH       1.00      0.92      0.96        13
+           OVERSUPPLY       0.76      0.85      0.80        26
+              TENSION       0.91      0.97      0.94        31
+             SHORTAGE       1.00      1.00      1.00        11
+                  LOW       1.00      0.96      0.98        27
+SITUATION_DETERIORATE       1.00      0.88      0.93         8
+                 FLAT       0.93      1.00      0.96        13
+   NEGATIVE_SENTIMENT       0.90      1.00      0.95        19
+               UNREST       0.87      0.87      0.87        15
+               STRONG       0.92      0.96      0.94        25
+               CRISIS       1.00      1.00      1.00         7
+          PROHIBITING       1.00      1.00      1.00         8
+
+            micro avg       0.91      0.95      0.93       594
+            macro avg       0.91      0.95      0.93       594
+
+INFO:__main__:=======Argument Role Classification=========
+INFO:__main__:arg accuracy - 0.9202127659574468
+INFO:__main__:arg precision - 0.9224651146009071
+INFO:__main__:arg recall - 0.9202127659574468
+INFO:__main__:arg f1 - 0.9202290466959634
+INFO:__main__:              precision    recall  f1-score   support
+
+           0       0.96      0.93      0.95      2286
+           1       0.85      0.95      0.89       273
+           2       0.89      0.91      0.90       233
+           3       0.69      0.88      0.77        49
+           4       0.70      0.82      0.76        17
+           5       0.91      0.65      0.75        31
+           6       0.87      0.88      0.88       113
+           7       0.87      0.87      0.87        92
+           8       0.80      0.91      0.85       129
+           9       0.88      0.78      0.82         9
+          10       0.62      0.83      0.71         6
+          11       0.88      0.94      0.91        32
+          12       0.92      1.00      0.96        11
+          13       0.96      0.73      0.83        30
+          14       0.83      0.83      0.83         6
+          15       0.85      0.96      0.90        24
+          17       0.00      0.00      0.00         7
+          18       1.00      0.86      0.92         7
+          19       0.75      1.00      0.86         9
+          20       0.81      0.85      0.83        20
+
+    accuracy                           0.92      3384
+   macro avg       0.80      0.83      0.81      3384
+weighted avg       0.92      0.92      0.92      3384
+
+INFO:__main__:epoch # 28
+INFO:__main__:=====Trigger Classification=====
+INFO:__main__:accuracy - 0.9911343729972228
+INFO:__main__:precision - 0.9012539184952978
+INFO:__main__:recall - 0.968013468013468
+INFO:__main__:f1 - 0.9334415584415585
+INFO:__main__:                       precision    recall  f1-score   support
+
+                 WEAK       0.84      0.86      0.85        37
+                  LOW       1.00      1.00      1.00        27
+                 LOSS       0.91      0.99      0.95       229
+               UNREST       0.87      0.87      0.87        15
+                 GAIN       0.88      0.98      0.93       105
+               STRONG       0.86      0.96      0.91        25
+                 HIGH       1.00      1.00      1.00        13
+           OVERSUPPLY       0.81      0.85      0.83        26
+              EMBARGO       0.90      0.95      0.93        20
+               CRISIS       1.00      1.00      1.00         7
+             SHORTAGE       1.00      1.00      1.00        11
+SITUATION_DETERIORATE       1.00      0.88      0.93         8
+              TENSION       0.86      1.00      0.93        31
+   NEGATIVE_SENTIMENT       0.86      1.00      0.93        19
+                 FLAT       0.93      1.00      0.96        13
+          PROHIBITING       1.00      1.00      1.00         8
+
+            micro avg       0.90      0.97      0.93       594
+            macro avg       0.90      0.97      0.93       594
+
+INFO:__main__:=======Argument Role Classification=========
+INFO:__main__:arg accuracy - 0.9295815295815296
+INFO:__main__:arg precision - 0.9315817826800946
+INFO:__main__:arg recall - 0.9295815295815296
+INFO:__main__:arg f1 - 0.9300375915490968
+INFO:__main__:              precision    recall  f1-score   support
+
+           0       0.96      0.95      0.96      2346
+           1       0.88      0.93      0.90       276
+           2       0.91      0.92      0.91       238
+           3       0.77      0.80      0.79        51
+           4       0.55      0.71      0.62        17
+           5       0.88      0.68      0.76        31
+           6       0.91      0.84      0.87       115
+           7       0.80      0.91      0.85        93
+           8       0.87      0.88      0.87       130
+           9       1.00      0.78      0.88         9
+          10       0.56      0.71      0.63         7
+          11       0.91      0.94      0.92        32
+          12       0.91      0.91      0.91        11
+          13       0.93      0.82      0.87        34
+          14       0.71      0.83      0.77         6
+          15       0.92      0.96      0.94        24
+          17       0.57      0.57      0.57         7
+          18       1.00      1.00      1.00         7
+          19       0.71      1.00      0.83        10
+          20       0.90      0.90      0.90        21
+
+    accuracy                           0.93      3465
+   macro avg       0.83      0.85      0.84      3465
+weighted avg       0.93      0.93      0.93      3465
+
+INFO:__main__:epoch # 29
+INFO:__main__:=====Trigger Classification=====
+INFO:__main__:accuracy - 0.9913480025635548
+INFO:__main__:precision - 0.9146537842190016
+INFO:__main__:recall - 0.9562289562289562
+INFO:__main__:f1 - 0.9349794238683127
+INFO:__main__:                       precision    recall  f1-score   support
+
+                 LOSS       0.95      0.97      0.96       229
+                 WEAK       0.81      0.92      0.86        37
+              EMBARGO       0.90      0.95      0.93        20
+                  LOW       1.00      1.00      1.00        27
+           OVERSUPPLY       0.79      0.85      0.81        26
+                 GAIN       0.91      0.94      0.93       105
+              TENSION       0.94      1.00      0.97        31
+               CRISIS       1.00      1.00      1.00         7
+               STRONG       0.75      0.96      0.84        25
+                 FLAT       0.87      1.00      0.93        13
+                 HIGH       1.00      0.92      0.96        13
+             SHORTAGE       1.00      1.00      1.00        11
+          PROHIBITING       0.89      1.00      0.94         8
+SITUATION_DETERIORATE       1.00      0.88      0.93         8
+   NEGATIVE_SENTIMENT       0.95      1.00      0.97        19
+               UNREST       0.93      0.87      0.90        15
+
+            micro avg       0.91      0.96      0.93       594
+            macro avg       0.92      0.96      0.94       594
+
+INFO:__main__:=======Argument Role Classification=========
+INFO:__main__:arg accuracy - 0.9222873900293255
+INFO:__main__:arg precision - 0.9281583230697856
+INFO:__main__:arg recall - 0.9222873900293255
+INFO:__main__:arg f1 - 0.924053134036407
+INFO:__main__:              precision    recall  f1-score   support
+
+           0       0.97      0.93      0.95      2296
+           1       0.89      0.94      0.91       274
+           2       0.90      0.91      0.91       237
+           3       0.74      0.82      0.78        51
+           4       0.50      0.82      0.62        17
+           5       0.56      0.90      0.69        31
+           6       0.84      0.86      0.85       115
+           7       0.82      0.87      0.84        92
+           8       0.83      0.88      0.86       129
+           9       0.80      0.89      0.84         9
+          10       0.62      0.71      0.67         7
+          11       0.94      0.91      0.92        32
+          12       0.79      1.00      0.88        11
+          13       0.91      0.94      0.93        34
+          14       1.00      0.83      0.91         6
+          15       0.79      0.96      0.87        24
+          17       1.00      0.57      0.73         7
+          18       1.00      1.00      1.00         7
+          19       0.91      1.00      0.95        10
+          20       0.95      0.86      0.90        21
+
+    accuracy                           0.92      3410
+   macro avg       0.84      0.88      0.85      3410
+weighted avg       0.93      0.92      0.92      3410
+
+INFO:__main__:epoch # 30
+INFO:__main__:=====Trigger Classification=====
+INFO:__main__:accuracy - 0.9918820764793848
+INFO:__main__:precision - 0.9182692307692307
+INFO:__main__:recall - 0.9646464646464646
+INFO:__main__:f1 - 0.9408866995073891
+INFO:__main__:                       precision    recall  f1-score   support
+
+                 WEAK       0.91      0.84      0.87        37
+                 LOSS       0.93      0.98      0.96       229
+               STRONG       0.83      0.96      0.89        25
+                 GAIN       0.88      0.98      0.93       105
+               UNREST       0.93      0.87      0.90        15
+                  LOW       1.00      1.00      1.00        27
+               CRISIS       1.00      1.00      1.00         7
+           OVERSUPPLY       0.81      0.85      0.83        26
+              TENSION       0.97      1.00      0.98        31
+          PROHIBITING       1.00      1.00      1.00         8
+   NEGATIVE_SENTIMENT       0.90      1.00      0.95        19
+                 HIGH       1.00      0.92      0.96        13
+              EMBARGO       0.90      0.95      0.93        20
+                 FLAT       0.87      1.00      0.93        13
+             SHORTAGE       1.00      1.00      1.00        11
+SITUATION_DETERIORATE       1.00      1.00      1.00         8
+
+            micro avg       0.92      0.96      0.94       594
+            macro avg       0.92      0.96      0.94       594
+
+INFO:__main__:=======Argument Role Classification=========
+INFO:__main__:arg accuracy - 0.930368636629608
+INFO:__main__:arg precision - 0.9327024829374968
+INFO:__main__:arg recall - 0.930368636629608
+INFO:__main__:arg f1 - 0.9310419500490429
+INFO:__main__:              precision    recall  f1-score   support
+
+           0       0.96      0.95      0.96      2300
+           1       0.88      0.94      0.91       277
+           2       0.91      0.92      0.91       236
+           3       0.76      0.82      0.79        51
+           4       0.54      0.82      0.65        17
+           5       0.77      0.87      0.82        31
+           6       0.86      0.85      0.86       115
+           7       0.87      0.88      0.88        92
+           8       0.87      0.87      0.87       130
+           9       1.00      0.67      0.80         9
+          10       0.62      0.71      0.67         7
+          11       0.94      0.91      0.92        32
+          12       0.92      1.00      0.96        11
+          13       0.94      0.88      0.91        34
+          14       0.83      0.83      0.83         6
+          15       0.92      0.96      0.94        24
+          17       0.71      0.62      0.67         8
+          18       1.00      1.00      1.00         7
+          19       0.77      1.00      0.87        10
+          20       0.90      0.86      0.88        21
+
+    accuracy                           0.93      3418
+   macro avg       0.85      0.87      0.85      3418
+weighted avg       0.93      0.93      0.93      3418
+
+INFO:__main__:epoch # 31
+INFO:__main__:=====Trigger Classification=====
+INFO:__main__:accuracy - 0.9913480025635548
+INFO:__main__:precision - 0.9121405750798722
+INFO:__main__:recall - 0.9612794612794613
+INFO:__main__:f1 - 0.9360655737704917
+INFO:__main__:                       precision    recall  f1-score   support
+
+                 WEAK       0.86      0.86      0.86        37
+                 LOSS       0.94      0.98      0.96       229
+              EMBARGO       0.90      0.95      0.93        20
+                 FLAT       0.93      1.00      0.96        13
+                 GAIN       0.87      0.98      0.92       105
+               STRONG       0.83      0.96      0.89        25
+               CRISIS       1.00      1.00      1.00         7
+           OVERSUPPLY       0.79      0.85      0.81        26
+   NEGATIVE_SENTIMENT       0.86      1.00      0.93        19
+                  LOW       1.00      1.00      1.00        27
+SITUATION_DETERIORATE       0.86      0.75      0.80         8
+             SHORTAGE       1.00      1.00      1.00        11
+              TENSION       0.97      1.00      0.98        31
+               UNREST       0.93      0.87      0.90        15
+                 HIGH       1.00      0.92      0.96        13
+          PROHIBITING       1.00      1.00      1.00         8
+
+            micro avg       0.91      0.96      0.94       594
+            macro avg       0.91      0.96      0.94       594
+
+INFO:__main__:=======Argument Role Classification=========
+INFO:__main__:arg accuracy - 0.9288849868305531
+INFO:__main__:arg precision - 0.9303689226871945
+INFO:__main__:arg recall - 0.9288849868305531
+INFO:__main__:arg f1 - 0.9290283741996853
+INFO:__main__:              precision    recall  f1-score   support
+
+           0       0.96      0.95      0.95      2299
+           1       0.90      0.92      0.91       278
+           2       0.93      0.90      0.92       237
+           3       0.76      0.82      0.79        51
+           4       0.56      0.82      0.67        17
+           5       0.92      0.71      0.80        31
+           6       0.88      0.84      0.86       115
+           7       0.80      0.89      0.85        92
+           8       0.87      0.88      0.87       130
+           9       1.00      0.78      0.88         9
+          10       0.62      0.71      0.67         7
+          11       0.91      0.94      0.92        32
+          12       0.91      0.91      0.91        11
+          13       0.93      0.82      0.87        34
+          14       0.71      0.83      0.77         6
+          15       0.82      0.96      0.88        24
+          17       0.33      0.17      0.22         6
+          18       1.00      1.00      1.00         7
+          19       0.77      1.00      0.87        10
+          20       0.90      0.86      0.88        21
+
+    accuracy                           0.93      3417
+   macro avg       0.82      0.84      0.82      3417
+weighted avg       0.93      0.93      0.93      3417
+
+INFO:__main__:epoch # 32
+INFO:__main__:=====Trigger Classification=====
+INFO:__main__:accuracy - 0.9912411877803888
+INFO:__main__:precision - 0.905511811023622
+INFO:__main__:recall - 0.968013468013468
+INFO:__main__:f1 - 0.9357200976403579
+INFO:__main__:                       precision    recall  f1-score   support
+
+                 WEAK       0.89      0.89      0.89        37
+                 HIGH       1.00      1.00      1.00        13
+                  LOW       1.00      1.00      1.00        27
+                 LOSS       0.93      0.98      0.96       229
+              EMBARGO       0.86      0.95      0.90        20
+                 FLAT       0.93      1.00      0.96        13
+                 GAIN       0.87      0.97      0.92       105
+              TENSION       0.94      1.00      0.97        31
+   NEGATIVE_SENTIMENT       0.83      1.00      0.90        19
+             SHORTAGE       1.00      1.00      1.00        11
+               CRISIS       1.00      1.00      1.00         7
+           OVERSUPPLY       0.73      0.85      0.79        26
+SITUATION_DETERIORATE       1.00      1.00      1.00         8
+               STRONG       0.80      0.96      0.87        25
+               UNREST       0.93      0.87      0.90        15
+          PROHIBITING       1.00      1.00      1.00         8
+
+            micro avg       0.91      0.97      0.94       594
+            macro avg       0.91      0.97      0.94       594
+
+INFO:__main__:=======Argument Role Classification=========
+INFO:__main__:arg accuracy - 0.9219384793964016
+INFO:__main__:arg precision - 0.9253671018763807
+INFO:__main__:arg recall - 0.9219384793964016
+INFO:__main__:arg f1 - 0.9223623125876735
+INFO:__main__:              precision    recall  f1-score   support
+
+           0       0.96      0.93      0.95      2328
+           1       0.86      0.95      0.90       277
+           2       0.84      0.96      0.90       237
+           3       0.75      0.86      0.80        51
+           4       0.54      0.76      0.63        17
+           5       0.84      0.52      0.64        31
+           6       0.88      0.86      0.87       115
+           7       0.80      0.89      0.85        92
+           8       0.84      0.85      0.85       131
+           9       1.00      0.89      0.94         9
+          10       0.56      0.71      0.63         7
+          11       0.88      0.94      0.91        32
+          12       0.92      1.00      0.96        11
+          13       0.93      0.88      0.90        32
+          14       0.83      0.83      0.83         6
+          15       0.92      0.96      0.94        24
+          17       0.60      0.38      0.46         8
+          18       1.00      1.00      1.00         7
+          19       0.77      1.00      0.87        10
+          20       0.90      0.86      0.88        21
+
+    accuracy                           0.92      3446
+   macro avg       0.83      0.85      0.84      3446
+weighted avg       0.93      0.92      0.92      3446
+
+INFO:__main__:epoch # 33
+INFO:__main__:=====Trigger Classification=====
+INFO:__main__:accuracy - 0.9917752616962188
+INFO:__main__:precision - 0.9121405750798722
+INFO:__main__:recall - 0.9612794612794613
+INFO:__main__:f1 - 0.9360655737704917
+INFO:__main__:                       precision    recall  f1-score   support
+
+                 WEAK       0.86      0.86      0.86        37
+                  LOW       1.00      1.00      1.00        27
+                 LOSS       0.93      0.98      0.96       229
+                 GAIN       0.88      0.96      0.92       105
+             SHORTAGE       1.00      1.00      1.00        11
+               STRONG       0.83      0.96      0.89        25
+                 HIGH       1.00      0.92      0.96        13
+              EMBARGO       0.90      0.95      0.93        20
+               UNREST       0.93      0.87      0.90        15
+          PROHIBITING       1.00      1.00      1.00         8
+              TENSION       0.94      1.00      0.97        31
+                 FLAT       0.93      1.00      0.96        13
+   NEGATIVE_SENTIMENT       0.86      1.00      0.93        19
+           OVERSUPPLY       0.81      0.85      0.83        26
+SITUATION_DETERIORATE       0.89      1.00      0.94         8
+               CRISIS       1.00      1.00      1.00         7
+
+            micro avg       0.91      0.96      0.94       594
+            macro avg       0.91      0.96      0.94       594
+
+INFO:__main__:=======Argument Role Classification=========
+INFO:__main__:arg accuracy - 0.9304703476482618
+INFO:__main__:arg precision - 0.9316560075958399
+INFO:__main__:arg recall - 0.9304703476482618
+INFO:__main__:arg f1 - 0.9307392516465874
+INFO:__main__:              precision    recall  f1-score   support
+
+           0       0.96      0.95      0.96      2310
+           1       0.92      0.92      0.92       276
+           2       0.93      0.91      0.92       236
+           3       0.77      0.74      0.76        50
+           4       0.57      0.71      0.63        17
+           5       0.93      0.81      0.86        31
+           6       0.84      0.84      0.84       115
+           7       0.78      0.90      0.84        91
+           8       0.86      0.86      0.86       128
+           9       1.00      0.89      0.94         9
+          10       0.50      0.43      0.46         7
+          11       0.94      0.94      0.94        32
+          12       0.91      0.91      0.91        11
+          13       0.91      0.88      0.90        34
+          14       0.71      0.83      0.77         6
+          15       0.92      0.96      0.94        24
+          17       0.70      0.88      0.78         8
+          18       1.00      1.00      1.00         7
+          19       0.77      1.00      0.87        10
+          20       0.89      0.76      0.82        21
+
+    accuracy                           0.93      3423
+   macro avg       0.84      0.86      0.84      3423
+weighted avg       0.93      0.93      0.93      3423
+
+INFO:__main__:epoch # 34
+INFO:__main__:=====Trigger Classification=====
+INFO:__main__:accuracy - 0.9915616321298868
+INFO:__main__:precision - 0.9109697933227345
+INFO:__main__:recall - 0.9646464646464646
+INFO:__main__:f1 - 0.937040065412919
+INFO:__main__:                       precision    recall  f1-score   support
+
+             SHORTAGE       1.00      1.00      1.00        11
+                 WEAK       0.89      0.84      0.86        37
+                 HIGH       1.00      1.00      1.00        13
+                 LOSS       0.93      0.98      0.95       229
+                 GAIN       0.88      0.98      0.93       105
+SITUATION_DETERIORATE       1.00      1.00      1.00         8
+              TENSION       0.94      1.00      0.97        31
+               CRISIS       1.00      1.00      1.00         7
+                  LOW       1.00      1.00      1.00        27
+               STRONG       0.80      0.96      0.87        25
+              EMBARGO       0.90      0.95      0.93        20
+               UNREST       0.93      0.87      0.90        15
+          PROHIBITING       1.00      1.00      1.00         8
+           OVERSUPPLY       0.81      0.85      0.83        26
+   NEGATIVE_SENTIMENT       0.86      1.00      0.93        19
+                 FLAT       0.87      1.00      0.93        13
+
+            micro avg       0.91      0.96      0.94       594
+            macro avg       0.91      0.96      0.94       594
+
+INFO:__main__:=======Argument Role Classification=========
+INFO:__main__:arg accuracy - 0.931195335276968
+INFO:__main__:arg precision - 0.9331905024568654
+INFO:__main__:arg recall - 0.931195335276968
+INFO:__main__:arg f1 - 0.9316256463239752
+INFO:__main__:              precision    recall  f1-score   support
+
+           0       0.96      0.95      0.96      2313
+           1       0.86      0.95      0.91       276
+           2       0.93      0.91      0.92       236
+           3       0.78      0.82      0.80        51
+           4       0.56      0.82      0.67        17
+           5       0.87      0.84      0.85        31
+           6       0.86      0.83      0.85       115
+           7       0.86      0.86      0.86        92
+           8       0.86      0.89      0.88       130
+           9       1.00      0.78      0.88         9
+          10       0.62      0.71      0.67         7
+          11       0.91      0.94      0.92        32
+          12       0.92      1.00      0.96        11
+          13       0.91      0.88      0.90        34
+          14       0.71      0.83      0.77         6
+          15       0.88      0.92      0.90        24
+          17       0.60      0.38      0.46         8
+          18       1.00      1.00      1.00         7
+          19       0.71      1.00      0.83        10
+          20       0.89      0.81      0.85        21
+
+    accuracy                           0.93      3430
+   macro avg       0.84      0.86      0.84      3430
+weighted avg       0.93      0.93      0.93      3430
+
+INFO:__main__:epoch # 35
+INFO:__main__:=====Trigger Classification=====
+INFO:__main__:accuracy - 0.9917752616962188
+INFO:__main__:precision - 0.9125596184419714
+INFO:__main__:recall - 0.9663299663299664
+INFO:__main__:f1 - 0.9386753883892069
+INFO:__main__:                       precision    recall  f1-score   support
+
+                 WEAK       0.89      0.89      0.89        37
+                  LOW       1.00      1.00      1.00        27
+                 HIGH       1.00      1.00      1.00        13
+                 LOSS       0.93      0.98      0.96       229
+                 GAIN       0.87      0.96      0.91       105
+               STRONG       0.83      0.96      0.89        25
+               CRISIS       1.00      1.00      1.00         7
+           OVERSUPPLY       0.81      0.85      0.83        26
+                 FLAT       0.93      1.00      0.96        13
+   NEGATIVE_SENTIMENT       0.86      1.00      0.93        19
+              TENSION       0.94      1.00      0.97        31
+             SHORTAGE       1.00      1.00      1.00        11
+               UNREST       1.00      0.87      0.93        15
+              EMBARGO       0.90      0.95      0.93        20
+          PROHIBITING       1.00      1.00      1.00         8
+SITUATION_DETERIORATE       0.89      1.00      0.94         8
+
+            micro avg       0.91      0.97      0.94       594
+            macro avg       0.91      0.97      0.94       594
+
+INFO:__main__:=======Argument Role Classification=========
+INFO:__main__:arg accuracy - 0.931466899970837
+INFO:__main__:arg precision - 0.93244638074723
+INFO:__main__:arg recall - 0.931466899970837
+INFO:__main__:arg f1 - 0.9314420561397078
+INFO:__main__:              precision    recall  f1-score   support
+
+           0       0.96      0.96      0.96      2310
+           1       0.91      0.90      0.90       277
+           2       0.91      0.89      0.90       237
+           3       0.79      0.80      0.80        51
+           4       0.61      0.82      0.70        17
+           5       0.81      0.84      0.83        31
+           6       0.90      0.86      0.88       115
+           7       0.84      0.88      0.86        92
+           8       0.85      0.85      0.85       130
+           9       1.00      0.67      0.80         9
+          10       0.60      0.43      0.50         7
+          11       0.94      0.94      0.94        32
+          12       0.91      0.91      0.91        11
+          13       0.91      0.91      0.91        34
+          14       0.71      0.83      0.77         6
+          15       0.88      0.96      0.92        24
+          17       1.00      0.50      0.67         8
+          18       1.00      1.00      1.00         7
+          19       0.71      1.00      0.83        10
+          20       0.90      0.90      0.90        21
+
+    accuracy                           0.93      3429
+   macro avg       0.86      0.84      0.84      3429
+weighted avg       0.93      0.93      0.93      3429
+
+INFO:__main__:epoch # 36
+INFO:__main__:=====Trigger Classification=====
+INFO:__main__:accuracy - 0.9915616321298868
+INFO:__main__:precision - 0.9095238095238095
+INFO:__main__:recall - 0.9646464646464646
+INFO:__main__:f1 - 0.9362745098039216
+INFO:__main__:                       precision    recall  f1-score   support
+
+                 WEAK       0.89      0.86      0.88        37
+                  LOW       1.00      1.00      1.00        27
+                 LOSS       0.92      0.98      0.95       229
+                 FLAT       0.93      1.00      0.96        13
+                 GAIN       0.89      0.96      0.92       105
+               CRISIS       1.00      1.00      1.00         7
+              EMBARGO       0.86      0.95      0.90        20
+           OVERSUPPLY       0.81      0.85      0.83        26
+               UNREST       1.00      0.87      0.93        15
+              TENSION       0.91      1.00      0.95        31
+   NEGATIVE_SENTIMENT       0.90      1.00      0.95        19
+                 HIGH       1.00      1.00      1.00        13
+               STRONG       0.83      0.96      0.89        25
+SITUATION_DETERIORATE       0.89      1.00      0.94         8
+          PROHIBITING       1.00      1.00      1.00         8
+             SHORTAGE       1.00      1.00      1.00        11
+
+            micro avg       0.91      0.96      0.94       594
+            macro avg       0.91      0.96      0.94       594
+
+INFO:__main__:=======Argument Role Classification=========
+INFO:__main__:arg accuracy - 0.9307017543859649
+INFO:__main__:arg precision - 0.9315472062242407
+INFO:__main__:arg recall - 0.9307017543859649
+INFO:__main__:arg f1 - 0.9307201722347226
+INFO:__main__:              precision    recall  f1-score   support
+
+           0       0.96      0.96      0.96      2302
+           1       0.87      0.92      0.90       277
+           2       0.93      0.90      0.91       237
+           3       0.79      0.80      0.80        51
+           4       0.65      0.88      0.75        17
+           5       0.86      0.81      0.83        31
+           6       0.87      0.83      0.85       115
+           7       0.87      0.86      0.86        92
+           8       0.87      0.85      0.86       129
+           9       1.00      0.78      0.88         9
+          10       0.80      0.57      0.67         7
+          11       1.00      0.91      0.95        32
+          12       0.90      0.82      0.86        11
+          13       0.94      0.97      0.96        34
+          14       0.83      0.83      0.83         6
+          15       0.82      0.96      0.88        24
+          17       0.71      0.62      0.67         8
+          18       1.00      1.00      1.00         7
+          19       0.77      1.00      0.87        10
+          20       0.89      0.81      0.85        21
+
+    accuracy                           0.93      3420
+   macro avg       0.87      0.85      0.86      3420
+weighted avg       0.93      0.93      0.93      3420
+
+INFO:__main__:epoch # 37
+INFO:__main__:=====Trigger Classification=====
+INFO:__main__:accuracy - 0.9906002990813929
+INFO:__main__:precision - 0.9022082018927445
+INFO:__main__:recall - 0.9629629629629629
+INFO:__main__:f1 - 0.9315960912052117
+INFO:__main__:                       precision    recall  f1-score   support
+
+                 WEAK       0.89      0.84      0.86        37
+                  LOW       1.00      1.00      1.00        27
+                 HIGH       1.00      1.00      1.00        13
+                 LOSS       0.93      0.98      0.96       229
+                 GAIN       0.87      0.97      0.92       105
+SITUATION_DETERIORATE       1.00      0.88      0.93         8
+          PROHIBITING       1.00      1.00      1.00         8
+           OVERSUPPLY       0.81      0.85      0.83        26
+   NEGATIVE_SENTIMENT       0.86      1.00      0.93        19
+               STRONG       0.69      0.96      0.80        25
+               CRISIS       1.00      1.00      1.00         7
+             SHORTAGE       1.00      1.00      1.00        11
+               UNREST       1.00      0.87      0.93        15
+              TENSION       0.94      1.00      0.97        31
+              EMBARGO       0.90      0.95      0.93        20
+                 FLAT       0.81      1.00      0.90        13
+
+            micro avg       0.90      0.96      0.93       594
+            macro avg       0.91      0.96      0.93       594
+
+INFO:__main__:=======Argument Role Classification=========
+INFO:__main__:arg accuracy - 0.9215116279069767
+INFO:__main__:arg precision - 0.9235620590036011
+INFO:__main__:arg recall - 0.9215116279069767
+INFO:__main__:arg f1 - 0.9214058785092362
+INFO:__main__:              precision    recall  f1-score   support
+
+           0       0.95      0.95      0.95      2332
+           1       0.83      0.94      0.88       275
+           2       0.94      0.82      0.88       235
+           3       0.76      0.82      0.79        50
+           4       0.55      0.71      0.62        17
+           5       0.82      0.74      0.78        31
+           6       0.88      0.86      0.87       114
+           7       0.84      0.88      0.86        92
+           8       0.86      0.81      0.84       128
+           9       1.00      0.56      0.71         9
+          10       0.57      0.57      0.57         7
+          11       0.94      0.91      0.92        32
+          12       0.86      0.55      0.67        11
+          13       0.97      0.88      0.92        34
+          14       0.71      0.83      0.77         6
+          15       1.00      0.96      0.98        24
+          17       1.00      0.57      0.73         7
+          18       1.00      1.00      1.00         7
+          19       0.69      1.00      0.82         9
+          20       0.85      0.85      0.85        20
+
+    accuracy                           0.92      3440
+   macro avg       0.85      0.81      0.82      3440
+weighted avg       0.92      0.92      0.92      3440
+
+INFO:__main__:epoch # 38
+INFO:__main__:=====Trigger Classification=====
+INFO:__main__:accuracy - 0.9909207434308909
+INFO:__main__:precision - 0.9052132701421801
+INFO:__main__:recall - 0.9646464646464646
+INFO:__main__:f1 - 0.9339853300733496
+INFO:__main__:                       precision    recall  f1-score   support
+
+                 WEAK       0.89      0.84      0.86        37
+                 LOSS       0.93      0.99      0.96       229
+              EMBARGO       0.95      0.95      0.95        20
+                 FLAT       0.87      1.00      0.93        13
+                 GAIN       0.88      0.97      0.92       105
+               STRONG       0.75      0.96      0.84        25
+                  LOW       1.00      1.00      1.00        27
+                 HIGH       1.00      1.00      1.00        13
+   NEGATIVE_SENTIMENT       0.86      1.00      0.93        19
+              TENSION       0.94      1.00      0.97        31
+             SHORTAGE       1.00      1.00      1.00        11
+          PROHIBITING       1.00      1.00      1.00         8
+               UNREST       1.00      0.87      0.93        15
+           OVERSUPPLY       0.79      0.85      0.81        26
+SITUATION_DETERIORATE       0.78      0.88      0.82         8
+               CRISIS       1.00      1.00      1.00         7
+
+            micro avg       0.91      0.96      0.93       594
+            macro avg       0.91      0.96      0.93       594
+
+INFO:__main__:=======Argument Role Classification=========
+INFO:__main__:arg accuracy - 0.9286128845037724
+INFO:__main__:arg precision - 0.9299641516610194
+INFO:__main__:arg recall - 0.9286128845037724
+INFO:__main__:arg f1 - 0.9285405256276066
+INFO:__main__:              precision    recall  f1-score   support
+
+           0       0.95      0.96      0.96      2331
+           1       0.88      0.92      0.90       276
+           2       0.94      0.87      0.91       236
+           3       0.77      0.84      0.80        51
+           4       0.57      0.71      0.63        17
+           5       0.79      0.71      0.75        31
+           6       0.92      0.81      0.86       115
+           7       0.84      0.88      0.86        92
+           8       0.88      0.81      0.84       129
+           9       1.00      0.56      0.71         9
+          10       0.57      0.57      0.57         7
+          11       0.97      0.94      0.95        32
+          12       0.85      1.00      0.92        11
+          13       0.97      0.91      0.94        34
+          14       0.67      0.67      0.67         6
+          15       0.92      1.00      0.96        24
+          17       0.38      0.43      0.40         7
+          18       1.00      1.00      1.00         7
+          19       0.67      1.00      0.80        10
+          20       0.90      0.90      0.90        21
+
+    accuracy                           0.93      3446
+   macro avg       0.82      0.82      0.82      3446
+weighted avg       0.93      0.93      0.93      3446
+
+INFO:__main__:epoch # 39
+INFO:__main__:=====Trigger Classification=====
+INFO:__main__:accuracy - 0.9906002990813929
+INFO:__main__:precision - 0.9022082018927445
+INFO:__main__:recall - 0.9629629629629629
+INFO:__main__:f1 - 0.9315960912052117
+INFO:__main__:                       precision    recall  f1-score   support
+
+             SHORTAGE       1.00      1.00      1.00        11
+                 WEAK       0.91      0.86      0.89        37
+                  LOW       1.00      1.00      1.00        27
+                 GAIN       0.88      0.97      0.92       105
+                 LOSS       0.93      0.97      0.95       229
+              EMBARGO       0.90      0.95      0.93        20
+               STRONG       0.73      0.96      0.83        25
+          PROHIBITING       0.89      1.00      0.94         8
+           OVERSUPPLY       0.81      0.85      0.83        26
+SITUATION_DETERIORATE       0.89      1.00      0.94         8
+               CRISIS       1.00      1.00      1.00         7
+               UNREST       0.93      0.87      0.90        15
+              TENSION       0.91      1.00      0.95        31
+   NEGATIVE_SENTIMENT       0.86      1.00      0.93        19
+                 FLAT       0.81      1.00      0.90        13
+                 HIGH       0.93      1.00      0.96        13
+
+            micro avg       0.90      0.96      0.93       594
+            macro avg       0.91      0.96      0.93       594
+
+INFO:__main__:=======Argument Role Classification=========
+INFO:__main__:arg accuracy - 0.9274941995359629
+INFO:__main__:arg precision - 0.9288907461874572
+INFO:__main__:arg recall - 0.9274941995359629
+INFO:__main__:arg f1 - 0.9277320678088692
+INFO:__main__:              precision    recall  f1-score   support
+
+           0       0.96      0.95      0.95      2334
+           1       0.90      0.92      0.91       275
+           2       0.91      0.91      0.91       236
+           3       0.80      0.80      0.80        51
+           4       0.48      0.65      0.55        17
+           5       0.83      0.65      0.73        31
+           6       0.89      0.85      0.87       115
+           7       0.81      0.90      0.85        92
+           8       0.84      0.84      0.84       128
+           9       1.00      0.78      0.88         9
+          10       0.62      0.71      0.67         7
+          11       0.94      0.94      0.94        32
+          12       0.91      0.91      0.91        11
+          13       0.91      0.91      0.91        34
+          14       0.67      0.67      0.67         6
+          15       0.83      1.00      0.91        24
+          17       0.50      0.38      0.43         8
+          18       1.00      1.00      1.00         7
+          19       0.71      1.00      0.83        10
+          20       0.90      0.90      0.90        21
+
+    accuracy                           0.93      3448
+   macro avg       0.82      0.83      0.82      3448
+weighted avg       0.93      0.93      0.93      3448
+
+INFO:__main__:epoch # 40
+INFO:__main__:=====Trigger Classification=====
+INFO:__main__:accuracy - 0.9912411877803888
+INFO:__main__:precision - 0.9095238095238095
+INFO:__main__:recall - 0.9646464646464646
+INFO:__main__:f1 - 0.9362745098039216
+INFO:__main__:                       precision    recall  f1-score   support
+
+                 WEAK       0.91      0.86      0.89        37
+                 HIGH       1.00      1.00      1.00        13
+                 LOSS       0.93      0.98      0.95       229
+                 GAIN       0.88      0.97      0.92       105
+              EMBARGO       0.95      0.95      0.95        20
+               UNREST       0.93      0.87      0.90        15
+           OVERSUPPLY       0.81      0.85      0.83        26
+                  LOW       1.00      1.00      1.00        27
+          PROHIBITING       1.00      1.00      1.00         8
+             SHORTAGE       1.00      1.00      1.00        11
+SITUATION_DETERIORATE       1.00      1.00      1.00         8
+               STRONG       0.73      0.96      0.83        25
+              TENSION       0.94      1.00      0.97        31
+               CRISIS       1.00      1.00      1.00         7
+   NEGATIVE_SENTIMENT       0.86      1.00      0.93        19
+                 FLAT       0.87      1.00      0.93        13
+
+            micro avg       0.91      0.96      0.94       594
+            macro avg       0.91      0.96      0.94       594
+
+INFO:__main__:=======Argument Role Classification=========
+INFO:__main__:arg accuracy - 0.9285295840656121
+INFO:__main__:arg precision - 0.9306695645361873
+INFO:__main__:arg recall - 0.9285295840656121
+INFO:__main__:arg f1 - 0.9286959760047234
+INFO:__main__:              precision    recall  f1-score   support
+
+           0       0.95      0.95      0.95      2296
+           1       0.89      0.92      0.90       278
+           2       0.92      0.90      0.91       236
+           3       0.73      0.86      0.79        51
+           4       0.56      0.82      0.67        17
+           5       0.87      0.65      0.74        31
+           6       0.88      0.87      0.87       115
+           7       0.85      0.89      0.87        91
+           8       0.89      0.80      0.84       130
+           9       1.00      0.67      0.80         9
+          10       0.50      0.71      0.59         7
+          11       0.97      0.94      0.95        32
+          12       0.90      0.82      0.86        11
+          13       0.97      0.88      0.92        34
+          14       0.62      0.83      0.71         6
+          15       0.92      0.96      0.94        24
+          17       1.00      0.50      0.67         8
+          18       1.00      1.00      1.00         7
+          19       0.77      1.00      0.87        10
+          20       0.90      0.90      0.90        21
+
+    accuracy                           0.93      3414
+   macro avg       0.86      0.84      0.84      3414
+weighted avg       0.93      0.93      0.93      3414
+
+INFO:__main__:epoch # 41
+INFO:__main__:=====Trigger Classification=====
+INFO:__main__:accuracy - 0.9916684469130528
+INFO:__main__:precision - 0.9168
+INFO:__main__:recall - 0.9646464646464646
+INFO:__main__:f1 - 0.9401148482362592
+INFO:__main__:                       precision    recall  f1-score   support
+
+                 WEAK       0.89      0.89      0.89        37
+                  LOW       1.00      1.00      1.00        27
+                 LOSS       0.94      0.98      0.96       229
+                 FLAT       0.93      1.00      0.96        13
+                 GAIN       0.89      0.97      0.93       105
+   NEGATIVE_SENTIMENT       0.90      1.00      0.95        19
+          PROHIBITING       1.00      1.00      1.00         8
+               UNREST       0.93      0.87      0.90        15
+               STRONG       0.75      0.96      0.84        25
+SITUATION_DETERIORATE       1.00      1.00      1.00         8
+           OVERSUPPLY       0.78      0.81      0.79        26
+               CRISIS       1.00      1.00      1.00         7
+              TENSION       0.94      1.00      0.97        31
+              EMBARGO       0.95      0.95      0.95        20
+                 HIGH       1.00      1.00      1.00        13
+             SHORTAGE       1.00      1.00      1.00        11
+
+            micro avg       0.92      0.96      0.94       594
+            macro avg       0.92      0.96      0.94       594
+
+INFO:__main__:=======Argument Role Classification=========
+INFO:__main__:arg accuracy - 0.9292009400705052
+INFO:__main__:arg precision - 0.9328039805189132
+INFO:__main__:arg recall - 0.9292009400705052
+INFO:__main__:arg f1 - 0.9301837216274921
+INFO:__main__:              precision    recall  f1-score   support
+
+           0       0.97      0.94      0.95      2290
+           1       0.89      0.94      0.91       278
+           2       0.88      0.93      0.90       236
+           3       0.74      0.84      0.79        50
+           4       0.67      0.82      0.74        17
+           5       0.74      0.84      0.79        31
+           6       0.83      0.88      0.86       113
+           7       0.82      0.90      0.86        92
+           8       0.86      0.88      0.87       130
+           9       1.00      0.67      0.80         9
+          10       0.56      0.71      0.63         7
+          11       0.88      0.94      0.91        32
+          12       0.91      0.91      0.91        11
+          13       0.92      1.00      0.96        34
+          14       0.62      0.83      0.71         6
+          15       0.92      0.96      0.94        24
+          17       1.00      0.62      0.77         8
+          18       1.00      1.00      1.00         7
+          19       0.69      1.00      0.82         9
+          20       0.85      0.85      0.85        20
+
+    accuracy                           0.93      3404
+   macro avg       0.84      0.87      0.85      3404
+weighted avg       0.93      0.93      0.93      3404
+
+INFO:__main__:epoch # 42
+INFO:__main__:=====Trigger Classification=====
+INFO:__main__:accuracy - 0.9915616321298868
+INFO:__main__:precision - 0.9125596184419714
+INFO:__main__:recall - 0.9663299663299664
+INFO:__main__:f1 - 0.9386753883892069
+INFO:__main__:                       precision    recall  f1-score   support
+
+                 WEAK       0.92      0.89      0.90        37
+                  LOW       1.00      1.00      1.00        27
+                 LOSS       0.94      0.98      0.96       229
+              EMBARGO       0.90      0.95      0.93        20
+           OVERSUPPLY       0.78      0.81      0.79        26
+                 GAIN       0.88      0.97      0.92       105
+                 HIGH       1.00      1.00      1.00        13
+             SHORTAGE       1.00      1.00      1.00        11
+               STRONG       0.75      0.96      0.84        25
+                 FLAT       0.87      1.00      0.93        13
+              TENSION       0.97      1.00      0.98        31
+               UNREST       1.00      0.87      0.93        15
+   NEGATIVE_SENTIMENT       0.83      1.00      0.90        19
+SITUATION_DETERIORATE       0.89      1.00      0.94         8
+               CRISIS       1.00      1.00      1.00         7
+          PROHIBITING       1.00      1.00      1.00         8
+
+            micro avg       0.91      0.97      0.94       594
+            macro avg       0.92      0.97      0.94       594
+
+INFO:__main__:=======Argument Role Classification=========
+INFO:__main__:arg accuracy - 0.9323615160349854
+INFO:__main__:arg precision - 0.9334606047081223
+INFO:__main__:arg recall - 0.9323615160349854
+INFO:__main__:arg f1 - 0.932261466404512
+INFO:__main__:              precision    recall  f1-score   support
+
+           0       0.96      0.96      0.96      2309
+           1       0.91      0.92      0.92       279
+           2       0.93      0.90      0.91       237
+           3       0.77      0.80      0.79        51
+           4       0.58      0.88      0.70        17
+           5       0.88      0.68      0.76        31
+           6       0.88      0.84      0.86       114
+           7       0.86      0.88      0.87        92
+           8       0.85      0.85      0.85       131
+           9       1.00      0.67      0.80         9
+          10       0.56      0.71      0.63         7
+          11       0.97      0.94      0.95        32
+          12       0.91      0.91      0.91        11
+          13       0.94      0.85      0.89        34
+          14       0.62      0.83      0.71         6
+          15       0.88      0.96      0.92        24
+          17       0.50      0.25      0.33         8
+          18       1.00      1.00      1.00         7
+          19       0.71      1.00      0.83        10
+          20       0.90      0.86      0.88        21
+
+    accuracy                           0.93      3430
+   macro avg       0.83      0.84      0.82      3430
+weighted avg       0.93      0.93      0.93      3430
+
+INFO:__main__:epoch # 43
+INFO:__main__:=====Trigger Classification=====
+INFO:__main__:accuracy - 0.9915616321298868
+INFO:__main__:precision - 0.9152
+INFO:__main__:recall - 0.9629629629629629
+INFO:__main__:f1 - 0.9384741591468417
+INFO:__main__:                       precision    recall  f1-score   support
+
+                 WEAK       0.94      0.84      0.89        37
+                 LOSS       0.93      0.98      0.96       229
+              EMBARGO       0.95      0.95      0.95        20
+              TENSION       0.91      1.00      0.95        31
+                  LOW       1.00      1.00      1.00        27
+                 GAIN       0.89      0.99      0.94       105
+                 FLAT       0.81      1.00      0.90        13
+           OVERSUPPLY       0.78      0.81      0.79        26
+                 HIGH       0.92      0.92      0.92        13
+SITUATION_DETERIORATE       1.00      0.88      0.93         8
+               CRISIS       1.00      1.00      1.00         7
+               STRONG       0.80      0.96      0.87        25
+               UNREST       0.93      0.87      0.90        15
+   NEGATIVE_SENTIMENT       0.95      1.00      0.97        19
+             SHORTAGE       1.00      1.00      1.00        11
+          PROHIBITING       1.00      1.00      1.00         8
+
+            micro avg       0.92      0.96      0.94       594
+            macro avg       0.92      0.96      0.94       594
+
+INFO:__main__:=======Argument Role Classification=========
+INFO:__main__:arg accuracy - 0.9332552693208431
+INFO:__main__:arg precision - 0.9349751684518719
+INFO:__main__:arg recall - 0.9332552693208431
+INFO:__main__:arg f1 - 0.9335424571754786
+INFO:__main__:              precision    recall  f1-score   support
+
+           0       0.96      0.96      0.96      2300
+           1       0.89      0.94      0.91       277
+           2       0.93      0.92      0.92       236
+           3       0.80      0.80      0.80        51
+           4       0.56      0.82      0.67        17
+           5       0.87      0.84      0.85        31
+           6       0.91      0.84      0.88       114
+           7       0.82      0.90      0.86        92
+           8       0.89      0.79      0.84       130
+           9       1.00      0.67      0.80         9
+          10       0.56      0.71      0.63         7
+          11       0.94      0.94      0.94        32
+          12       0.90      0.82      0.86        11
+          13       0.94      0.94      0.94        34
+          14       0.67      0.67      0.67         6
+          15       0.92      0.96      0.94        24
+          17       0.75      0.86      0.80         7
+          18       1.00      1.00      1.00         7
+          19       0.71      1.00      0.83        10
+          20       0.86      0.90      0.88        21
+
+    accuracy                           0.93      3416
+   macro avg       0.84      0.86      0.85      3416
+weighted avg       0.93      0.93      0.93      3416
+
+INFO:__main__:epoch # 44
+INFO:__main__:=====Trigger Classification=====
+INFO:__main__:accuracy - 0.9911343729972228
+INFO:__main__:precision - 0.9093799682034976
+INFO:__main__:recall - 0.9629629629629629
+INFO:__main__:f1 - 0.9354047424366312
+INFO:__main__:                       precision    recall  f1-score   support
+
+                 WEAK       0.92      0.89      0.90        37
+                 LOSS       0.93      0.98      0.96       229
+                  LOW       1.00      1.00      1.00        27
+                 GAIN       0.88      0.95      0.92       105
+   NEGATIVE_SENTIMENT       0.86      1.00      0.93        19
+              EMBARGO       0.95      0.95      0.95        20
+               UNREST       0.81      0.87      0.84        15
+              TENSION       0.91      1.00      0.95        31
+             SHORTAGE       1.00      1.00      1.00        11
+           OVERSUPPLY       0.81      0.85      0.83        26
+SITUATION_DETERIORATE       1.00      0.88      0.93         8
+                 HIGH       1.00      1.00      1.00        13
+                 FLAT       0.93      1.00      0.96        13
+               STRONG       0.75      0.96      0.84        25
+               CRISIS       1.00      1.00      1.00         7
+          PROHIBITING       1.00      1.00      1.00         8
+
+            micro avg       0.91      0.96      0.94       594
+            macro avg       0.91      0.96      0.94       594
+
+INFO:__main__:=======Argument Role Classification=========
+INFO:__main__:arg accuracy - 0.9334500875656743
+INFO:__main__:arg precision - 0.9357072075639997
+INFO:__main__:arg recall - 0.9334500875656743
+INFO:__main__:arg f1 - 0.9338888886874922
+INFO:__main__:              precision    recall  f1-score   support
+
+           0       0.97      0.95      0.96      2307
+           1       0.87      0.94      0.91       278
+           2       0.90      0.92      0.91       238
+           3       0.74      0.90      0.81        51
+           4       0.64      0.82      0.72        17
+           5       0.91      0.65      0.75        31
+           6       0.89      0.86      0.88       115
+           7       0.86      0.89      0.88        92
+           8       0.85      0.85      0.85       129
+           9       1.00      0.78      0.88         9
+          10       0.62      0.71      0.67         7
+          11       0.94      0.94      0.94        32
+          12       0.91      0.91      0.91        11
+          13       0.97      0.91      0.94        34
+          14       0.83      0.83      0.83         6
+          15       0.96      0.96      0.96        24
+          17       0.86      0.86      0.86         7
+          18       1.00      1.00      1.00         7
+          19       0.67      1.00      0.80        10
+          20       0.90      0.86      0.88        21
+
+    accuracy                           0.93      3426
+   macro avg       0.86      0.88      0.87      3426
+weighted avg       0.94      0.93      0.93      3426
+
+INFO:__main__:epoch # 45
+INFO:__main__:=====Trigger Classification=====
+INFO:__main__:accuracy - 0.9917752616962188
+INFO:__main__:precision - 0.9212218649517685
+INFO:__main__:recall - 0.9646464646464646
+INFO:__main__:f1 - 0.9424342105263158
+INFO:__main__:                       precision    recall  f1-score   support
+
+                 HIGH       1.00      0.92      0.96        13
+                 LOSS       0.94      0.98      0.96       229
+              EMBARGO       0.90      0.95      0.93        20
+                 GAIN       0.90      0.98      0.94       105
+               STRONG       0.77      0.96      0.86        25
+              TENSION       0.94      1.00      0.97        31
+                  LOW       1.00      1.00      1.00        27
+           OVERSUPPLY       0.81      0.85      0.83        26
+             SHORTAGE       1.00      1.00      1.00        11
+                 FLAT       0.93      1.00      0.96        13
+   NEGATIVE_SENTIMENT       0.90      1.00      0.95        19
+                 WEAK       0.89      0.89      0.89        37
+               CRISIS       1.00      1.00      1.00         7
+SITUATION_DETERIORATE       1.00      0.88      0.93         8
+               UNREST       0.93      0.87      0.90        15
+          PROHIBITING       1.00      1.00      1.00         8
+
+            micro avg       0.92      0.96      0.94       594
+            macro avg       0.92      0.96      0.94       594
+
+INFO:__main__:=======Argument Role Classification=========
+INFO:__main__:arg accuracy - 0.9265785609397944
+INFO:__main__:arg precision - 0.9310784235713079
+INFO:__main__:arg recall - 0.9265785609397944
+INFO:__main__:arg f1 - 0.9277268813586836
+INFO:__main__:              precision    recall  f1-score   support
+
+           0       0.97      0.93      0.95      2291
+           1       0.87      0.94      0.90       278
+           2       0.89      0.92      0.90       237
+           3       0.77      0.86      0.81        50
+           4       0.64      0.82      0.72        17
+           5       0.84      0.87      0.86        31
+           6       0.86      0.89      0.88       114
+           7       0.79      0.92      0.85        92
+           8       0.82      0.91      0.86       129
+           9       1.00      0.67      0.80         9
+          10       0.56      0.71      0.63         7
+          11       0.86      0.94      0.90        32
+          12       0.90      0.82      0.86        11
+          13       0.94      1.00      0.97        34
+          14       0.71      0.83      0.77         6
+          15       0.92      0.96      0.94        24
+          17       1.00      0.57      0.73         7
+          18       1.00      1.00      1.00         7
+          19       0.60      1.00      0.75         9
+          20       0.82      0.90      0.86        20
+
+    accuracy                           0.93      3405
+   macro avg       0.84      0.87      0.85      3405
+weighted avg       0.93      0.93      0.93      3405
+
+INFO:__main__:epoch # 46
+INFO:__main__:=====Trigger Classification=====
+INFO:__main__:accuracy - 0.9914548173467208
+INFO:__main__:precision - 0.9138755980861244
+INFO:__main__:recall - 0.9646464646464646
+INFO:__main__:f1 - 0.9385749385749385
+INFO:__main__:                       precision    recall  f1-score   support
+
+                 WEAK       0.89      0.86      0.88        37
+              EMBARGO       0.90      0.95      0.93        20
+                 LOSS       0.95      0.98      0.96       229
+                 GAIN       0.88      0.98      0.93       105
+           OVERSUPPLY       0.78      0.81      0.79        26
+   NEGATIVE_SENTIMENT       0.83      1.00      0.90        19
+               UNREST       1.00      0.87      0.93        15
+                  LOW       1.00      1.00      1.00        27
+              TENSION       0.97      1.00      0.98        31
+             SHORTAGE       1.00      1.00      1.00        11
+                 HIGH       1.00      1.00      1.00        13
+               CRISIS       1.00      1.00      1.00         7
+               STRONG       0.75      0.96      0.84        25
+          PROHIBITING       1.00      1.00      1.00         8
+                 FLAT       0.87      1.00      0.93        13
+SITUATION_DETERIORATE       1.00      1.00      1.00         8
+
+            micro avg       0.91      0.96      0.94       594
+            macro avg       0.92      0.96      0.94       594
+
+INFO:__main__:=======Argument Role Classification=========
+INFO:__main__:arg accuracy - 0.9337825959566364
+INFO:__main__:arg precision - 0.935210311495407
+INFO:__main__:arg recall - 0.9337825959566364
+INFO:__main__:arg f1 - 0.9340632737264112
+INFO:__main__:              precision    recall  f1-score   support
+
+           0       0.96      0.96      0.96      2301
+           1       0.91      0.92      0.92       277
+           2       0.94      0.92      0.93       236
+           3       0.75      0.86      0.80        50
+           4       0.61      0.82      0.70        17
+           5       0.89      0.77      0.83        31
+           6       0.89      0.84      0.86       113
+           7       0.85      0.91      0.88        92
+           8       0.87      0.84      0.85       129
+           9       1.00      0.78      0.88         9
+          10       0.50      0.57      0.53         7
+          11       0.91      0.94      0.92        32
+          12       0.92      1.00      0.96        11
+          13       0.94      0.91      0.93        34
+          14       0.71      0.83      0.77         6
+          15       0.92      0.96      0.94        24
+          17       0.50      0.38      0.43         8
+          18       1.00      1.00      1.00         7
+          19       0.64      1.00      0.78         9
+          20       0.86      0.90      0.88        20
+
+    accuracy                           0.93      3413
+   macro avg       0.83      0.86      0.84      3413
+weighted avg       0.94      0.93      0.93      3413
+
+INFO:__main__:epoch # 47
+INFO:__main__:=====Trigger Classification=====
+INFO:__main__:accuracy - 0.9917752616962188
+INFO:__main__:precision - 0.9169329073482428
+INFO:__main__:recall - 0.9663299663299664
+INFO:__main__:f1 - 0.9409836065573771
+INFO:__main__:                       precision    recall  f1-score   support
+
+                 WEAK       0.92      0.89      0.90        37
+                 HIGH       1.00      1.00      1.00        13
+              EMBARGO       0.90      0.95      0.93        20
+                  LOW       1.00      1.00      1.00        27
+                 LOSS       0.94      0.98      0.96       229
+               UNREST       0.93      0.87      0.90        15
+                 GAIN       0.87      0.98      0.92       105
+           OVERSUPPLY       0.81      0.85      0.83        26
+               CRISIS       1.00      1.00      1.00         7
+              TENSION       0.94      1.00      0.97        31
+   NEGATIVE_SENTIMENT       0.90      1.00      0.95        19
+             SHORTAGE       1.00      1.00      1.00        11
+                 FLAT       0.87      1.00      0.93        13
+SITUATION_DETERIORATE       0.88      0.88      0.88         8
+               STRONG       0.86      0.96      0.91        25
+          PROHIBITING       0.89      1.00      0.94         8
+
+            micro avg       0.92      0.97      0.94       594
+            macro avg       0.92      0.97      0.94       594
+
+INFO:__main__:=======Argument Role Classification=========
+INFO:__main__:arg accuracy - 0.9313066354866998
+INFO:__main__:arg precision - 0.933642351001961
+INFO:__main__:arg recall - 0.9313066354866998
+INFO:__main__:arg f1 - 0.9316333706893991
+INFO:__main__:              precision    recall  f1-score   support
+
+           0       0.96      0.95      0.96      2310
+           1       0.90      0.95      0.92       277
+           2       0.91      0.90      0.91       235
+           3       0.77      0.82      0.80        50
+           4       0.53      0.94      0.68        17
+           5       0.86      0.77      0.81        31
+           6       0.91      0.85      0.88       114
+           7       0.82      0.91      0.87        92
+           8       0.91      0.80      0.85       129
+           9       1.00      0.67      0.80         9
+          10       0.56      0.71      0.63         7
+          11       0.94      0.94      0.94        32
+          12       0.92      1.00      0.96        11
+          13       0.97      0.88      0.92        34
+          14       0.71      0.83      0.77         6
+          15       0.85      0.96      0.90        24
+          17       0.40      0.29      0.33         7
+          18       1.00      1.00      1.00         7
+          19       0.67      0.89      0.76         9
+          20       0.94      0.85      0.89        20
+
+    accuracy                           0.93      3421
+   macro avg       0.83      0.85      0.83      3421
+weighted avg       0.93      0.93      0.93      3421
+
+INFO:__main__:epoch # 48
+INFO:__main__:=====Trigger Classification=====
+INFO:__main__:accuracy - 0.9917752616962188
+INFO:__main__:precision - 0.9144215530903328
+INFO:__main__:recall - 0.9713804713804713
+INFO:__main__:f1 - 0.9420408163265307
+INFO:__main__:                       precision    recall  f1-score   support
+
+                  LOW       1.00      1.00      1.00        27
+                 LOSS       0.95      0.99      0.97       229
+           OVERSUPPLY       0.81      0.85      0.83        26
+              EMBARGO       0.74      0.85      0.79        20
+                 GAIN       0.87      0.98      0.92       105
+   NEGATIVE_SENTIMENT       0.83      1.00      0.90        19
+               UNREST       0.93      0.87      0.90        15
+                 HIGH       1.00      1.00      1.00        13
+                 WEAK       0.92      0.95      0.93        37
+               CRISIS       1.00      1.00      1.00         7
+               STRONG       0.80      0.96      0.87        25
+             SHORTAGE       1.00      1.00      1.00        11
+              TENSION       0.97      1.00      0.98        31
+SITUATION_DETERIORATE       1.00      1.00      1.00         8
+          PROHIBITING       1.00      1.00      1.00         8
+                 FLAT       0.93      1.00      0.96        13
+
+            micro avg       0.91      0.97      0.94       594
+            macro avg       0.92      0.97      0.94       594
+
+INFO:__main__:=======Argument Role Classification=========
+INFO:__main__:arg accuracy - 0.929671607090962
+INFO:__main__:arg precision - 0.9332190044866416
+INFO:__main__:arg recall - 0.929671607090962
+INFO:__main__:arg f1 - 0.9305073307446655
+INFO:__main__:              precision    recall  f1-score   support
+
+           0       0.96      0.95      0.96      2324
+           1       0.93      0.94      0.93       279
+           2       0.90      0.92      0.91       238
+           3       0.65      0.84      0.73        49
+           4       0.67      0.82      0.74        17
+           5       0.90      0.84      0.87        31
+           6       0.81      0.88      0.84       114
+           7       0.80      0.89      0.84        92
+           8       0.86      0.83      0.84       130
+           9       1.00      0.78      0.88         9
+          10       0.62      0.71      0.67         7
+          11       0.97      0.91      0.94        33
+          12       0.92      1.00      0.96        11
+          13       0.97      0.94      0.96        34
+          14       0.57      0.67      0.62         6
+          15       0.85      0.96      0.90        24
+          17       1.00      0.38      0.55         8
+          18       1.00      1.00      1.00         7
+          19       0.57      1.00      0.73         8
+          20       0.80      0.80      0.80        20
+
+    accuracy                           0.93      3441
+   macro avg       0.84      0.85      0.83      3441
+weighted avg       0.93      0.93      0.93      3441
+
+INFO:__main__:epoch # 49
+INFO:__main__:=====Trigger Classification=====
+INFO:__main__:accuracy - 0.9911343729972228
+INFO:__main__:precision - 0.8930232558139535
+INFO:__main__:recall - 0.9696969696969697
+INFO:__main__:f1 - 0.9297820823244553
+INFO:__main__:                       precision    recall  f1-score   support
+
+                 WEAK       0.92      0.89      0.90        37
+                  LOW       0.96      1.00      0.98        27
+                 LOSS       0.92      0.99      0.95       229
+                 FLAT       0.87      1.00      0.93        13
+                 GAIN       0.88      0.98      0.93       105
+              TENSION       0.94      1.00      0.97        31
+               STRONG       0.75      0.96      0.84        25
+           OVERSUPPLY       0.81      0.85      0.83        26
+             SHORTAGE       1.00      1.00      1.00        11
+          PROHIBITING       1.00      1.00      1.00         8
+   NEGATIVE_SENTIMENT       0.90      1.00      0.95        19
+               CRISIS       1.00      1.00      1.00         7
+               UNREST       0.81      0.87      0.84        15
+                 HIGH       0.87      1.00      0.93        13
+              EMBARGO       0.77      0.85      0.81        20
+SITUATION_DETERIORATE       0.89      1.00      0.94         8
+
+            micro avg       0.89      0.97      0.93       594
+            macro avg       0.89      0.97      0.93       594
+
+INFO:__main__:=======Argument Role Classification=========
+INFO:__main__:arg accuracy - 0.925979262672811
+INFO:__main__:arg precision - 0.9280452033898079
+INFO:__main__:arg recall - 0.925979262672811
+INFO:__main__:arg f1 - 0.9261890772315203
+INFO:__main__:              precision    recall  f1-score   support
+
+           0       0.96      0.95      0.95      2357
+           1       0.90      0.91      0.91       278
+           2       0.88      0.89      0.89       238
+           3       0.74      0.80      0.76        49
+           4       0.65      0.88      0.75        17
+           5       0.91      0.68      0.78        31
+           6       0.87      0.84      0.86       114
+           7       0.81      0.92      0.86        92
+           8       0.86      0.84      0.85       129
+           9       1.00      0.67      0.80         9
+          10       0.57      0.57      0.57         7
+          11       0.94      0.91      0.92        33
+          12       0.92      1.00      0.96        11
+          13       1.00      0.94      0.97        34
+          14       0.71      0.83      0.77         6
+          15       0.88      0.96      0.92        24
+          17       1.00      0.50      0.67         8
+          18       1.00      1.00      1.00         7
+          19       0.62      1.00      0.76         8
+          20       0.74      0.85      0.79        20
+
+    accuracy                           0.93      3472
+   macro avg       0.85      0.85      0.84      3472
+weighted avg       0.93      0.93      0.93      3472
+
+INFO:__main__:epoch # 50
+INFO:__main__:=====Trigger Classification=====
+INFO:__main__:accuracy - 0.9925229651783807
+INFO:__main__:precision - 0.9184
+INFO:__main__:recall - 0.9663299663299664
+INFO:__main__:f1 - 0.9417555373256767
+INFO:__main__:                       precision    recall  f1-score   support
+
+                 WEAK       0.92      0.89      0.90        37
+                 LOSS       0.95      0.99      0.97       229
+              EMBARGO       0.85      0.85      0.85        20
+                 GAIN       0.89      0.98      0.93       105
+SITUATION_DETERIORATE       0.89      1.00      0.94         8
+               UNREST       0.93      0.87      0.90        15
+              TENSION       0.94      1.00      0.97        31
+   NEGATIVE_SENTIMENT       0.83      1.00      0.90        19
+                 HIGH       1.00      1.00      1.00        13
+          PROHIBITING       1.00      1.00      1.00         8
+           OVERSUPPLY       0.81      0.85      0.83        26
+               STRONG       0.79      0.92      0.85        25
+                  LOW       1.00      1.00      1.00        27
+               CRISIS       1.00      1.00      1.00         7
+                 FLAT       0.93      1.00      0.96        13
+             SHORTAGE       1.00      1.00      1.00        11
+
+            micro avg       0.92      0.97      0.94       594
+            macro avg       0.92      0.97      0.94       594
+
+INFO:__main__:=======Argument Role Classification=========
+INFO:__main__:arg accuracy - 0.9242513211978861
+INFO:__main__:arg precision - 0.9268415918790434
+INFO:__main__:arg recall - 0.9242513211978861
+INFO:__main__:arg f1 - 0.9246511466446995
+INFO:__main__:              precision    recall  f1-score   support
+
+           0       0.96      0.94      0.95      2289
+           1       0.88      0.94      0.91       277
+           2       0.88      0.93      0.91       237
+           3       0.75      0.78      0.76        50
+           4       0.56      0.82      0.67        17
+           5       0.93      0.81      0.86        31
+           6       0.86      0.85      0.86       115
+           7       0.79      0.91      0.84        92
+           8       0.89      0.79      0.84       129
+           9       1.00      0.56      0.71         9
+          10       0.67      0.57      0.62         7
+          11       0.91      0.91      0.91        33
+          12       0.91      0.91      0.91        11
+          13       0.97      0.94      0.96        34
+          14       0.71      0.83      0.77         6
+          15       0.85      0.96      0.90        24
+          17       0.70      0.88      0.78         8
+          18       0.88      1.00      0.93         7
+          19       0.73      0.89      0.80         9
+          20       0.88      0.71      0.79        21
+
+    accuracy                           0.92      3406
+   macro avg       0.83      0.85      0.83      3406
+weighted avg       0.93      0.92      0.92      3406
+
+INFO:__main__:epoch # 51
+INFO:__main__:=====Trigger Classification=====
+INFO:__main__:accuracy - 0.9915616321298868
+INFO:__main__:precision - 0.9070866141732283
+INFO:__main__:recall - 0.9696969696969697
+INFO:__main__:f1 - 0.9373474369406021
+INFO:__main__:                       precision    recall  f1-score   support
+
+                 WEAK       0.92      0.89      0.90        37
+                  LOW       1.00      1.00      1.00        27
+                 LOSS       0.94      0.99      0.96       229
+              EMBARGO       0.81      0.85      0.83        20
+                 FLAT       0.93      1.00      0.96        13
+                 GAIN       0.89      0.98      0.93       105
+               STRONG       0.77      0.96      0.86        25
+   NEGATIVE_SENTIMENT       0.76      1.00      0.86        19
+          PROHIBITING       1.00      1.00      1.00         8
+              TENSION       0.91      1.00      0.95        31
+             SHORTAGE       1.00      1.00      1.00        11
+           OVERSUPPLY       0.81      0.85      0.83        26
+                 HIGH       1.00      1.00      1.00        13
+               UNREST       0.93      0.87      0.90        15
+               CRISIS       1.00      1.00      1.00         7
+SITUATION_DETERIORATE       0.89      1.00      0.94         8
+
+            micro avg       0.91      0.97      0.94       594
+            macro avg       0.91      0.97      0.94       594
+
+INFO:__main__:=======Argument Role Classification=========
+INFO:__main__:arg accuracy - 0.9303410084523462
+INFO:__main__:arg precision - 0.9316462180455782
+INFO:__main__:arg recall - 0.9303410084523462
+INFO:__main__:arg f1 - 0.9300075936068296
+INFO:__main__:              precision    recall  f1-score   support
+
+           0       0.95      0.96      0.96      2310
+           1       0.91      0.93      0.92       278
+           2       0.94      0.91      0.93       239
+           3       0.74      0.78      0.76        50
+           4       0.67      0.82      0.74        17
+           5       0.91      0.65      0.75        31
+           6       0.88      0.83      0.86       115
+           7       0.80      0.91      0.85        92
+           8       0.89      0.82      0.86       130
+           9       1.00      0.56      0.71         9
+          10       0.71      0.71      0.71         7
+          11       0.94      0.91      0.92        33
+          12       0.90      0.82      0.86        11
+          13       1.00      0.88      0.94        34
+          14       0.71      0.83      0.77         6
+          15       0.88      0.96      0.92        24
+          17       1.00      0.50      0.67         8
+          18       0.70      1.00      0.82         7
+          19       0.73      0.89      0.80         9
+          20       0.89      0.76      0.82        21
+
+    accuracy                           0.93      3431
+   macro avg       0.86      0.82      0.83      3431
+weighted avg       0.93      0.93      0.93      3431
+
+INFO:__main__:epoch # 52
+INFO:__main__:=====Trigger Classification=====
+INFO:__main__:accuracy - 0.9918820764793848
+INFO:__main__:precision - 0.9113924050632911
+INFO:__main__:recall - 0.9696969696969697
+INFO:__main__:f1 - 0.9396411092985317
+INFO:__main__:                       precision    recall  f1-score   support
+
+                 WEAK       0.92      0.89      0.90        37
+                 LOSS       0.93      0.98      0.96       229
+              EMBARGO       0.90      0.95      0.93        20
+               UNREST       0.81      0.87      0.84        15
+                 FLAT       0.93      1.00      0.96        13
+                 GAIN       0.88      0.98      0.93       105
+               STRONG       0.80      0.96      0.87        25
+           OVERSUPPLY       0.81      0.85      0.83        26
+          PROHIBITING       1.00      1.00      1.00         8
+   NEGATIVE_SENTIMENT       0.90      1.00      0.95        19
+             SHORTAGE       1.00      1.00      1.00        11
+                  LOW       1.00      1.00      1.00        27
+                 HIGH       1.00      1.00      1.00        13
+SITUATION_DETERIORATE       0.89      1.00      0.94         8
+              TENSION       0.91      1.00      0.95        31
+               CRISIS       1.00      1.00      1.00         7
+
+            micro avg       0.91      0.97      0.94       594
+            macro avg       0.91      0.97      0.94       594
+
+INFO:__main__:=======Argument Role Classification=========
+INFO:__main__:arg accuracy - 0.9319929036073329
+INFO:__main__:arg precision - 0.9332004091138483
+INFO:__main__:arg recall - 0.9319929036073329
+INFO:__main__:arg f1 - 0.9320624784866255
+INFO:__main__:              precision    recall  f1-score   support
+
+           0       0.95      0.96      0.96      2272
+           1       0.91      0.92      0.92       277
+           2       0.95      0.87      0.91       237
+           3       0.73      0.80      0.76        50
+           4       0.67      0.71      0.69        17
+           5       0.92      0.83      0.87        29
+           6       0.88      0.86      0.87       114
+           7       0.81      0.91      0.86        91
+           8       0.87      0.80      0.83       129
+           9       1.00      0.67      0.80         9
+          10       0.56      0.71      0.63         7
+          11       0.97      0.94      0.95        32
+          12       0.83      0.91      0.87        11
+          13       0.97      0.94      0.96        34
+          14       0.67      0.67      0.67         6
+          15       0.88      0.96      0.92        24
+          17       1.00      0.71      0.83         7
+          18       1.00      1.00      1.00         7
+          19       0.67      0.89      0.76         9
+          20       0.86      0.90      0.88        20
+
+    accuracy                           0.93      3382
+   macro avg       0.85      0.85      0.85      3382
+weighted avg       0.93      0.93      0.93      3382
+
+INFO:__main__:epoch # 53
+INFO:__main__:=====Trigger Classification=====
+INFO:__main__:accuracy - 0.9924161503952147
+INFO:__main__:precision - 0.9202551834130781
+INFO:__main__:recall - 0.9713804713804713
+INFO:__main__:f1 - 0.945126945126945
+INFO:__main__:                       precision    recall  f1-score   support
+
+                 WEAK       0.92      0.92      0.92        37
+                 LOSS       0.95      0.98      0.96       229
+              EMBARGO       0.90      0.95      0.93        20
+                 GAIN       0.89      0.98      0.93       105
+               STRONG       0.80      0.96      0.87        25
+               UNREST       0.93      0.87      0.90        15
+           OVERSUPPLY       0.81      0.85      0.83        26
+          PROHIBITING       1.00      1.00      1.00         8
+                 HIGH       1.00      1.00      1.00        13
+   NEGATIVE_SENTIMENT       0.86      1.00      0.93        19
+              TENSION       0.94      1.00      0.97        31
+             SHORTAGE       1.00      1.00      1.00        11
+                 FLAT       0.93      1.00      0.96        13
+               CRISIS       1.00      1.00      1.00         7
+                  LOW       1.00      1.00      1.00        27
+SITUATION_DETERIORATE       0.89      1.00      0.94         8
+
+            micro avg       0.92      0.97      0.95       594
+            macro avg       0.92      0.97      0.95       594
+
+INFO:__main__:=======Argument Role Classification=========
+INFO:__main__:arg accuracy - 0.9315188762071993
+INFO:__main__:arg precision - 0.9339713618700956
+INFO:__main__:arg recall - 0.9315188762071993
+INFO:__main__:arg f1 - 0.9317818801072125
+INFO:__main__:              precision    recall  f1-score   support
+
+           0       0.96      0.95      0.96      2293
+           1       0.90      0.94      0.92       279
+           2       0.94      0.90      0.92       239
+           3       0.69      0.86      0.77        51
+           4       0.62      0.88      0.73        17
+           5       0.91      0.65      0.75        31
+           6       0.88      0.86      0.87       115
+           7       0.83      0.90      0.86        92
+           8       0.87      0.82      0.85       131
+           9       1.00      0.78      0.88         9
+          10       0.56      0.71      0.63         7
+          11       0.97      0.94      0.95        32
+          12       0.92      1.00      0.96        11
+          13       0.97      0.85      0.91        34
+          14       0.71      0.83      0.77         6
+          15       0.85      0.96      0.90        24
+          17       1.00      0.50      0.67         8
+          18       1.00      1.00      1.00         7
+          19       0.77      1.00      0.87        10
+          20       0.90      0.86      0.88        21
+
+    accuracy                           0.93      3417
+   macro avg       0.86      0.86      0.85      3417
+weighted avg       0.93      0.93      0.93      3417
+
+INFO:__main__:epoch # 54
+INFO:__main__:=====Trigger Classification=====
+INFO:__main__:accuracy - 0.9919888912625507
+INFO:__main__:precision - 0.909952606635071
+INFO:__main__:recall - 0.9696969696969697
+INFO:__main__:f1 - 0.9388753056234718
+INFO:__main__:                       precision    recall  f1-score   support
+
+             SHORTAGE       1.00      1.00      1.00        11
+                 WEAK       0.91      0.86      0.89        37
+                 LOSS       0.94      0.99      0.96       229
+                 FLAT       0.93      1.00      0.96        13
+                 GAIN       0.88      0.98      0.93       105
+               STRONG       0.77      0.96      0.86        25
+               UNREST       0.81      0.87      0.84        15
+           OVERSUPPLY       0.81      0.85      0.83        26
+              EMBARGO       0.90      0.95      0.93        20
+   NEGATIVE_SENTIMENT       0.86      1.00      0.93        19
+               CRISIS       1.00      1.00      1.00         7
+                  LOW       1.00      1.00      1.00        27
+          PROHIBITING       1.00      1.00      1.00         8
+              TENSION       0.91      1.00      0.95        31
+                 HIGH       1.00      1.00      1.00        13
+SITUATION_DETERIORATE       0.89      1.00      0.94         8
+
+            micro avg       0.91      0.97      0.94       594
+            macro avg       0.91      0.97      0.94       594
+
+INFO:__main__:=======Argument Role Classification=========
+INFO:__main__:arg accuracy - 0.9336244541484716
+INFO:__main__:arg precision - 0.9367877826409959
+INFO:__main__:arg recall - 0.9336244541484716
+INFO:__main__:arg f1 - 0.9344636460402387
+INFO:__main__:              precision    recall  f1-score   support
+
+           0       0.97      0.95      0.96      2315
+           1       0.89      0.94      0.92       277
+           2       0.91      0.92      0.92       238
+           3       0.75      0.88      0.81        51
+           4       0.56      0.82      0.67        17
+           5       0.89      0.81      0.85        31
+           6       0.88      0.87      0.87       115
+           7       0.81      0.92      0.86        92
+           8       0.86      0.83      0.84       130
+           9       1.00      0.67      0.80         9
+          10       0.60      0.86      0.71         7
+          11       0.94      0.94      0.94        32
+          12       0.92      1.00      0.96        11
+          13       0.97      0.97      0.97        34
+          14       0.62      0.83      0.71         6
+          15       0.85      0.96      0.90        24
+          17       1.00      0.75      0.86         8
+          18       1.00      1.00      1.00         7
+          19       0.77      1.00      0.87        10
+          20       0.90      0.86      0.88        21
+
+    accuracy                           0.93      3435
+   macro avg       0.85      0.89      0.86      3435
+weighted avg       0.94      0.93      0.93      3435
+
+INFO:__main__:epoch # 55
+INFO:__main__:=====Trigger Classification=====
+INFO:__main__:accuracy - 0.9926297799615467
+INFO:__main__:precision - 0.9185303514376997
+INFO:__main__:recall - 0.968013468013468
+INFO:__main__:f1 - 0.9426229508196722
+INFO:__main__:                       precision    recall  f1-score   support
+
+                 WEAK       0.92      0.89      0.90        37
+              EMBARGO       0.90      0.95      0.93        20
+                 FLAT       0.93      1.00      0.96        13
+                 GAIN       0.88      0.98      0.93       105
+                 LOSS       0.94      0.98      0.96       229
+SITUATION_DETERIORATE       1.00      1.00      1.00         8
+               STRONG       0.86      0.96      0.91        25
+                 HIGH       1.00      1.00      1.00        13
+              TENSION       0.94      1.00      0.97        31
+                  LOW       1.00      1.00      1.00        27
+   NEGATIVE_SENTIMENT       0.86      1.00      0.93        19
+           OVERSUPPLY       0.78      0.81      0.79        26
+               UNREST       0.87      0.87      0.87        15
+             SHORTAGE       1.00      1.00      1.00        11
+               CRISIS       1.00      1.00      1.00         7
+          PROHIBITING       1.00      1.00      1.00         8
+
+            micro avg       0.92      0.97      0.94       594
+            macro avg       0.92      0.97      0.94       594
+
+INFO:__main__:=======Argument Role Classification=========
+INFO:__main__:arg accuracy - 0.9306002928257686
+INFO:__main__:arg precision - 0.9331420664427594
+INFO:__main__:arg recall - 0.9306002928257686
+INFO:__main__:arg f1 - 0.9312075305085326
+INFO:__main__:              precision    recall  f1-score   support
+
+           0       0.96      0.95      0.96      2302
+           1       0.92      0.92      0.92       278
+           2       0.93      0.90      0.91       237
+           3       0.73      0.72      0.73        50
+           4       0.67      0.82      0.74        17
+           5       0.89      0.81      0.85        31
+           6       0.89      0.85      0.87       113
+           7       0.75      0.92      0.83        91
+           8       0.84      0.88      0.86       129
+           9       1.00      0.78      0.88         9
+          10       0.62      0.71      0.67         7
+          11       0.91      0.94      0.92        32
+          12       0.92      1.00      0.96        11
+          13       0.97      0.91      0.94        34
+          14       0.56      0.83      0.67         6
+          15       0.81      0.92      0.86        24
+          17       1.00      0.62      0.77         8
+          18       1.00      1.00      1.00         7
+          19       0.69      1.00      0.82         9
+          20       0.86      0.90      0.88        20
+
+    accuracy                           0.93      3415
+   macro avg       0.85      0.87      0.85      3415
+weighted avg       0.93      0.93      0.93      3415
+
+INFO:__main__:epoch # 56
+INFO:__main__:=====Trigger Classification=====
+INFO:__main__:accuracy - 0.9926297799615467
+INFO:__main__:precision - 0.9203821656050956
+INFO:__main__:recall - 0.9730639730639731
+INFO:__main__:f1 - 0.9459901800327332
+INFO:__main__:                       precision    recall  f1-score   support
+
+                 WEAK       0.92      0.92      0.92        37
+                  LOW       1.00      1.00      1.00        27
+                 LOSS       0.94      0.99      0.96       229
+              EMBARGO       0.90      0.95      0.93        20
+                 GAIN       0.89      0.97      0.93       105
+                 HIGH       0.93      1.00      0.96        13
+              TENSION       0.94      1.00      0.97        31
+   NEGATIVE_SENTIMENT       0.90      1.00      0.95        19
+           OVERSUPPLY       0.81      0.85      0.83        26
+               STRONG       0.83      0.96      0.89        25
+               UNREST       0.93      0.87      0.90        15
+             SHORTAGE       1.00      1.00      1.00        11
+          PROHIBITING       1.00      1.00      1.00         8
+                 FLAT       0.93      1.00      0.96        13
+SITUATION_DETERIORATE       0.89      1.00      0.94         8
+               CRISIS       1.00      1.00      1.00         7
+
+            micro avg       0.92      0.97      0.95       594
+            macro avg       0.92      0.97      0.95       594
+
+INFO:__main__:=======Argument Role Classification=========
+INFO:__main__:arg accuracy - 0.9317187044061862
+INFO:__main__:arg precision - 0.9340041380656734
+INFO:__main__:arg recall - 0.9317187044061862
+INFO:__main__:arg f1 - 0.9323775504151856
+INFO:__main__:              precision    recall  f1-score   support
+
+           0       0.96      0.95      0.96      2308
+           1       0.90      0.94      0.92       279
+           2       0.91      0.91      0.91       238
+           3       0.71      0.84      0.77        49
+           4       0.64      0.82      0.72        17
+           5       0.90      0.87      0.89        31
+           6       0.85      0.86      0.86       115
+           7       0.87      0.85      0.86        91
+           8       0.85      0.88      0.86       130
+           9       1.00      0.67      0.80         9
+          10       0.56      0.71      0.63         7
+          11       0.88      0.91      0.90        33
+          12       0.91      0.91      0.91        11
+          13       0.97      1.00      0.99        34
+          14       0.71      0.83      0.77         6
+          15       0.88      0.96      0.92        24
+          17       0.83      0.62      0.71         8
+          18       1.00      1.00      1.00         7
+          19       0.69      1.00      0.82         9
+          20       0.77      0.81      0.79        21
+
+    accuracy                           0.93      3427
+   macro avg       0.84      0.87      0.85      3427
+weighted avg       0.93      0.93      0.93      3427
+
+INFO:__main__:epoch # 57
+INFO:__main__:=====Trigger Classification=====
+INFO:__main__:accuracy - 0.9916684469130528
+INFO:__main__:precision - 0.9125596184419714
+INFO:__main__:recall - 0.9663299663299664
+INFO:__main__:f1 - 0.9386753883892069
+INFO:__main__:                       precision    recall  f1-score   support
+
+                 LOSS       0.93      0.98      0.96       229
+              EMBARGO       0.90      0.95      0.93        20
+                  LOW       1.00      1.00      1.00        27
+                 GAIN       0.88      0.98      0.93       105
+                 FLAT       1.00      1.00      1.00        13
+                 WEAK       0.89      0.92      0.91        37
+               CRISIS       1.00      1.00      1.00         7
+              TENSION       0.94      1.00      0.97        31
+               STRONG       0.75      0.96      0.84        25
+   NEGATIVE_SENTIMENT       0.95      1.00      0.97        19
+           OVERSUPPLY       0.78      0.81      0.79        26
+                 HIGH       1.00      0.92      0.96        13
+             SHORTAGE       1.00      1.00      1.00        11
+SITUATION_DETERIORATE       1.00      1.00      1.00         8
+               UNREST       0.87      0.87      0.87        15
+          PROHIBITING       1.00      1.00      1.00         8
+
+            micro avg       0.91      0.97      0.94       594
+            macro avg       0.92      0.97      0.94       594
+
+INFO:__main__:=======Argument Role Classification=========
+INFO:__main__:arg accuracy - 0.9337631887456037
+INFO:__main__:arg precision - 0.934967656148859
+INFO:__main__:arg recall - 0.9337631887456037
+INFO:__main__:arg f1 - 0.933942876988586
+INFO:__main__:              precision    recall  f1-score   support
+
+           0       0.96      0.96      0.96      2287
+           1       0.89      0.94      0.91       277
+           2       0.93      0.90      0.91       239
+           3       0.75      0.84      0.80        51
+           4       0.73      0.65      0.69        17
+           5       0.92      0.74      0.82        31
+           6       0.87      0.86      0.86       115
+           7       0.83      0.91      0.87        92
+           8       0.88      0.85      0.86       132
+           9       1.00      0.78      0.88         9
+          10       0.50      0.71      0.59         7
+          11       0.91      0.91      0.91        33
+          12       0.92      1.00      0.96        11
+          13       0.97      0.97      0.97        34
+          14       0.71      0.83      0.77         6
+          15       0.96      0.96      0.96        24
+          17       1.00      0.88      0.93         8
+          18       1.00      1.00      1.00         7
+          19       0.77      1.00      0.87        10
+          20       0.90      0.82      0.86        22
+
+    accuracy                           0.93      3412
+   macro avg       0.87      0.87      0.87      3412
+weighted avg       0.93      0.93      0.93      3412
+
+INFO:__main__:epoch # 58
+INFO:__main__:=====Trigger Classification=====
+INFO:__main__:accuracy - 0.9922025208288827
+INFO:__main__:precision - 0.9156050955414012
+INFO:__main__:recall - 0.968013468013468
+INFO:__main__:f1 - 0.9410801963993454
+INFO:__main__:                       precision    recall  f1-score   support
+
+                 WEAK       0.92      0.89      0.90        37
+                 LOSS       0.93      0.98      0.96       229
+              EMBARGO       0.90      0.95      0.93        20
+                  LOW       1.00      1.00      1.00        27
+                 GAIN       0.90      0.98      0.94       105
+           OVERSUPPLY       0.78      0.81      0.79        26
+                 HIGH       1.00      1.00      1.00        13
+               CRISIS       1.00      1.00      1.00         7
+SITUATION_DETERIORATE       0.89      1.00      0.94         8
+               UNREST       0.87      0.87      0.87        15
+   NEGATIVE_SENTIMENT       0.90      1.00      0.95        19
+              TENSION       0.94      1.00      0.97        31
+               STRONG       0.80      0.96      0.87        25
+          PROHIBITING       1.00      1.00      1.00         8
+             SHORTAGE       1.00      1.00      1.00        11
+                 FLAT       1.00      1.00      1.00        13
+
+            micro avg       0.92      0.97      0.94       594
+            macro avg       0.92      0.97      0.94       594
+
+INFO:__main__:=======Argument Role Classification=========
+INFO:__main__:arg accuracy - 0.9356348741954359
+INFO:__main__:arg precision - 0.9380549523870162
+INFO:__main__:arg recall - 0.9356348741954359
+INFO:__main__:arg f1 - 0.9363724194319772
+INFO:__main__:              precision    recall  f1-score   support
+
+           0       0.97      0.95      0.96      2297
+           1       0.88      0.94      0.91       278
+           2       0.91      0.93      0.92       239
+           3       0.77      0.80      0.79        51
+           4       0.72      0.76      0.74        17
+           5       0.79      0.84      0.81        31
+           6       0.89      0.89      0.89       114
+           7       0.80      0.91      0.85        92
+           8       0.87      0.91      0.89       130
+           9       1.00      0.78      0.88         9
+          10       0.56      0.71      0.63         7
+          11       0.83      0.94      0.88        32
+          12       0.92      1.00      0.96        11
+          13       0.97      0.97      0.97        34
+          14       0.71      0.83      0.77         6
+          15       0.96      0.96      0.96        24
+          17       0.78      0.88      0.82         8
+          18       1.00      1.00      1.00         7
+          19       0.77      1.00      0.87        10
+          20       0.86      0.86      0.86        21
+
+    accuracy                           0.94      3418
+   macro avg       0.85      0.89      0.87      3418
+weighted avg       0.94      0.94      0.94      3418
+
+INFO:__main__:epoch # 59
+INFO:__main__:=====Trigger Classification=====
+INFO:__main__:accuracy - 0.9924161503952147
+INFO:__main__:precision - 0.925686591276252
+INFO:__main__:recall - 0.9646464646464646
+INFO:__main__:f1 - 0.9447650453421269
+INFO:__main__:                       precision    recall  f1-score   support
+
+                  LOW       1.00      1.00      1.00        27
+                 LOSS       0.95      0.98      0.96       229
+                 WEAK       0.89      0.92      0.91        37
+              EMBARGO       0.95      0.95      0.95        20
+                 GAIN       0.90      0.98      0.94       105
+           OVERSUPPLY       0.78      0.81      0.79        26
+               STRONG       0.89      0.96      0.92        25
+              TENSION       0.91      0.97      0.94        31
+   NEGATIVE_SENTIMENT       0.86      0.95      0.90        19
+                 HIGH       1.00      1.00      1.00        13
+          PROHIBITING       1.00      1.00      1.00         8
+SITUATION_DETERIORATE       0.89      1.00      0.94         8
+               UNREST       0.93      0.87      0.90        15
+                 FLAT       1.00      1.00      1.00        13
+               CRISIS       1.00      1.00      1.00         7
+             SHORTAGE       1.00      1.00      1.00        11
+
+            micro avg       0.93      0.96      0.94       594
+            macro avg       0.93      0.96      0.94       594
+
+INFO:__main__:=======Argument Role Classification=========
+INFO:__main__:arg accuracy - 0.9305269355313512
+INFO:__main__:arg precision - 0.9337099819979789
+INFO:__main__:arg recall - 0.9305269355313512
+INFO:__main__:arg f1 - 0.9313644934780183
+INFO:__main__:              precision    recall  f1-score   support
+
+           0       0.97      0.95      0.96      2279
+           1       0.92      0.93      0.93       276
+           2       0.88      0.92      0.90       238
+           3       0.74      0.69      0.71        51
+           4       0.71      0.88      0.79        17
+           5       0.77      0.87      0.82        31
+           6       0.85      0.88      0.86       114
+           7       0.72      0.91      0.80        92
+           8       0.87      0.92      0.90       130
+           9       1.00      0.78      0.88         9
+          10       0.50      0.57      0.53         7
+          11       0.97      0.88      0.92        32
+          12       0.91      0.91      0.91        11
+          13       0.97      0.97      0.97        34
+          14       0.80      0.67      0.73         6
+          15       0.89      1.00      0.94        24
+          17       0.86      0.75      0.80         8
+          18       0.88      1.00      0.93         7
+          19       0.71      1.00      0.83        10
+          20       0.89      0.81      0.85        21
+
+    accuracy                           0.93      3397
+   macro avg       0.84      0.86      0.85      3397
+weighted avg       0.93      0.93      0.93      3397
+
+INFO:__main__:epoch # 60
+INFO:__main__:=====Trigger Classification=====
+INFO:__main__:accuracy - 0.9917752616962188
+INFO:__main__:precision - 0.909952606635071
+INFO:__main__:recall - 0.9696969696969697
+INFO:__main__:f1 - 0.9388753056234718
+INFO:__main__:                       precision    recall  f1-score   support
+
+                 LOSS       0.93      0.99      0.96       229
+               UNREST       1.00      0.87      0.93        15
+                 GAIN       0.89      0.98      0.93       105
+               STRONG       0.71      0.96      0.81        25
+          PROHIBITING       1.00      1.00      1.00         8
+                 HIGH       1.00      1.00      1.00        13
+              TENSION       0.91      0.97      0.94        31
+   NEGATIVE_SENTIMENT       0.95      1.00      0.97        19
+           OVERSUPPLY       0.81      0.85      0.83        26
+                  LOW       1.00      1.00      1.00        27
+                 WEAK       0.85      0.89      0.87        37
+              EMBARGO       0.95      0.95      0.95        20
+SITUATION_DETERIORATE       1.00      1.00      1.00         8
+               CRISIS       1.00      1.00      1.00         7
+             SHORTAGE       1.00      1.00      1.00        11
+                 FLAT       0.87      1.00      0.93        13
+
+            micro avg       0.91      0.97      0.94       594
+            macro avg       0.91      0.97      0.94       594
+
+INFO:__main__:=======Argument Role Classification=========
+INFO:__main__:arg accuracy - 0.9350989522700814
+INFO:__main__:arg precision - 0.9353153681665789
+INFO:__main__:arg recall - 0.9350989522700814
+INFO:__main__:arg f1 - 0.9346311309901542
+INFO:__main__:              precision    recall  f1-score   support
+
+           0       0.95      0.97      0.96      2305
+           1       0.94      0.88      0.91       277
+           2       0.96      0.88      0.92       240
+           3       0.75      0.81      0.78        52
+           4       0.67      0.71      0.69        17
+           5       0.86      0.81      0.83        31
+           6       0.93      0.86      0.89       117
+           7       0.87      0.85      0.86        92
+           8       0.87      0.81      0.84       131
+           9       1.00      0.78      0.88         9
+          10       0.62      0.71      0.67         7
+          11       0.97      0.88      0.92        33
+          12       0.92      1.00      0.96        11
+          13       0.97      0.94      0.96        34
+          14       0.83      0.71      0.77         7
+          15       0.92      0.96      0.94        24
+          17       1.00      0.75      0.86         8
+          18       1.00      1.00      1.00         7
+          19       0.85      1.00      0.92        11
+          20       0.95      0.87      0.91        23
+
+    accuracy                           0.94      3436
+   macro avg       0.89      0.86      0.87      3436
+weighted avg       0.94      0.94      0.93      3436
+
