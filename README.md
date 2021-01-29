@@ -40,8 +40,6 @@ The results are written to (1) Tensorboard and (2) "runs/logfiles/output_XX.log'
 To access results on Tensorboard, first you need to have Tensorboard install and to bring up to bring up tensorboardX, use this command: ```tensorboard --logdir runs```
 
 ## Results
-| Tables   |      Are      |  Cool |
-
 |       Argument role      | precision |  recall  | f1-score |
 |--------------------------|:---------:|---------:|---------:|
 | NONE                     |   0.95    |   0.97   |   0.96   |
