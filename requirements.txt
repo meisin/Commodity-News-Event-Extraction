@@ -5,3 +5,5 @@ numpy==1.18.1
 pandas==0.25.3
 scikit_learn==0.24.1
 tensorboardX==2.1
+wget==3.2
+
