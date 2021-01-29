@@ -16,11 +16,11 @@ The events found in Commodity News are group into three main categories:
 1. Python 3 (own version is 3.7.4)
 2. PyTorch 1.2
 3. Transformer (own version is 2.11.0) - [Huggingface](https://huggingface.co/transformers/)
-4. Stanford CoreNLP
 
 To install the requirements, run ```pip install -r requirements.txt```.
 
 ## Repository contents
+- ```ComBERT``` folder contains the link to download ComBERT model.
 - ```dataset``` folder contains training data- ```event_extraction_train.json``` and testing data- ```event_extraction_test.json```
 - ```data``` folder contains (1) ```const.py``` file with Event Labels, Entity Labels, Argument Role Labels and other constants and (2) ```data_loader.py``` with functions relating to the loading of data.
 - ```utils``` folder contains helper functions and Tree structure related functions.
