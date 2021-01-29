@@ -63,7 +63,9 @@ To access results on Tensorboard, first you need to have Tensorboard install and
 | Forecast                 |   0.95    |   0.87   |   0.91   |
 
 
-  |      Entity Types     |                                  Examples                                   |
+| Tables   |      Are      |  Cool |
+|----------|:-------------:|------:|
+| col 1 is |  left-aligned | $1600 |
 
 ## Citation
 If you find the codes or the paper useful, please cite using the following:
