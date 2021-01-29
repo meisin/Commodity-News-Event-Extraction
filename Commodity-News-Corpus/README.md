@@ -8,6 +8,14 @@ This folder contains the raw files of the Commodity News Corpus, which is made u
 - 21 Argument roles 
 For complete list of the above, please refer to Event Annotation Guidelines.pdf
 
+| Tables   |      Are      |  Cool |
+|----------|:-------------:|------:|
+| col 1 is |  left-aligned | $1600 |
+| col 2 is |    centered   |   $12 |
+| col 3 is | right-aligned |    $1 |
+
+
+
 The diagram below shows the annotation details using the tool called Brat Annotation Tool.
 
 ![Annotation](brat_annotation.png)
