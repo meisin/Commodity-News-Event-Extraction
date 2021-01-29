@@ -17,16 +17,7 @@ class GCN(nn.Module):
         self.layers = num_layers
         self.hidden_dim = hidden_dim    
         self.in_dim = total_dim
-        self.useRNN = True   ## Ablation study
-        
-        # for Ablation study - rnn layer
-        if self.useRNN:
-            input_size = self.in_dim
-            self.rnn_hidden = 200
-            self.rnn_layers = 1
-            self.rnn = nn.LSTM(input_size, self.rnn_hidden, self.rnn_layers, batch_first=True, bidirectional=True)
-            self.in_dim = self.rnn_hidden * 2
-        
+       
         # GCN layer
         self.W = nn.ModuleList()
         for layer in range(self.layers):
@@ -39,10 +30,7 @@ class GCN(nn.Module):
         return rnn_outputs        
     
     def forward(self, adj, gcn_inputs):
-        
-        # for Ablation study - rnn layer
-        if self.useRNN:
-            gcn_inputs = self.encode_with_rnn(gcn_inputs, gcn_inputs.size()[0])       
+    
             
         # gcn layer
         denom = adj.sum(2).unsqueeze(2) + 1   ## [batch_size, maxlen, 1]  - suming up at dimension = 2
