@@ -39,5 +39,29 @@ The results are written to (1) Tensorboard and (2) "runs/logfiles/output_XX.log'
 
 To access results on Tensorboard, first you need to have Tensorboard install and to bring up to bring up tensorboardX, use this command: ```tensorboard --logdir runs```
 
+## Results
+|       Argument role      | precision |  recall  | f1-score |
+| NONE                     |   0.95    |   0.97   |   0.96   |
+| Attribute                |   0.94    |   0.88   |   0.91   |
+| Item                     |   0.96    |   0.88   |   0.92   |
+| Final_value              |   0.75    |   0.81   |   0.78   |
+| Initial_reference_point  |   0.67    |   0.71   |   0.69   |
+| Place                    |   0.86    |   0.81   |   0.83   |
+| Reference_point_time     |   0.93    |   0.86   |   0.89   |
+| Difference               |   0.87    |   0.85   |   0.86   |   
+| Supplier_consumer        |   0.87    |   0.81   |   0.84   |
+| Imposer                  |   1.00    |   0.78   |   0.88   |
+| Contract_date            |   0.62    |   0.71   |   0.67   |
+| Type                     |   0.97    |   0.88   |   0.92   |
+| Imposee                  |   0.92    |   1.00   |   0.96   |
+| Impacted_countries       |   0.97    |   0.94   |   0.96   |
+| Initial_value            |   0.83    |   0.71   |   0.77   |
+| Duration                 |   0.92    |   0.96   |   0.94   |
+| Situation                |   1.00    |   0.75   |   0.86   |
+| Participating_countries  |   1.00    |   1.00   |   1.00   |
+| Forecaster               |   0.85    |   1.00   |   0.92   |
+| Forecast                 |   0.95    |   0.87   |   0.91   |
+
+
 ## Citation
 If you find the codes or the paper useful, please cite using the following:
