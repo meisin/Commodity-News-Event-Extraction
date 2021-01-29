@@ -32,8 +32,31 @@ This folder contains the raw files of the Commodity News Corpus, which is made u
   1. **Geo-political News**
       - Civil unrest (*civil-unrest*):  Violence or turmoil within the oil producing country.
       - Other forms of Crisis (*Crisis*): A time of intense difficulty. 
-      - Embargo (*Embargo*
-    
+      - Embargo (*Embargo* / *Prohibiting*): Trade or other commercial activity of the commodity is banned.
+      - Geo-political tension: Political tension between oil-producing nation with other nations. 
+      - Trade tensions (*Trade-tensions*): Trade-related tension between oil-producing and oil-consuming nations. 
+  2. **Macro-economic News
+      - Employment (*Grow-strong* / *Slow-weak*): Status of US Employment Data, which is an indicator of economic situation. 
+      - Economy / GDP (*Grow-strong* / *Slow-weak*): Economic / GDP growth of a nation.
+      - Bearish technical view / outlook (*Negative-sentiment*): Bearish sentiment or outlook
+  3. **Commodity Supply (includes exports)**
+      - Oversupply (*Oversupply*): Situation where production goes into surplus.
+      - Shortage (*Shortage*): Situation where demand is more than supply.
+      - Supply increase (*Movement-up-gain*): Situation where supply increased.
+      - Supply increase (*Cause-movement-up-gain*): Deliberate action to increase supply.
+      - Supply decrease (*Movement-down-loss*): Situation where supply decreased.
+      - Supply decrease (*Cause-movement-down-loss*): Deliberate action to decrease supply. 
+  4. **Commodity Demand (includes imports)**
+      - Demand increase (*Movement-up-gain*): Situation where demand increased.
+      - Demand decrease (*Movement-down-loss*): Situation where demand decreased.
+  5. **Commodity Price Movement** (Commodity price here includes *spot price*, *futures* and *futures contract*.)
+      - Price increase (*Movement-up-gain*): Situation where commodity price rises.
+      - Price decrease (*Movement-down-loss*): Situation where commodity price drops.
+      - Price movement flat (*Movement-flat*): Situation where no or little change to commodity price.
+      - Price target /forecast increase (*Caused-movement-up-gain*): Commodity forecasted / target price is raised.
+      - Price target /forecast decrease (*Caused-movement-down-loss*): Commodity forecasted / target price is lowered.
+      - Price position (*Position-high*, *Position-low*): Describes the position of the current commodity price.
+
 - 21 Argument roles 
 
 For complete list of the above, please refer to Event Annotation Guidelines.pdf
