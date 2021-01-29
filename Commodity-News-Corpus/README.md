@@ -57,7 +57,7 @@ This folder contains the raw files of the Commodity News Corpus, which is made u
       - Price target /forecast decrease (*Caused-movement-down-loss*): Commodity forecasted / target price is lowered.
       - Price position (*Position-high*, *Position-low*): Describes the position of the current commodity price.
 
-- 21 Argument roles 
+- 21 Argument roles - 
   Please refer to the annotation guide for list of events and its corresponding list of argument roles.
 
 For complete list of the above, please refer to **Event Annotation Guidelines.pdf**.
