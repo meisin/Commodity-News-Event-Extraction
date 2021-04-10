@@ -1,8 +1,14 @@
 # Commodity-News-Corpus
 
-This folder contains the raw files of the Commodity News Corpus, which is made up of a pair of files : a text file (.txt) containing the news article and a annotation file (.ann) containing the annotation details.
+This folder contains the files of the Commodity News Corpus, which is made up of a pair of files : a text file (.txt) containing the link to the news article and a annotation file (.ann) containing the annotation details. Pre-processing and post-processing codes are provided for the re-producibility of experiment results.
 
 ## Summary information
+- There are
+- 1. 21 Entity Types
+- 2. 19 Event Types
+- 3. 21 Argument Roles
+
+
 - 21 Entity types covering both named and nominal entities
   |      Entity Types     |                                  Examples                                   |
   |-----------------------|-----------------------------------------------------------------------------|
