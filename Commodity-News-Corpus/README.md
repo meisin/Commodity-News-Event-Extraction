@@ -3,13 +3,13 @@
 This folder contains the files of the Commodity News Corpus, which is made up of a pair of files : a text file (.txt) containing the link to the news article and a annotation file (.ann) containing the annotation details. Pre-processing and post-processing codes are provided for the re-producibility of experiment results.
 
 ## Summary information
-- There are
-- 1. 21 Entity Types
-- 2. 19 Event Types
-- 3. 21 Argument Roles
+There are
+1. 21 Entity Types
+2. 19 Event Types
+3. 21 Argument Roles
 
-
-- 21 Entity types covering both named and nominal entities
+### Entity Types
+21 Entity types covering both named and nominal entities
   |      Entity Types     |                                  Examples                                   |
   |-----------------------|-----------------------------------------------------------------------------|
   | 1. Commodity          | *oil, crude oil, Brent, West Texas Intermediate (WTI), fuel, U.S Shale*     | 
@@ -34,7 +34,8 @@ This folder contains the files of the Commodity News Corpus, which is made up of
   | 20. Quantity          | *1.3500 million barrels, 1.8 million gallons, 18 million tonnes*            |
   | 21. State or province | *Washington, Moscow, Cushing, North America*                                |
   
-- 19 event types
+### Event Types
+19 event types
   1. **Geo-political News**
       - Civil unrest (*civil-unrest*):  Violence or turmoil within the oil producing country.
       - Other forms of Crisis (*Crisis*): A time of intense difficulty. 
@@ -63,8 +64,10 @@ This folder contains the files of the Commodity News Corpus, which is made up of
       - Price target /forecast decrease (*Caused-movement-down-loss*): Commodity forecasted / target price is lowered.
       - Price position (*Position-high*, *Position-low*): Describes the position of the current commodity price.
 
-- 21 Argument roles - 
-  Please refer to the annotation guide for list of events and its corresponding list of argument roles.
+### Argument Roles
+21 Argument roles - 
+
+Please refer to the annotation guide for list of events and its corresponding list of argument roles.
 
 For complete list of the above, please refer to **Event Annotation Guidelines.pdf**.
 
