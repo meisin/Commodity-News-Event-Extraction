@@ -3,10 +3,7 @@
 This folder contains the files of the Commodity News Corpus, which is made up of a pair of files : a text file (.txt) containing the link to the news article and a annotation file (.ann) containing the annotation details. Pre-processing and post-processing codes are provided for the re-producibility of experiment results.
 
 ## Summary information
-There are
-1. 21 Entity Types
-2. 19 Event Types
-3. 21 Argument Roles
+The dataset contains about 8,500 sentences, over 3,075 events, 21 Entity Types, 19 Event Types and 21 Argument Roles. More details can be found in subsections below.
 
 ### Entity Types
 21 Entity types covering both named and nominal entities
@@ -63,6 +60,29 @@ There are
       - Price target /forecast increase (*Caused-movement-up-gain*): Commodity forecasted / target price is raised.
       - Price target /forecast decrease (*Caused-movement-down-loss*): Commodity forecasted / target price is lowered.
       - Price position (*Position-high*, *Position-low*): Describes the position of the current commodity price.
+
+There are 3,075 events and their distributions are as follows:
+  |      Event Type                                   |        Ration        |     # Sentence      |
+  |---------------------------------------------------|----------------------|---------------------|
+  | 1. Cause-movement-down-loss                       |        14.9%         |        457          |
+  | 2. Cause-movement-up-gain                         |           2%         |         63          |
+  | 3. Civil-unrest                                   |         2.6%         |         79          |
+  | 4. Crisis                                         |         1.2%         |         36          |
+  | 5. Embargo                                        |         4.8%         |        148          |
+  | 6. Geopolitical-tensions                          |           2%         |         63          |
+  | 7. Grow-strong                                    |           6%         |        183          |
+  | 8. Movement-down-loss                             |          24%         |        753          |
+  | 9. Movement-flat                                  |         2.6%         |         80          |
+  | 10. Movement-up-gain                              |          15%         |        461          |
+  | 11. Negative-sentiment                            |        4.07%         |        125          |
+  | 12. Oversupply                                    |         3.8%         |        116          |
+  | 13. Position-high                                 |        3.06%         |         94          |
+  | 14. Position-low                                  |        3.58%         |        110          |
+  | 15. Prohibiting                                   |         0.9%         |         28          |
+  | 16. Shortage                                      |           1%         |         31          |
+  | 17. Situation-deteriorate                         |         1.1%         |         35          |
+  | 18. Slow-weak                                     |        5.79%         |        178          |
+  | 19. Trade-tensions                                |         1.7%         |         53          |
 
 ### Argument Roles
 21 Argument roles - 
