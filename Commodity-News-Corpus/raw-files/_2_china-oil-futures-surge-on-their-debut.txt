@@ -1,7 +1,1 @@
-.-.China’s oil futures surge on their debut
-.-.March 26, 2018 at 5:58 a.m. ET
-.-.https://www.marketwatch.com/story/chinas-oil-futures-surge-on-their-debut-2018-03-26.
-
-China’s yuan-denominated crude-oil futures surged on their long-awaited debut Monday, indicating positive sentiment toward the new market, which Beijing hopes will eventually give the country an oil benchmark to rival those in the U.S. and Europe.
-
-The most actively traded futures contract due for delivery in September closed up 3.3% at 429.9 yuan per barrel on the Shanghai International Energy Exchange, after opening up more than 6% from a starting reference point of 416 yuan per barrel. Over 42,000 lots, or more than 21 million barrels, of oil valued at 18.3 billion yuan ($2.9 billion) were traded on Monday, according to data from Wind Information Co.
+https://www.marketwatch.com/story/chinas-oil-futures-surge-on-their-debut-2018-03-26
