@@ -36,11 +36,14 @@ The dataset contains about 8,500 sentences, over 3,075 events, 21 Entity Types, 
   1. **Geo-political News**
       - Civil unrest (*civil-unrest*):  Violence or turmoil within the oil producing country.
         * Example [1] *.....a fragile recovery in Libyan supply outweighed **fighting** in Iraq ......*
-        * asdfasdfasf 
-      - Other forms of Crisis (*Crisis*): A time of intense difficulty. 
+        * Example [2] *.......a backdrop of the worst **strife** in Iran this decade....*
       - Embargo (*Embargo* / *Prohibiting*): Trade or other commercial activity of the commodity is banned.
+        * Example [1] **
       - Geo-political tension: Political tension between oil-producing nation with other nations. 
       - Trade tensions (*Trade-tensions*): Trade-related tension between oil-producing and oil-consuming nations. 
+      - Other forms of Crisis (*Crisis*): (a) A time of intense difficulty, such as other forms of unspecified crisis that do not fall into any of the above category and (b) Financial / Economic Crisis (which can be grouped under Macro-economic News)
+        * Example for (a) **.... Ukraine declared an end to an oil **crisis** that has .........**
+        * Example for (b) ***....since the 2014/15 financial **crisis** as .......**
   2. **Macro-economic News
       - Employment (*Grow-strong* / *Slow-weak*): Status of US Employment Data, which is an indicator of economic situation. 
       - Economy / GDP (*Grow-strong* / *Slow-weak*): Economic / GDP growth of a nation.
