@@ -35,6 +35,8 @@ The dataset contains about 8,500 sentences, over 3,075 events, 21 Entity Types, 
 19 event types
   1. **Geo-political News**
       - Civil unrest (*civil-unrest*):  Violence or turmoil within the oil producing country.
+        * Example sentences *
+        * asdfasdfasf *
       - Other forms of Crisis (*Crisis*): A time of intense difficulty. 
       - Embargo (*Embargo* / *Prohibiting*): Trade or other commercial activity of the commodity is banned.
       - Geo-political tension: Political tension between oil-producing nation with other nations. 
