@@ -38,33 +38,72 @@ The dataset contains about 8,500 sentences, over 3,075 events, 21 Entity Types, 
         * Example [1] *.....a fragile recovery in Libyan supply outweighed **fighting** in Iraq ......*
         * Example [2] *.......a backdrop of the worst **strife** in Iran this decade....*
       - Embargo (*Embargo* / *Prohibiting*): Trade or other commercial activity of the commodity is banned.
-        * Example [1] **
+        * Example [1] *..... and **sanctions** against Iran.*
+        * Example [2] *.....prepared to impose `` strong and swift '' economic **sanctions** on Venezuela.....*
       - Geo-political tension: Political tension between oil-producing nation with other nations. 
+        * Example [1] *..... heightened **tensions** between the West and Russia.....* 
+        * Example [2] *..... despite geopolitical **war** in Iraq , Libya and Ukraine.*
       - Trade tensions (*Trade-tensions*): Trade-related tension between oil-producing and oil-consuming nations. 
+        * Example [1] *..... escalating global **trade wars**, especially between the US and China.*
+        * Example [2] *.... showing that OPEC is not ready to end its **trade tensions**......*
       - Other forms of Crisis (*Crisis*): (a) A time of intense difficulty, such as other forms of unspecified crisis that do not fall into any of the above category and (b) Financial / Economic Crisis (which can be grouped under Macro-economic News)
         * Example for (a) **.... Ukraine declared an end to an oil **crisis** that has .........**
-        * Example for (b) ***....since the 2014/15 financial **crisis** as .......**
+        * Example for (b) **....since the 2014/15 financial **crisis** as .......**
   2. **Macro-economic News
-      - Employment (*Grow-strong* / *Slow-weak*): Status of US Employment Data, which is an indicator of economic situation. 
       - Economy / GDP (*Grow-strong* / *Slow-weak*): Economic / GDP growth of a nation.
+        * Example [1] *....... concerns over **slowing** global growth.....*
+        * Example [2] *``Fear of domestic economic growth **contract** is afflicting .....* 
+      - Employment (*Grow-strong* / *Slow-weak*): Status of US Employment Data, which is an indicator of economic situation. 
+        * Example [1] *U.S. employment data **contrasts** with the euro zone.....*
+        * Example [2] *as **strong** U.S. employment data.....*
       - Bearish technical view / outlook (*Negative-sentiment*): Bearish sentiment or outlook
+        * Example [1] *But in a market **clouded by uncertainties**.....*
+        * Example [2] *....supply concerns would ease even more ......*
   3. **Commodity Supply (includes exports)**
       - Oversupply (*Oversupply*): Situation where production goes into surplus.
+        * Example [1] *..... the region **surplus** of supply.....*
+        * Example [2] *....the market is still working off the **gluts** built up.....*
       - Shortage (*Shortage*): Situation where demand is more than supply.
+        * Example [1] *.... increase a supply **shortage** from chaotic Libya....*
+        * Example [2] *......and there is no **shortfall** in supply , the minister added.*
       - Supply increase (*Movement-up-gain*): Situation where supply increased.
+        * Example [1] *....further **increases** in U.S. crude production.....*
+        * Example [2] *The **rise** in production is definitely benefiting the United States....*
       - Supply increase (*Cause-movement-up-gain*): Deliberate action to increase supply.
+        * Example [1] *The IEA **boosted** its estimate of production from ExxonMobil to 1.8 million bpd in July 4 holiday weekend.*
+        * Example [2] *.....urged the kingdom to **ramp up** production.....*
       - Supply decrease (*Movement-down-loss*): Situation where supply decreased.
+        * Example [1] *UAE 's production has almost **halved** in two years to 31.6 million bpd...*
+        * Example [2] *...fears that global supplies will **drop** due to Washington 's sanctions on the OPEC member nation .* 
       - Supply decrease (*Cause-movement-down-loss*): Deliberate action to decrease supply. 
+        * Example [1] *......by **slashing** production by almost three quarters in the 1980s....*
+        * Example [2] *.....an announcement by Iran that it would **cut** its production last week.*
   4. **Commodity Demand (includes imports)**
       - Demand increase (*Movement-up-gain*): Situation where demand increased.
+        * Example [1] *It expects consumption to **trend upward** by 1.05 million bpd , below 40,000 bpd from July .*
+        * Example [2] *....as **more** seasonal demand kicks in due to colder weather.*
       - Demand decrease (*Movement-down-loss*): Situation where demand decreased.
+        * Example [1] *....onto a market reeling from **falling** demand because of the virus outbreak.*
+        * Example [2] *....when global demand growth for air conditioning **collapses** from its summer peak....*
   5. **Commodity Price Movement** (Commodity price here includes *spot price*, *futures* and *futures contract*.)
       - Price increase (*Movement-up-gain*): Situation where commodity price rises.
+        * Example [1] **
+        * Example [2] **
       - Price decrease (*Movement-down-loss*): Situation where commodity price drops.
+        * Example [1] *The **drop** in oil prices to their lowest in two years.....7.*
+        * Example [2] *Oil prices **declined** back the final quarter of 1991 to 87 cents....*
       - Price movement flat (*Movement-flat*): Situation where no or little change to commodity price.
+        * Example [1] *Contango spread in Brent is **steady** at 15 cents per barrel.....*
+        * Example [2] *U.S. crude is expected to **hold** around $ 105 per barrel , Spooner forecast .*
       - Price target /forecast increase (*Caused-movement-up-gain*): Commodity forecasted / target price is raised.
+        * Example [1] *The IMF earlier said it **increased** its 2019 global economic growth forecast to 3.30%*
+        * Example [2] *Tthe International Monetary Fund **doubled** its global growth forecast for 2013.....*
       - Price target /forecast decrease (*Caused-movement-down-loss*): Commodity forecasted / target price is lowered.
+        * Example [1] *Germany 's Bundesbank this week **halved** its 2015 growth forecasts for Europe 's largest economy to 1 percent.*
+        * Example [2] *OPEC also **lowered** forecast global demand for its crude oil....*
       - Price position (*Position-high*, *Position-low*): Describes the position of the current commodity price.
+        * Example [1] *remained close to four-year highs on fears that global supplies will drop due to Washington 's sanctions on Iran .*
+        * Example [2] **
 
 There are 3,075 events and their distributions are as follows:
   |      Event Type                                   |        Ration        |     # Sentence      |
