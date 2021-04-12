@@ -102,8 +102,8 @@ The dataset contains about 8,500 sentences, over 3,075 events, 21 Entity Types, 
         * Example [1] *Germany 's Bundesbank this week **halved** its 2015 growth forecasts for Europe 's largest economy to 1 percent.*
         * Example [2] *OPEC also **lowered** forecast global demand for its crude oil....*
       - Price position (*Position-high*, *Position-low*): Describes the position of the current commodity price.
-        * Example [1] *remained close to four-year highs on fears that global supplies will drop due to Washington 's sanctions on Iran .*
-        * Example [2] **
+        * Example [1] *Oil price remained close to four-year **highs**....*
+        * Example [2] *Oil slipped more than 20% to its **weakest level** in two years on 1980s.....*
 
 There are 3,075 events and their distributions are as follows:
   |      Event Type                                   |        Ration        |     # Sentence      |
