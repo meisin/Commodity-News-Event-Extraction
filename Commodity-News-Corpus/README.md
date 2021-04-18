@@ -87,8 +87,8 @@ The dataset contains about 8,500 sentences, over 3,075 events, 21 Entity Types, 
         * Example [2] *....when global demand growth for air conditioning **collapses** from its summer peak....*
   5. **Commodity Price Movement** (Commodity price here includes *spot price*, *futures* and *futures contract*.)
       - Price increase (*Movement-up-gain*): Situation where commodity price rises.
-        * Example [1] **
-        * Example [2] **
+        * Example [1] *Oil price **rose** $105 a barrel on March....*
+        * Example [2] *...oil prices have **fallen** as much as 20 percent since June*
       - Price decrease (*Movement-down-loss*): Situation where commodity price drops.
         * Example [1] *The **drop** in oil prices to their lowest in two years.....7.*
         * Example [2] *Oil prices **declined** back the final quarter of 1991 to 87 cents....*
@@ -97,7 +97,7 @@ The dataset contains about 8,500 sentences, over 3,075 events, 21 Entity Types, 
         * Example [2] *U.S. crude is expected to **hold** around $ 105 per barrel , Spooner forecast .*
       - Price target /forecast increase (*Caused-movement-up-gain*): Commodity forecasted / target price is raised.
         * Example [1] *The IMF earlier said it **increased** its 2019 global economic growth forecast to 3.30%*
-        * Example [2] *Tthe International Monetary Fund **doubled** its global growth forecast for 2013.....*
+        * Example [2] *The International Monetary Fund **doubled** its global growth forecast for 2013.....*
       - Price target /forecast decrease (*Caused-movement-down-loss*): Commodity forecasted / target price is lowered.
         * Example [1] *Germany 's Bundesbank this week **halved** its 2015 growth forecasts for Europe 's largest economy to 1 percent.*
         * Example [2] *OPEC also **lowered** forecast global demand for its crude oil....*
