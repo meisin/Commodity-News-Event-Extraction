@@ -58,7 +58,7 @@ The dataset contains about 8,500 sentences, over 3,075 events, 21 Entity Types, 
         * Example [2] *as **strong** U.S. employment data.....*
       - Bearish technical view / outlook (*Negative-sentiment*): Bearish sentiment or outlook
         * Example [1] *But in a market **clouded by uncertainties**.....*
-        * Example [2] *....supply concerns would ease even more ......*
+        * Example [2] *....supply **concerns** would ease even more ......*
   3. **Commodity Supply (includes exports)**
       - Oversupply (*Oversupply*): Situation where production goes into surplus.
         * Example [1] *..... the region **surplus** of supply.....*
