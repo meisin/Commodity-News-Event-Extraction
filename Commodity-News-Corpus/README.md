@@ -69,13 +69,13 @@ The dataset contains about 8,500 sentences, over 3,075 events, 21 Entity Types, 
       - Supply increase (*Movement-up-gain*): Situation where supply increased.
         * Example [1] *....further **increases** in U.S. crude production.....*
         * Example [2] *The **rise** in production is definitely benefiting the United States....*
-      - Supply increase (*Cause-movement-up-gain*): Deliberate action to increase supply.
+      - Action taken to increase supply (*Cause-movement-up-gain*): Deliberate action to increase supply.
         * Example [1] *The IEA **boosted** its estimate of production from ExxonMobil to 1.8 million bpd in July 4 holiday weekend.*
         * Example [2] *.....urged the kingdom to **ramp up** production.....*
       - Supply decrease (*Movement-down-loss*): Situation where supply decreased.
         * Example [1] *UAE 's production has almost **halved** in two years to 31.6 million bpd...*
         * Example [2] *...fears that global supplies will **drop** due to Washington 's sanctions on the OPEC member nation .* 
-      - Supply decrease (*Cause-movement-down-loss*): Deliberate action to decrease supply. 
+      - Action taken to decrease supply (*Cause-movement-down-loss*): Deliberate action to decrease supply. 
         * Example [1] *......by **slashing** production by almost three quarters in the 1980s....*
         * Example [2] *.....an announcement by Iran that it would **cut** its production last week.*
   4. **Commodity Demand (includes imports)**
