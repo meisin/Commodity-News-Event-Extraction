@@ -92,10 +92,10 @@ The dataset contains about 8,500 sentences, over 3,075 events, 21 Entity Types, 
         * Example [1].......*
         * Example [2].......*
   5. **Commodity Price Movement** (Commodity price here includes *spot price*, *futures* and *futures contract*.)
-      - Price increase (*Movement-up-gain*): Situation where commodity price rises.
+      - Price or price target increase (*Movement-up-gain*): Situation where commodity price or forecast/target price rises.
         * Example [1] *Oil price **rose** $105 a barrel on March....*
         * Example [2] *...oil prices have **jumped** as much as 20 percent since June*
-      - Price decrease (*Movement-down-loss*): Situation where commodity price drops.
+      - Price or price target decrease (*Movement-down-loss*): Situation where commodity price forecast/target price drops.
         * Example [1] *The **drop** in oil prices to their lowest in two years.....7.*
         * Example [2] *Oil prices **declined** back the final quarter of 1991 to 87 cents....*
       - Price movement flat (*Movement-flat*): Situation where no or little change to commodity price.
