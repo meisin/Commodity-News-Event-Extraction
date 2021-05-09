@@ -47,8 +47,8 @@ The dataset contains about 8,500 sentences, over 3,075 events, 21 Entity Types, 
         * Example [1] *..... escalating global **trade wars**, especially between the US and China.*
         * Example [2] *.... showing that OPEC is not ready to end its **trade tensions**......*
       - Other forms of Crisis (*Crisis*): (a) A time of intense difficulty, such as other forms of unspecified crisis that do not fall into any of the above category and (b) Financial / Economic Crisis (which can be grouped under Macro-economic News)
-        * Example for (a) **.... Ukraine declared an end to an oil **crisis** that has .........**
-        * Example for (b) **....since the 2014/15 financial **crisis** as .......**
+        * Example for (a) *.... Ukraine declared an end to an oil **crisis** that has .........*
+        * Example for (b) *....since the 2014/15 financial **crisis** as .......*
   2. **Macro-economic News**
       - Economy / GDP (*Grow-strong* / *Slow-weak*): Economic / GDP growth of a nation.
         * Example [1] *....... concerns over **slowing** global growth.....*
