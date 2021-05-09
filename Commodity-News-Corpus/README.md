@@ -92,24 +92,25 @@ The dataset contains about 8,500 sentences, over 3,075 events, 21 Entity Types, 
         * Example [1].......*
         * Example [2].......*
   5. **Commodity Price Movement** (Commodity price here includes *spot price*, *futures* and *futures contract*.)
-      - Price or price target increase (*Movement-up-gain*): Situation where commodity price or forecast/target price rises.
+     - Price increase (*Movement-up-gain*): Situation where commodity price rises.
         * Example [1] *Oil price **rose** $105 a barrel on March....*
         * Example [2] *...oil prices have **jumped** as much as 20 percent since June*
-      - Price or price target decrease (*Movement-down-loss*): Situation where commodity price forecast/target price drops.
+      - Price decrease (*Movement-down-loss*): Situation where commodity price drops.
         * Example [1] *The **drop** in oil prices to their lowest in two years.....7.*
         * Example [2] *Oil prices **declined** back the final quarter of 1991 to 87 cents....*
       - Price movement flat (*Movement-flat*): Situation where no or little change to commodity price.
         * Example [1] *Contango spread in Brent is **steady** at 15 cents per barrel.....*
-        * Example [2] *U.S. crude is expected to **hold** around $ 105 per barrel , Spooner forecast .*
-      - Price target /forecast increase (*Caused-movement-up-gain*): Commodity forecasted / target price is raised.
-        * Example [1] *The IMF earlier said it **increased** its 2019 global economic growth forecast to 3.30%*
-        * Example [2] *The International Monetary Fund **doubled** its global growth forecast for 2013.....*
-      - Price target /forecast decrease (*Caused-movement-down-loss*): Commodity forecasted / target price is lowered.
-        * Example [1] *Germany 's Bundesbank this week **halved** its 2015 growth forecasts for Europe 's largest economy to 1 percent.*
-        * Example [2] *OPEC also **lowered** forecast global demand for its crude oil....*
+        * Example [2] *U.S. crude is expected to **hold** around $ 105 per barrel , Spooner forecast .* 
       - Price position (*Position-high*, *Position-low*): Describes the position of the current commodity price.
         * Example [1] *Oil price remained close to four-year **highs**....*
         * Example [2] *Oil slipped more than 20% to its **weakest level** in two years on 1980s.....*
+  6. **Change in Forecasted value** 
+      - Increase forecast target (*Caused-movement-up-gain*): Forecasted / target is raised, possible values are price target, growth target, demand and supply target.
+        * Example [1] *The IMF earlier said it **increased** its 2019 global economic growth forecast to 3.30%*
+        * Example [2] *The International Monetary Fund **doubled** its global growth forecast for 2013.....*
+      - Price target /forecast decrease (*Caused-movement-down-loss*): Forecasted / target is lowered, possible values are commodity price target, growth target, demand and supply target.
+        * Example [1] *Germany 's Bundesbank this week **halved** its 2015 growth forecasts for Europe 's largest economy to 1 percent.*
+        * Example [2] *OPEC also **lowered** forecast global demand for its crude oil....*    
 
 There are 3,075 events and their distributions are as follows:
   |      Event Type                                   |        Ration        |     # Sentence      |
