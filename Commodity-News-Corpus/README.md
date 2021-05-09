@@ -108,7 +108,7 @@ The dataset contains about 8,500 sentences, over 3,075 events, 21 Entity Types, 
       - Increase forecast target (*Caused-movement-up-gain*): Forecasted / target is raised, possible values are price target, growth target, demand and supply target.
         * Example [1] *The IMF earlier said it **increased** its 2019 global economic growth forecast to 3.30%*
         * Example [2] *The International Monetary Fund **doubled** its global growth forecast for 2013.....*
-      - Price target /forecast decrease (*Caused-movement-down-loss*): Forecasted / target is lowered, possible values are commodity price target, growth target, demand and supply target.
+      - Decrease forecast target (*Caused-movement-down-loss*): Forecasted / target is lowered, possible values are commodity price target, growth target, demand and supply target.
         * Example [1] *Germany 's Bundesbank this week **halved** its 2015 growth forecasts for Europe 's largest economy to 1 percent.*
         * Example [2] *OPEC also **lowered** forecast global demand for its crude oil....*    
 
