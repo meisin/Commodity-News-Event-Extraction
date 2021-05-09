@@ -82,9 +82,15 @@ The dataset contains about 8,500 sentences, over 3,075 events, 21 Entity Types, 
       - Demand increase (*Movement-up-gain*): Situation where demand increased.
         * Example [1] *It expects consumption to **trend upward** by 1.05 million bpd , below 40,000 bpd from July .*
         * Example [2] *....as **more** seasonal demand kicks in due to colder weather.*
+      - Action taken to increase demand (*Caused-movement-up-gain*): Deliberate action taken to increase demand.
+        * Example [1] ......*
+        * Example [2] ......*
       - Demand decrease (*Movement-down-loss*): Situation where demand decreased.
         * Example [1] *....onto a market reeling from **falling** demand because of the virus outbreak.*
         * Example [2] *....when global demand growth for air conditioning **collapses** from its summer peak....*
+      - Action taken to decrease demand (*Caused-movement-down-loss*): Deliberate action taken to decrease demand.
+        * Example [1].......*
+        * Example [2].......*
   5. **Commodity Price Movement** (Commodity price here includes *spot price*, *futures* and *futures contract*.)
       - Price increase (*Movement-up-gain*): Situation where commodity price rises.
         * Example [1] *Oil price **rose** $105 a barrel on March....*
