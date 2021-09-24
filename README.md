@@ -11,11 +11,12 @@ The events found in Commodity News are group into three main categories:
 1. Geo-political events
 2. Macro-economic events
 3. Commodity Price Movement events
+4. Supply-demand Related events
 
 ## Requirements
-1. Python 3 (own version is 3.7.4)
+1. Python 3 (version 3.7.4 is used here)
 2. PyTorch 1.2
-3. Transformer (own version is 2.11.0) - [Huggingface](https://huggingface.co/transformers/)
+3. Transformer (version 2.11.0 is used here) - [Huggingface](https://huggingface.co/transformers/)
 
 To install the requirements, run ```pip install -r requirements.txt```.
 
@@ -42,25 +43,25 @@ To access results on Tensorboard, first you need to have Tensorboard install and
 ## Results
 |       Argument role      | precision |  recall  | f1-score |
 |--------------------------|:---------:|---------:|---------:|
-| NONE                     |   0.95    |   0.97   |   0.96   |
-| Attribute                |   0.94    |   0.88   |   0.91   |
-| Item                     |   0.96    |   0.88   |   0.92   |
-| Final_value              |   0.75    |   0.81   |   0.78   |
-| Initial_reference_point  |   0.67    |   0.71   |   0.69   |
-| Place                    |   0.86    |   0.81   |   0.83   |
-| Reference_point_time     |   0.93    |   0.86   |   0.89   |
-| Difference               |   0.87    |   0.85   |   0.86   |   
-| Supplier_consumer        |   0.87    |   0.81   |   0.84   |
-| Imposer                  |   1.00    |   0.78   |   0.88   |
-| Contract_date            |   0.62    |   0.71   |   0.67   |
-| Type                     |   0.97    |   0.88   |   0.92   |
-| Imposee                  |   0.92    |   1.00   |   0.96   |
-| Impacted_countries       |   0.97    |   0.94   |   0.96   |
+| NONE                     |   0.95    |   0.93   |   0.94   |
+| Attribute                |   0.75    |   0.94   |   0.83   |
+| Item                     |   0.87    |   0.89   |   0.88   |
+| Final_value              |   0.75    |   0.81   |   0.79   |
+| Initial_reference_point  |   0.67    |   0.71   |   0.66   |
+| Place                    |   0.76    |   0.71   |   0.74   |
+| Reference_point_time     |   0.83    |   0.81   |   0.80   |
+| Difference               |   0.87    |   0.85   |   0.89   |   
+| Supplier_consumer        |   0.77    |   0.81   |   0.79   |
+| Imposer                  |   0.80    |   0.78   |   0.81   |
+| Contract_date            |   0.75    |   0.71   |   0.80   |
+| Type                     |   0.95    |   0.89   |   0.96   |
+| Imposee                  |   0.66    |   0.75   |   0.68   |
+| Impacted_countries       |   0.77    |   0.75   |   0.76   |
 | Initial_value            |   0.83    |   0.71   |   0.77   |
-| Duration                 |   0.92    |   0.96   |   0.94   |
-| Situation                |   1.00    |   0.75   |   0.86   |
-| Participating_countries  |   1.00    |   1.00   |   1.00   |
-| Forecaster               |   0.85    |   1.00   |   0.92   |
+| Duration                 |   0.82    |   0.86   |   0.84   |
+| Situation                |   0.79    |   0.75   |   0.66   |
+| Participating_countries  |   0.88    |   0.85   |   0.89   |
+| Forecaster               |   0.75    |   1.00   |   0.80   |
 | Forecast                 |   0.95    |   0.87   |   0.91   |
 
 
