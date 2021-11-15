@@ -1,7 +1,7 @@
 # Commodity News Event Extraction 
 
 ## Introduction
-This repository contains PyTorch code for the paper entitled **"Effective Use of Pre-trained Language Models and Graph Convolution Network over Contextual Sub-dependency Parse Tree for Event Extraction in Commodity News"**
+This repository contains PyTorch code for the paper entitled **"Effective Use of Graph Convolution Network and Contextual Sub-Tree for Commodity News Event Extraction"** (Accepted at ECONLP workshop in EMNLP 2021).
 
 This paper introduces the use of pre-trained language models, eg: BERT and Graph Convolution Network (GCN) over a sub-dependency parse tree, termed here as **Contextual Sub-Tree** for event extraction in Commodity News. Below is a diagram showing the overall architecture of the proposed solution. 
 
@@ -67,3 +67,11 @@ To access results on Tensorboard, first you need to have Tensorboard install and
 
 ## Citation
 If you find the codes or the paper useful, please cite using the following:
+@misc{lee2021effective,
+      title={Effective Use of Graph Convolution Network and Contextual Sub-Tree forCommodity News Event Extraction}, 
+      author={Meisin Lee and Lay-Ki Soon and Eu-Gene Siew},
+      year={2021},
+      eprint={2109.12781},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
