@@ -68,12 +68,12 @@ To access results on Tensorboard, first you need to have Tensorboard install and
 ## Citation
 If you find the codes or the paper useful, please cite using the following:
 ``
-@misc{lee2021effective,
-      title={Effective Use of Graph Convolution Network and Contextual Sub-Tree forCommodity News Event Extraction}, 
-      author={Meisin Lee and Lay-Ki Soon and Eu-Gene Siew},
-      year={2021},
-      eprint={2109.12781},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL}
-}
+      @misc{lee2021effective,
+            title={Effective Use of Graph Convolution Network and Contextual Sub-Tree forCommodity News Event Extraction}, 
+            author={Meisin Lee and Lay-Ki Soon and Eu-Gene Siew},
+            year={2021},
+            eprint={2109.12781},
+            archivePrefix={arXiv},
+            primaryClass={cs.CL}
+      }
 ``
