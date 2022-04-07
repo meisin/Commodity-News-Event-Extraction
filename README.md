@@ -7,6 +7,9 @@ This paper introduces the use of pre-trained language models, eg: BERT and Graph
 
 ![Architecture](fig/architecture_without_polaritymodality.png)
 
+See presentation materials for summary:
+- [presentation materials/ECONLP 2021_12_PresentationSlides.pdf](Presentation Slides)
+
 The events found in Commodity News are group into three main categories:
 1. Geo-political events
 2. Macro-economic events
@@ -68,12 +71,11 @@ To access results on Tensorboard, first you need to have Tensorboard install and
 ## Citation
 If you find the codes or the paper useful, please cite using the following:
 ```
-      @misc{lee2021effective,
-            title={Effective Use of Graph Convolution Network and Contextual Sub-Tree forCommodity News Event Extraction}, 
-            author={Meisin Lee and Lay-Ki Soon and Eu-Gene Siew},
-            year={2021},
-            eprint={2109.12781},
-            archivePrefix={arXiv},
-            primaryClass={cs.CL}
+      @inproceedings{lee2021effective,
+        title={Effective Use of Graph Convolution Network and Contextual Sub-Tree for Commodity News Event Extraction},
+        author={Lee, Meisin and Soon, Lay-Ki and Siew, Eu-Gene},
+        booktitle={Proceedings of the Third Workshop on Economics and Natural Language Processing},
+        pages={69--81},
+        year={2021}
       }
 ```
