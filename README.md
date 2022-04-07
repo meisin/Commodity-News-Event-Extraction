@@ -3,13 +3,15 @@
 ## Introduction
 This repository contains PyTorch code for the paper entitled **"Effective Use of Graph Convolution Network and Contextual Sub-Tree for Commodity News Event Extraction"** (Accepted at ECONLP workshop in EMNLP 2021).
 
+See [Presentation Materials](https://github.com/meisin/Commodity-News-Event-Extraction/tree/main/presentation%20materials) for summary:
+- Presentation Slides
+- Poster
+- Presentation Recording (.mp4)
+
+
 This paper introduces the use of pre-trained language models, eg: BERT and Graph Convolution Network (GCN) over a sub-dependency parse tree, termed here as **Contextual Sub-Tree** for event extraction in Commodity News. Below is a diagram showing the overall architecture of the proposed solution. 
 
 ![Architecture](fig/architecture_without_polaritymodality.png)
-
-See [Presentation Materials](https://github.com/meisin/Commodity-News-Event-Extraction/tree/main/presentation%20materials) for summary:
-- [Presentation Slides](/presentation materials/ECONLP 2021_12_PresentationSlides)
-- 
 
 The events found in Commodity News are group into three main categories:
 1. Geo-political events
