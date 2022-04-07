@@ -8,7 +8,7 @@ This paper introduces the use of pre-trained language models, eg: BERT and Graph
 ![Architecture](fig/architecture_without_polaritymodality.png)
 
 See presentation materials for summary:
-- [Presentation Slides](presentation materials/ECONLP 2021_12_PresentationSlides.pdf)
+- [Presentation Slides](/presentation materials/ECONLP 2021_12_PresentationSlides.pdf)
 - 
 
 The events found in Commodity News are group into three main categories:
