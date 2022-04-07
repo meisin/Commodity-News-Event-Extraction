@@ -7,7 +7,7 @@ This paper introduces the use of pre-trained language models, eg: BERT and Graph
 
 ![Architecture](fig/architecture_without_polaritymodality.png)
 
-See presentation materials for summary:
+See [Presentation Materials](/presentation materials) for summary:
 - [Presentation Slides](/presentation materials/ECONLP 2021_12_PresentationSlides)
 - 
 
